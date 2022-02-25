@@ -13,7 +13,7 @@ class Listing
               :interior,
               :sellingPrice
 
-  def initialize(data)
+  def initialize(data = {})
     @year = data[:year]
     @make = data[:make]
     @model = data[:model]
@@ -22,7 +22,7 @@ class Listing
     @transmission = data[:transmission]
     @vin = data[:vin]
     @state = data[:state]
-    @condiition = data[:condiition]
+    @condition = data[:condition]
     @odometer = data[:odometer]
     @color = data[:color]
     @interior = data[:interior]

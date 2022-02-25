@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'listing poro' do
-  let!(:listing) {create(:listing,
+  let!(:listing) { build(:listing,
                         year: 2015,
                         make: "Honda",
                         model: "Civic",
@@ -15,7 +15,7 @@ RSpec.describe 'listing poro' do
                         color: "gray",
                         interior: "gray",
                         sellingPrice: 8900
-                )}
+                        ) }
 
   it "exists" do
     expect(listing).to be_a(Listing)
