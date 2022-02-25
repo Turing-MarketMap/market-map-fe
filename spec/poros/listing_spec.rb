@@ -50,4 +50,21 @@ RSpec.describe 'listing poro' do
     expect(listing.interior).to eq("gray")
     expect(listing.sellingPrice).to eq(8900)
   end
+
+  it "has factory with correct default attributes" do
+    listing = build(:listing)
+    expect(listing.year).to be_a(Integer)
+    expect(listing.make).to be_a(String)
+    expect(listing.model).to be_a(String)
+    expect(listing.trim).to be_a(String)
+    expect(listing.body).to be_a(String)
+    expect(listing.transmission).to be_a(String)
+    expect(listing.vin).to be_a(String)
+    expect(listing.state).to be_a(String)
+    expect(listing.condition).to be_a(Float)
+    expect(listing.odometer).to be_a(Integer)
+    expect(listing.color).to be_a(String)
+    expect(listing.interior).to be_a(String)
+    expect(listing.sellingPrice).to be_a(Integer)
+  end
 end
