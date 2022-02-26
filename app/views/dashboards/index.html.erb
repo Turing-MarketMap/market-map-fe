@@ -1,1 +1,7 @@
 <h1>Market Map</h1>
+
+<div class="filters">
+  <% form_with url: '/listings', method: :post, local: true do |f| %>
+  <%= f.collection_select(:listing, :make, @listings, :make, :make, prompt: true) %>
+  <% end %>
+</div>
