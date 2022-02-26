@@ -1,0 +1,20 @@
+<h1>Market Map</h1>
+
+<div class="filters">
+  <%= form_with url: '/listings', method: :post, local: true do |f| %>
+  <%= f.label :make %>
+  <%= f.select(:make, Listing.all_makes) %>
+
+  <% end %>
+
+</div>
+
+<div class="listings">
+  <h3>All listings</h3>
+  <ul>
+    <% @listings.each do |listing| =%>
+      <li><%= listing.make %></li>
+    <% end %>
+  </ul>
+
+</div>
