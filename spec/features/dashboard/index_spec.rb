@@ -12,13 +12,16 @@ RSpec.describe 'dashboard page' do
       let!(:make_options_1) { ["A", "B", "C"] }
       let!(:make_options_2) { ["A", "B", "C", "D", "E"] }
 
-      xit "has model dropdowns that match available models in database" do
+      it "has model dropdowns that match available models in database" do
+
+        allow(ListingService).to receive(:get_makes).and_return({data: options_1})
+
         visit '/'
         within 'div.filters' do
+          makes = ListingService.get_makes
 
-
-          make_options.each do |selection|
-            select selection, from: "Make"
+          makes.each do |make|
+            select make, from: "Make"
           end
         end
       end
