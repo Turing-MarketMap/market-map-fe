@@ -23,6 +23,7 @@ RSpec.describe 'dashboard page' do
 
 
         visit '/'
+        save_and_open_page
         within 'div.filters' do
           make_options_2.each do |make|
             select make, from: "Make"
