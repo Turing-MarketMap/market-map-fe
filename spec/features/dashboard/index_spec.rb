@@ -1,8 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe 'dashboard page' do
+  let!(:listings) { build_list(:listing, 10) }
+
 
   it "is the root page" do
+    allow(ListingFacade).to (receive(:get_listings).and_return(listings))
     visit '/'
     expect(page).to have_content("Market Map")
   end
@@ -11,18 +14,19 @@ RSpec.describe 'dashboard page' do
     describe 'model filters' do
       let!(:make_options_1) { ["A", "B", "C"] }
       let!(:make_options_2) { ["A", "B", "C", "D", "E"] }
-      let!(:listings) { build_list(:listing, 10) }
+
 
       it "has model dropdowns that match available models in retreived listings" do
 
         #allow(ListingService).to receive(:get_makes).and_return({data: make_options_1})
+        allow(ListingFacade).to receive(:get_listings).and_return(listings)
+        allow(Listing).to receive(:all_makes).and_return(make_options_2)
 
-        allow(ListingFacade).to (receive(:get_listings).and_return(listings))
 
         visit '/'
         within 'div.filters' do
-          listings.each do |listing|
-            select listing.make, from: "Make"
+          make_options_2.each do |make|
+            select make, from: "Make"
           end
         end
       end
