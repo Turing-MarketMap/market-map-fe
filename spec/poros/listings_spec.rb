@@ -13,11 +13,25 @@ RSpec.describe 'Listings poro' do
   end
 
   describe 'instance methods' do
-    let!(:listing_1) { build(:listing, make: 'Honda', model: 'Civic')}
-    let!(:listing_2) { build(:listing, make: 'Honda', model: 'Accord')}
-    let!(:listing_3) { build(:listing, make: 'Mazda', model: 'Mazda3')}
+    let!(:listing_1) { build(:listing, make: 'Honda', model: 'Civic', odometer: 10000, sellingPrice: 25000)}
+    let!(:listing_2) { build(:listing, make: 'Honda', model: 'Accord', odometer: 50000, sellingPrice: 8000)}
+    let!(:listing_3) { build(:listing, make: 'Mazda', model: 'Mazda3', odometer: 30000, sellingPrice: 15000)}
 
     let!(:listings_object) { Listings.new([listing_1, listing_2, listing_3]) }
+
+    describe '@odometer' do
+      it "returns an array of the odometer values of the listings" do
+        expect(listings_object.odometers).to be_a(Array)
+        expect(listings_object.odometers).to eq([10000,50000,30000])
+      end
+    end
+
+    describe '@sellingPrice' do
+      it "returns an array of the sellingPrice values of the listings" do
+        expect(listings_object.sellingPrices).to be_a(Array)
+        expect(listings_object.sellingPrices).to eq([25000,8000,15000])
+      end
+    end
 
     describe '#all_makes' do
       it "returns an array of all the available makes in the collection" do

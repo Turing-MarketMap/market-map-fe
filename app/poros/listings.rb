@@ -19,4 +19,17 @@ class Listings
     models = listings_of_make.map {|listing| listing.model}.sort
     models.uniq
   end
+
+  def odometers
+    @listings.map do |listing|
+      listing.odometer
+    end
+  end
+
+  def sellingPrices
+    @listings.map do |listing|
+      listing.sellingPrice
+    end
+  end
+
 end
