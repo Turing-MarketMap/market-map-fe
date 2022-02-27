@@ -20,12 +20,11 @@ RSpec.describe 'dashboard page' do
 
         #allow(ListingService).to receive(:get_makes).and_return({data: make_options_1})
         allow(ListingFacade).to receive(:get_listings).and_return(listings)
-        allow(listings).to receive(:all_makes).and_return(make_options_2)
 
         visit '/'
 
         within 'div.filters' do
-          make_options_2.each do |make|
+          listings.all_makes.each do |make|
             select make, from: "Make"
           end
         end
