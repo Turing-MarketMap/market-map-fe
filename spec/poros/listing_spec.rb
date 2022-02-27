@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'listing poro' do
   let!(:listing) { build(:listing,
+                        id: 1,
                         year: 2015,
                         make: "Honda",
                         model: "Civic",
@@ -14,7 +15,8 @@ RSpec.describe 'listing poro' do
                         odometer: 73995,
                         color: "gray",
                         interior: "gray",
-                        sellingPrice: 8900
+                        selling_price: 8900,
+                        title: '2015 Honda Civic'
                         ) }
 
   it "exists" do
@@ -22,6 +24,7 @@ RSpec.describe 'listing poro' do
   end
 
   it "has correct attributes" do
+    expect(listing.id).to be_a(Integer)
     expect(listing.year).to be_a(Integer)
     expect(listing.make).to be_a(String)
     expect(listing.model).to be_a(String)
@@ -34,8 +37,10 @@ RSpec.describe 'listing poro' do
     expect(listing.odometer).to be_a(Integer)
     expect(listing.color).to be_a(String)
     expect(listing.interior).to be_a(String)
-    expect(listing.sellingPrice).to be_a(Integer)
+    expect(listing.selling_price).to be_a(Integer)
+    expect(listing.title).to be_a(String)
 
+    expect(listing.id).to eq(1)
     expect(listing.year).to eq(2015)
     expect(listing.make).to eq("Honda")
     expect(listing.model).to eq("Civic")
@@ -48,11 +53,13 @@ RSpec.describe 'listing poro' do
     expect(listing.odometer).to eq(73995)
     expect(listing.color).to eq("gray")
     expect(listing.interior).to eq("gray")
-    expect(listing.sellingPrice).to eq(8900)
+    expect(listing.selling_price).to eq(8900)
+    expect(listing.title).to eq('2015 Honda Civic')
   end
 
   it "has factory with correct default attributes" do
     listing = build(:listing)
+    expect(listing.id).to be_a(Integer)
     expect(listing.year).to be_a(Integer)
     expect(listing.make).to be_a(String)
     expect(listing.model).to be_a(String)
@@ -65,7 +72,9 @@ RSpec.describe 'listing poro' do
     expect(listing.odometer).to be_a(Integer)
     expect(listing.color).to be_a(String)
     expect(listing.interior).to be_a(String)
-    expect(listing.sellingPrice).to be_a(Integer)
+    expect(listing.selling_price).to be_a(Integer)
+    expect(listing.title).to be_a(String)
+    expect(listing.title).to eq("#{listing.year} #{listing.make} #{listing.model}")
   end
 
 

@@ -1,5 +1,6 @@
 FactoryBot.define do
   factory :listing do
+    sequence(:id)
     year { Faker::Vehicle.year }
     make { Faker::Vehicle.make }
     model { Faker::Vehicle.model(make_of_model: make) }
@@ -12,7 +13,8 @@ FactoryBot.define do
     odometer { Faker::Number.between(from: 0, to: 250000) }
     color { Faker::Vehicle.color }
     interior { Faker::Lorem.sentence }
-    sellingPrice { (Faker::Number.within(range: 20000..40000) * ((250000 - odometer ) / 250000.0)).to_i } # Deprecate value based on mileage for more realistic fake prices
+    selling_price { (Faker::Number.within(range: 20000..40000) * ((250000 - odometer ) / 250000.0)).to_i } # Deprecate value based on mileage for more realistic fake prices
+    title { "#{year} #{make} #{model}" }
 
     initialize_with { new(attributes) }
   end

@@ -72,11 +72,12 @@ Shoulda::Matchers.configure do |config|
   end
 end
 
-VCR.configure do |config|
-  config.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
-  config.hook_into :webmock
-  config.filter_sensitive_data('<encrypted_key>') { ENV['image_api_key'] }
-  config.filter_sensitive_data('<encrypted_key>') { ENV['google_client_id'] }
-  config.filter_sensitive_data('<encrypted_key>') { ENV['client_secret_id'] }
-  config.configure_rspec_metadata!
+VCR.configure do |c|
+  c.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
+  c.hook_into :webmock
+  c.filter_sensitive_data('<cx>') { ENV['google_image_cx'] }
+  c.filter_sensitive_data('<key>') { ENV['google_image_api_key'] }
+  c.filter_sensitive_data('<encrypted_key>') { ENV['google_client_id'] }
+  c.filter_sensitive_data('<encrypted_key>') { ENV['client_secret_id'] }
+  c.configure_rspec_metadata!
 end
