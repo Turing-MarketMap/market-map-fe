@@ -9,7 +9,7 @@ class Listings
     makes = @listings.map do |listing|
       listing.make
     end
-    makes.uniq!
+    makes.uniq
   end
 
   def all_models(make)
@@ -17,6 +17,6 @@ class Listings
       listing.make == make
     end
     models = listings_of_make.map {|listing| listing.model}.sort
-    models.uniq!
+    models.uniq
   end
 end
