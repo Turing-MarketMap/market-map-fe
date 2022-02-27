@@ -15,7 +15,6 @@ RSpec.describe 'dashboard page' do
     it "has a scatter plot" do
       allow(ListingFacade).to receive(:get_listings).and_return(listings_2)
       visit '/'
-      save_and_open_page
     end
   end
 
