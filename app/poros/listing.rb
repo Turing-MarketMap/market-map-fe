@@ -1,5 +1,6 @@
 class Listing
-  attr_reader :year,
+  attr_reader :id,
+              :year,
               :make,
               :model,
               :trim,
@@ -11,9 +12,11 @@ class Listing
               :odometer,
               :color,
               :interior,
-              :sellingPrice
+              :selling_price,
+              :title
 
   def initialize(data = {})
+    @id = data[:id]
     @year = data[:year]
     @make = data[:make]
     @model = data[:model]
@@ -26,6 +29,7 @@ class Listing
     @odometer = data[:odometer]
     @color = data[:color]
     @interior = data[:interior]
-    @sellingPrice = data[:sellingPrice]
+    @selling_price = data[:sellingPrice]
+    @title = "#{@year} #{@make} #{@model}"
   end
 end
