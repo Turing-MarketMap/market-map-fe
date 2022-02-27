@@ -17,5 +17,6 @@ class Listings
       listing.make == make
     end
     models = listings_of_make.map {|listing| listing.model}.sort
+    models.uniq!
   end
 end

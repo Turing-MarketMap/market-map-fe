@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'dashboard page' do
-  let!(:listings) { build(:listings, listing_count: 10) }
+  let!(:listings) { build(:listings, listing_count: 100) }
   let!(:listings_2) { build(:listings, listing_count: 10) }
 
 
