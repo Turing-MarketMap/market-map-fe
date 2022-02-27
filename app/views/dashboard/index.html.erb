@@ -3,8 +3,9 @@
 <div class="filters">
   <%= form_with url: '/listings', method: :post, local: true do |f| %>
   <%= f.label :make %>
-  <%= f.select(:make, Listing.all_makes) %>
-
+  <%= f.select(:make, @listings.all_makes) %>
+  <%= f.label :model %>
+  <%= f.select(:model, @listings.all_models(@listings.all_makes[0])) %>
   <% end %>
 
 </div>
@@ -12,7 +13,7 @@
 <div class="listings">
   <h3>All listings</h3>
   <ul>
-    <% @listings.each do |listing| =%>
+    <% @listings.listings.each do |listing| =%>
       <li><%= listing.make %></li>
     <% end %>
   </ul>
