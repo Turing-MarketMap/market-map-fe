@@ -7,7 +7,8 @@ class ListingsController < ApplicationController
   private
 
   def listing_params
-    params.require(:listing).permit(:id, 
+    params.require(:listing).permit(
+                                    :id, 
                                     :year, 
                                     :make, 
                                     :model, 
@@ -21,6 +22,7 @@ class ListingsController < ApplicationController
                                     :color, 
                                     :interior, 
                                     :selling_price, 
-                                    :title)
+                                    :title
+                                   )
   end
 end
