@@ -19,14 +19,14 @@ RSpec.describe 'Listings poro' do
 
     let!(:listings_object) { Listings.new([listing_1, listing_2, listing_3]) }
 
-    describe '@odometer' do
+    describe '#odometers' do
       it "returns an array of the odometer values of the listings" do
         expect(listings_object.odometers).to be_a(Array)
         expect(listings_object.odometers).to eq([10000,50000,30000])
       end
     end
 
-    describe '@sellingPrice' do
+    describe '#sellingPrices' do
       it "returns an array of the sellingPrice values of the listings" do
         expect(listings_object.sellingPrices).to be_a(Array)
         expect(listings_object.sellingPrices).to eq([25000,8000,15000])

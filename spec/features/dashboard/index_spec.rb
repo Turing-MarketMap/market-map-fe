@@ -11,6 +11,14 @@ RSpec.describe 'dashboard page' do
     expect(page).to have_content("Market Map")
   end
 
+  describe 'scatter_chart' do
+    it "has a scatter plot" do
+      allow(ListingFacade).to receive(:get_listings).and_return(listings_2)
+      visit '/'
+      save_and_open_page
+    end
+  end
+
   describe 'filters' do
     describe 'make filters' do
       let!(:make_options_1) { ["A", "B", "C"] }

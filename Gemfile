@@ -47,6 +47,7 @@ group :development, :test do
   gem 'figaro'
   gem 'jsonapi-serializer'
   gem 'chartkick'
+  gem 'sprockets'
 end
 
 group :development do

@@ -10,6 +10,10 @@
 
 </div>
 
+<div class="chart">
+  <%= scatter_chart [@listings.odometers, @listings.sellingPrices], xtitle: 'Mileage', ytitle: "Price" %>
+</div>
+
 <div class="listings">
   <h3>All listings</h3>
   <ul>
