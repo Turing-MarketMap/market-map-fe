@@ -49,8 +49,8 @@ group :development, :test do
   gem 'simplecov', require: false, group: :test
   gem 'figaro'
   gem 'jsonapi-serializer'
-  gem 'chartkick'
   gem 'sprockets-rails', :require => 'sprockets/railtie'
+  gem 'chartkick'
 end
 
 group :development do

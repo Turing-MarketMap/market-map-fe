@@ -23,7 +23,7 @@ RSpec.describe 'dashboard page' do
       let!(:make_options_1) { ["A", "B", "C"] }
       let!(:make_options_2) { ["A", "B", "C", "D", "E"] }
 
-      it "has make dropdowns that match available models in retreived listings" do
+      xit "has make dropdowns that match available models in retreived listings" do
 
         #allow(ListingService).to receive(:get_makes).and_return({data: make_options_1})
         allow(ListingFacade).to receive(:get_listings).and_return(listings)
