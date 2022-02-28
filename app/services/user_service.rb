@@ -10,7 +10,7 @@ class UserService
       JSON.parse(response.body, symbolize_names: true)
     end
 
-    def find_user(email, first_name = nil, last_name = nil)
+    def find_user(email, first_name, last_name)
       response = connection.post("users") do |faraday|
         faraday.params['user[email]'] = email
         faraday.params['user[first_name]'] = first_name
