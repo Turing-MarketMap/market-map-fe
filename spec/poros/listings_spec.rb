@@ -13,37 +13,37 @@ RSpec.describe 'Listings poro' do
   end
 
   describe 'instance methods' do
-    let!(:listing_1) { build(:listing, make: 'Honda', model: 'Civic', odometer: 10000, sellingPrice: 25000)}
-    let!(:listing_2) { build(:listing, make: 'Honda', model: 'Accord', odometer: 50000, sellingPrice: 8000)}
-    let!(:listing_3) { build(:listing, make: 'Mazda', model: 'Mazda3', odometer: 30000, sellingPrice: 15000)}
+    let!(:listing_1) { build(:listing, make: 'Honda', model: 'Civic', odometer: 10000, selling_price: 25000)}
+    let!(:listing_2) { build(:listing, make: 'Honda', model: 'Accord', odometer: 50000, selling_price: 8000)}
+    let!(:listing_3) { build(:listing, make: 'Mazda', model: 'Mazda3', odometer: 30000, selling_price: 15000)}
 
-    let!(:listings_object) { Listings.new([listing_1, listing_2, listing_3]) }
+    let!(:listings_object_2) { Listings.new([listing_1, listing_2, listing_3]) }
 
     describe '#odometers' do
       it "returns an array of the odometer values of the listings" do
-        expect(listings_object.odometers).to be_a(Array)
-        expect(listings_object.odometers).to eq([10000,50000,30000])
+        expect(listings_object_2.odometers).to be_a(Array)
+        expect(listings_object_2.odometers).to eq([10000,50000,30000])
       end
     end
 
     describe '#sellingPrices' do
       it "returns an array of the sellingPrice values of the listings" do
-        expect(listings_object.sellingPrices).to be_a(Array)
-        expect(listings_object.sellingPrices).to eq([25000,8000,15000])
+        expect(listings_object_2.sellingPrices).to be_a(Array)
+        expect(listings_object_2.sellingPrices).to eq([25000,8000,15000])
       end
     end
 
     describe '#all_makes' do
       it "returns an array of all the available makes in the collection" do
-        expect(listings_object.all_makes).to eq(['Honda', 'Mazda'])
+        expect(listings_object_2.all_makes).to eq(['Honda', 'Mazda'])
       end
     end
 
     describe '#all_models' do
       it "returns an array of all of the available models for the chosen make" do
-        expect(listings_object.all_models('Honda')).to be_a(Array)
-        expect(listings_object.all_models('Honda')).to eq(['Accord', 'Civic'])
-        expect(listings_object.all_models('Mazda')).to eq(['Mazda3'])
+        expect(listings_object_2.all_models('Honda')).to be_a(Array)
+        expect(listings_object_2.all_models('Honda')).to eq(['Accord', 'Civic'])
+        expect(listings_object_2.all_models('Mazda')).to eq(['Mazda3'])
       end
     end
   end

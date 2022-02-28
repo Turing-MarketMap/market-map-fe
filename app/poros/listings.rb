@@ -28,7 +28,7 @@ class Listings
 
   def sellingPrices
     @listings.map do |listing|
-      listing.sellingPrice
+      listing.selling_price
     end
   end
 

@@ -29,7 +29,7 @@ class Listing
     @odometer = data[:odometer]
     @color = data[:color]
     @interior = data[:interior]
-    @selling_price = data[:sellingPrice]
+    @selling_price = data[:selling_price]
     @title = "#{@year} #{@make} #{@model}"
   end
 
