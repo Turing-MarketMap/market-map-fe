@@ -2,24 +2,14 @@
 
 <div class="filters">
   <%= form_with url: '/listings', method: :post, local: true do |f| %>
-  <%= f.label :make %>
-  <%= f.select(:make, @listings.all_makes) %>
-  <%= f.label :model %>
-  <%= f.select(:model, @listings.all_models(@listings.all_makes[0])) %>
+    <%= f.label :make %>
+    <%= f.select(:make, ["a","b"]) %>
+    <%= f.label :model %>
+    <%= f.select(:model, ["a","b"]) %>
   <% end %>
 
 </div>
 
 <div class="chart">
-  <%= scatter_chart [@listings.odometers, @listings.sellingPrices], xtitle: 'Mileage', ytitle: "Price" %>
-</div>
-
-<div class="listings">
-  <h3>All listings</h3>
-  <ul>
-    <% @listings.listings.each do |listing| =%>
-      <li><%= listing.make %></li>
-    <% end %>
-  </ul>
-
+  <%= scatter_chart [[1,1],[1,2],[0,1], [3,3]], xtitle: 'Mileage', ytitle: "Price" %>
 </div>

@@ -50,7 +50,7 @@ group :development, :test do
   gem 'figaro'
   gem 'jsonapi-serializer'
   gem 'chartkick'
-  gem 'sprockets'
+  gem 'sprockets-rails', :require => 'sprockets/railtie'
 end
 
 group :development do
