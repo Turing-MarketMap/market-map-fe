@@ -55,6 +55,14 @@ $ rails s
 ## Endpoints
 ### Listings
 ### Users
+- Login/Register
+  - Login or create a new user.
+  - Example Request: `https://https://consultancy-be.herokuapp.com/api/v1/users`
+- Destroy User
+  - Delete a users account.
+  - Example Request: `https://https://consultancy-be.herokuapp.com/users/1`
+  
+    
 ### UserListings
 
 ## Further Project Information
