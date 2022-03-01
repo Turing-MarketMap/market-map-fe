@@ -72,7 +72,11 @@ RSpec.describe 'dashboard page' do
     end
   end
 
-
-
-
+  context 'as user' do
+    describe 'before logging into the site' do
+      describe 'viewable elements' do
+        
+      end
+    end
+  end
 end
