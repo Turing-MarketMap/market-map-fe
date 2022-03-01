@@ -6,6 +6,7 @@ class ListingsController < ApplicationController
 
   def search
     @listings = ListingFacade.get_listings(params)
+    redirect_to '/'
   end
 
   private
