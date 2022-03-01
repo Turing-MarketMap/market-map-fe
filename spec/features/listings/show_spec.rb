@@ -23,22 +23,22 @@ RSpec.describe 'Listings Show Page', type: :feature do
                        }
 
         listing = build(:listing, listing_data)
-        listing_attr = { 
-                         id: listing.id, 
-                         year: listing.year, 
-                         make: listing.make, 
-                         model: listing.model, 
-                         trim: listing.trim, 
-                         body: listing.body, 
-                         transmission: listing.transmission, 
-                         vin: listing.vin, 
-                         state: listing.state, 
-                         condition: listing.condition, 
-                         odometer: listing.odometer, 
-                         color: listing.color, 
-                         interior: listing.interior, 
-                         selling_price: listing.selling_price, 
-                         title: listing.title
+        listing_attr = {
+                        id: listing.id, 
+                        year: listing.year, 
+                        make: listing.make, 
+                        model: listing.model, 
+                        trim: listing.trim, 
+                        body: listing.body, 
+                        transmission: listing.transmission, 
+                        vin: listing.vin, 
+                        state: listing.state, 
+                        condition: listing.condition, 
+                        odometer: listing.odometer, 
+                        color: listing.color, 
+                        interior: listing.interior, 
+                        selling_price: listing.selling_price, 
+                        title: listing.title
                        }
 
         image = ImageFacade.search_for_listing_image(listing.title, listing.color)
