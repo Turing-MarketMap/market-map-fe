@@ -18,7 +18,12 @@
               type: 'line',
               showLine: false,
               label: 'Listings',
-              data: [{selling_price: 1, odometer: 1, make: "test"},{selling_price: 1, odometer: 2, make: "test"},{selling_price: 0, odometer: 1, make: "test"},{selling_price: 3, odometer: 3, make: "test"},{selling_price: 2.6, odometer: 2, make: "test"},{selling_price: 1.8, odometer: 1.4, make: "test"}],
+              data: [{selling_price: 1, odometer: 1, make: "Honda", model: 'Civic', year: 2010},
+                    {selling_price: 1, odometer: 2, make: "Honda", model: 'Civic', year: 2018},
+                    {selling_price: 0, odometer: 1, make: "Honda", model: 'Civic', year: 2013},
+                    {selling_price: 3, odometer: 3, make: "Honda", model: 'Civic', year: 2018},
+                    {selling_price: 2.6, odometer: 2, make: "Honda", model: 'Civic', year: 2015},
+                    {selling_price: 1.8, odometer: 1.4, make: "Honda", model: 'Civic', year: 2017}],
               pointBackgroundColor: 'rgba(0,0,200,1)',
               pointBorderColor: 'rgba(0,0,0,.1)',
               pointRadius: 2,
@@ -27,7 +32,7 @@
               type: 'line',
               label: 'Regression',
               //data: [{selling_price: 1, odometer: 1, make: "test"},{selling_price: 1, odometer: 2, make: "test"},{selling_price: 0, odometer: 1, make: "test"},{selling_price: 3, odometer: 3, make: "test"},{selling_price: 2.6, odometer: 2, make: "test"},{selling_price: 1.8, odometer: 1.4, make: "test"}],
-              data: [[0,1.1],[1,1.6], [2,1.6],[2.5,1.9],[3,2.6]],
+              //data: [[0,1.1],[1,1.6], [2,1.6],[2.5,1.9],[3,2.6]],
               borderColor: 'rgba(255,150,150,1)',
               borderJoinStyle: 'bevel',
               borderWidth: 4,
@@ -38,13 +43,39 @@
 
       options: {
         parsing: {
-          xAxisKey: 'selling_price',
-          yAxisKey: 'odometer'
+          xAxisKey: 'odometer',
+          yAxisKey: 'selling_price'
         },
+
         scales: {
           y: { title: { color: 'grey', display: true, text: 'Price' } },
           x: { title: { color: 'grey', display: true, text: 'Mileage' } }
         },
+
+        plugins: {
+            tooltip: {
+                callbacks: {
+                    label: function(context) {
+                      let data = context.dataset.data[context.dataIndex];
+                      let label = [''];
+
+                      if (data.make !== null && data.model != null && data.year) {
+                        label[0] = `${data.year} ${data.make} ${data.model}`;
+                      }
+                      if (data.selling_price !== null) {
+                        price_label = 'Price: ';
+                        price_label += new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(data.selling_price);
+                        label.push(price_label);
+                      }
+                      if (data.odometer !== null) {
+                        label.push(`Mileage: ${data.odometer}`);
+                      }
+                      return label;
+                    }
+                }
+            }
+          },
+
         onClick: function clickHandler(evt) {
           const points = mixedChart.getElementsAtEventForMode(evt, 'nearest', { intersect: true }, true);
 
@@ -54,7 +85,7 @@
             const label = mixedChart.data.labels[firstPoint.index];
             const value = mixedChart.data.datasets[firstPoint.datasetIndex].data[firstPoint.index];
             // redirect to show page with data added to query string
-            //location.href = '/listings/0?x={value[0]}&y={value[1]}';
+            location.href = '/listings/0?x={value[0]}&y={value[1]}';
           }
         }
       }
