@@ -21,6 +21,4 @@ class ListingService
   #   root = 'https://api/v1'
   #   root += "/#{url}"
   # end
-
-
 end
