@@ -1,8 +1,5 @@
 class DashboardController < ApplicationController
-  def index
-    if session[:auth_hash]
-      current_user
-    end
+  before_action :current_user
 
     @listings = ListingFacade.get_listings(search_params.to_h.symbolize_keys)
     if @listings != []
@@ -21,5 +18,4 @@ class DashboardController < ApplicationController
       search_params = {min_year: 2000, max_year: 2015, make: 'Subaru', model: "Outback"}
     end
   end
-
 end

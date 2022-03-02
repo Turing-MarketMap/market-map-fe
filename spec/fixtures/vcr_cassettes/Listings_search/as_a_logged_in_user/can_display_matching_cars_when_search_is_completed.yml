@@ -1,0 +1,77 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/listings/search?search_params%5Bmake%5D&search_params%5Bmax_year%5D&search_params%5Bmin_year%5D&search_params%5Bmodel%5D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ad0b8c70-b0f1-454b-8bc3-dbc36ceba270
+      X-Runtime:
+      - '0.138736'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Wed, 02 Mar 2022 00:04:43 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/listings/search?search_params%5Bmake%5D=Toyota&search_params%5Bmax_year%5D=2005&search_params%5Bmin_year%5D=2001&search_params%5Bmodel%5D=Camry
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"6f380cc0c28b75fc0f686c91c4a7ad20"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5756a29e-e6ea-4272-8af2-098cf729ab47
+      X-Runtime:
+      - '0.373344'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"3516","type":"listing","attributes":{"year":2004,"make":"Toyota","model":"Camry","trim":"LE
+        V6","body":"Sedan","transmission":"automatic","vin":"jtdbf30k140152417","state":"ca","condition":4.2,"odometer":107479,"color":"white","interior":"gray","sellingprice":6500}},{"id":"3805","type":"listing","attributes":{"year":2002,"make":"Toyota","model":"Camry","trim":"LE","body":"Sedan","transmission":"automatic","vin":"jtdbe32k620019455","state":"ca","condition":2.4,"odometer":194275,"color":"silver","interior":"gray","sellingprice":2700}},{"id":"3821","type":"listing","attributes":{"year":2002,"make":"Toyota","model":"Camry","trim":"SE
+        V6","body":"Sedan","transmission":"automatic","vin":"4t1bf32k02u513182","state":"ca","condition":1.9,"odometer":210125,"color":"silver","interior":"black","sellingprice":1500}},{"id":"3844","type":"listing","attributes":{"year":2002,"make":"Toyota","model":"Camry","trim":"LE","body":"Sedan","transmission":"automatic","vin":"jtdbe32kx20091100","state":"ca","condition":2.4,"odometer":171040,"color":"red","interior":"purple","sellingprice":2800}},{"id":"5719","type":"listing","attributes":{"year":2003,"make":"Toyota","model":"Camry","trim":"SE
+        V6","body":"Sedan","transmission":"automatic","vin":"4t1bf32k43u049217","state":"ca","condition":3.7,"odometer":171776,"color":"gold","interior":"beige","sellingprice":3800}},{"id":"10926","type":"listing","attributes":{"year":2003,"make":"Toyota","model":"Camry","trim":"LE","body":"Sedan","transmission":"automatic","vin":"jtdbe32k530175763","state":"nj","condition":1.9,"odometer":112992,"color":"silver","interior":"gray","sellingprice":3950}},{"id":"13223","type":"listing","attributes":{"year":2005,"make":"Toyota","model":"Camry","trim":"LE","body":"Sedan","transmission":"automatic","vin":"4t1be32k55u030620","state":"ga","condition":2.0,"odometer":1,"color":"gold","interior":"tan","sellingprice":1700}},{"id":"13679","type":"listing","attributes":{"year":2003,"make":"Toyota","model":"Camry","trim":"LE","body":"Sedan","transmission":"automatic","vin":"4t1be32k33u210918","state":"fl","condition":2.3,"odometer":146830,"color":"gold","interior":"gray","sellingprice":3200}},{"id":"17289","type":"listing","attributes":{"year":2003,"make":"Toyota","model":"Camry","trim":"LE","body":"Sedan","transmission":"automatic","vin":"jtdbe32k530170594","state":"ca","condition":2.9,"odometer":149684,"color":"black","interior":"tan","sellingprice":3200}},{"id":"21201","type":"listing","attributes":{"year":2003,"make":"Toyota","model":"Camry","trim":"XLE","body":"Sedan","transmission":"automatic","vin":"jtdbe32k730177093","state":"ca","condition":3.5,"odometer":107697,"color":"gold","interior":"beige","sellingprice":6000}},{"id":"21789","type":"listing","attributes":{"year":2003,"make":"Toyota","model":"Camry","trim":"LE","body":"Sedan","transmission":"automatic","vin":"4t1be32k93u744344","state":"oh","condition":3.6,"odometer":127390,"color":"green","interior":"tan","sellingprice":4400}},{"id":"21980","type":"listing","attributes":{"year":2002,"make":"Toyota","model":"Camry","trim":"SE
+        V6","body":"Sedan","transmission":"automatic","vin":"4t1bf32k82u027395","state":"ca","condition":1.0,"odometer":1,"color":"black","interior":"beige","sellingprice":900}},{"id":"23794","type":"listing","attributes":{"year":2005,"make":"Toyota","model":"Camry","trim":"XLE","body":"Sedan","transmission":"automatic","vin":"4t1be32k95u099276","state":"oh","condition":2.9,"odometer":123750,"color":"beige","interior":"gray","sellingprice":6600}},{"id":"28733","type":"listing","attributes":{"year":2005,"make":"Toyota","model":"Camry","trim":"LE
+        V6","body":"Sedan","transmission":"automatic","vin":"4t1bf30k35u098138","state":"oh","condition":3.7,"odometer":1,"color":"black","interior":"beige","sellingprice":1000}},{"id":"33027","type":"listing","attributes":{"year":2003,"make":"Toyota","model":"Camry","trim":"LE","body":"Sedan","transmission":"automatic","vin":"4t1be32k93u772130","state":"il","condition":1.0,"odometer":1,"color":"gray","interior":"gray","sellingprice":1150}},{"id":"33727","type":"listing","attributes":{"year":2005,"make":"Toyota","model":"Camry","trim":"LE","body":"Sedan","transmission":"automatic","vin":"4t1be32k75u974354","state":"tx","condition":2.4,"odometer":1,"color":"silver","interior":"gray","sellingprice":2100}},{"id":"36760","type":"listing","attributes":{"year":2005,"make":"Toyota","model":"Camry","trim":"SE","body":"Sedan","transmission":"automatic","vin":"4t1be32k75u400269","state":"fl","condition":3.8,"odometer":39966,"color":"gold","interior":"beige","sellingprice":6300}},{"id":"40327","type":"listing","attributes":{"year":2005,"make":"Toyota","model":"Camry","trim":"LE
+        V6","body":"sedan","transmission":"automatic","vin":"4t1bf32k15u614509","state":"tx","condition":3.4,"odometer":103772,"color":"white","interior":"tan","sellingprice":7900}},{"id":"40592","type":"listing","attributes":{"year":2005,"make":"Toyota","model":"Camry","trim":"LE","body":"sedan","transmission":"automatic","vin":"4t1be32k75u427228","state":"nj","condition":2.5,"odometer":118943,"color":"blue","interior":"gray","sellingprice":3100}}]}'
+  recorded_at: Wed, 02 Mar 2022 00:04:44 GMT
+recorded_with: VCR 6.0.0
