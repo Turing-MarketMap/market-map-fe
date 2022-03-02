@@ -16,7 +16,6 @@ RSpec.describe 'dashboard page' do
           visit '/'
 
           within 'div.filters' do
-            save_and_open_page
             select 'Subaru', from: "Make"
             select 'Subaru: Impreza', from: "Model"
             #select 2002, from: "Min Year"
