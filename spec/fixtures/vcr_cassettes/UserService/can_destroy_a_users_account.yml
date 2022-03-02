@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users?user%5Bemail%5D=eturambi@gmail.com&user%5Bfirst_name%5D=eldridge&user%5Blast_name%5D=turambi
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.2.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"81c0c308e8e11127ad579b6fa86cd93c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ece9406b-1ccf-436c-a011-572b633f5e0a
+      X-Runtime:
+      - '0.012172'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"eldridge","last_name":"turambi","email":"eturambi@gmail.com"}}}'
+  recorded_at: Wed, 02 Mar 2022 18:23:24 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/api/v1/users/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 95985db4-ec45-4ec5-90d4-656e84e2ccdf
+      X-Runtime:
+      - '0.012056'
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Wed, 02 Mar 2022 18:23:24 GMT
+recorded_with: VCR 6.0.0

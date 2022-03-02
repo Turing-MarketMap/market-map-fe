@@ -38,6 +38,7 @@ gem 'faraday'
 
 # Google OmniAuth, Oauth implementation
 gem 'omniauth-google-oauth2'
+gem 'omniauth-rails_csrf_protection'
 
 # Add bootstrap and related FE gems
 gem 'bootstrap', '~> 5.1.3'
@@ -58,6 +59,7 @@ group :development, :test do
   gem 'simplecov', require: false, group: :test
   gem 'figaro'
   gem 'jsonapi-serializer'
+  gem 'chartkick'
 end
 
 group :development do

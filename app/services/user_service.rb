@@ -19,6 +19,11 @@ class UserService
       parse_json(response)
     end
 
+    def delete_account(user_id)
+      response = connection.delete("users/#{user_id}")
+      parse_json(response)
+    end
+
 
     # def find_user(email)#(email)
     #
