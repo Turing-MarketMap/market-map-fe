@@ -22,6 +22,11 @@ class ListingService
       parse_json(response)
     end
 
+    def get_listing_by_id(id)
+      response = conn.get("listings/#{id}")
+      parse_json(response)
+    end
+
   # def self.get_url(url)
   #   root = 'https://api/v1'
   #   root += "/#{url}"
