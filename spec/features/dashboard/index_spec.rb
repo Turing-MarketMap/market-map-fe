@@ -48,7 +48,11 @@ RSpec.describe 'dashboard page' do
 
   describe 'Link to listing show page' do
 
-    it 'sees link that routes to listing show page'
+    xit 'sees link that routes to listing show page' do
+      visit '/'
+
+      
+    end
   end
 
   context 'as user' do
