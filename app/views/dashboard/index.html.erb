@@ -2,13 +2,13 @@
   <%= form_with url: '/', method: :get, local: true do |f| %>
   <%= fields_for :search_params do |ff| %>
     <%= ff.label :make %>
-    <%= ff.text_field :make, value: "Subaru" %>
+    <%= ff.select :make, Listing.all_makes, value: "Subaru" %>
 
     <%= ff.label :model %>
-    <%= ff.text_field :model, value: "Impreza" %>
+    <%= ff.select :model, Listing.all_models, value: "Subaru: Impreza" %>
 
     <%= ff.label :min_year %>
-    <%= ff.number_field :min_year, value: 2010 %>
+    <%= ff.number_field :min_year, value: 1995 %>
 
     <%= ff.label :max_year %>
     <%= ff.number_field :max_year, value: 2015 %>
@@ -38,6 +38,7 @@
   <canvas id="myChart" width="600" height="150"></canvas>
   <script type="text/javascript">
     var listing_data = JSON.parse('<%= raw(@data.to_json) %>');
+    var title = `${listing_data[0].make} ${listing_data[0].model}`
     const ctx = document.getElementById('myChart').getContext('2d');
     const mixedChart = new Chart(ctx, {
       type: 'scatter',
@@ -81,32 +82,36 @@
         },
 
         plugins: {
-            tooltip: {
-                callbacks: {
-                    label: function(context) {
-                      let data = context.dataset.data[context.dataIndex];
-                      let label = [''];
-
-                      if (data.title) {
-                        label[0] = `${data.title}`;
-                      }
-                      if (data.sellingprice !== null) {
-                        price_label = 'Price: ';
-                        price_label += new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(data.selling_price);
-                        label.push(price_label);
-                      }
-                      if (data.odometer !== null) {
-                        label.push(`Mileage: ${data.odometer}`);
-                      }
-                      if (data.condition !== null) {
-                        label.push(`Condition: ${data.condition}`);
-                      }
-
-                      return label;
-                    }
-                }
-            }
+          title: {
+            display: true,
+            text: title
           },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                let data = context.dataset.data[context.dataIndex];
+                let label = [''];
+
+                if (data.title) {
+                  label[0] = `${data.title}`;
+                }
+                if (data.sellingprice !== null) {
+                  price_label = 'Price: ';
+                  price_label += new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(data.sellingprice);
+                  label.push(price_label);
+                }
+                if (data.odometer !== null) {
+                  label.push(`Mileage: ${data.odometer}`);
+                }
+                if (data.condition !== null) {
+                  label.push(`Condition: ${data.condition}`);
+                }
+
+                return label;
+              }
+            }
+          }
+        },
 
         onClick: function clickHandler(evt) {
           const points = mixedChart.getElementsAtEventForMode(evt, 'nearest', { intersect: true }, true);

@@ -16,8 +16,9 @@ RSpec.describe 'dashboard page' do
           visit '/'
 
           within 'div.filters' do
-            #select 'Subaru', from: "make"
-            #select 'Impreza', from: "Model"
+            save_and_open_page
+            select 'Subaru', from: "Make"
+            select 'Subaru: Impreza', from: "Model"
             #select 2002, from: "Min Year"
             #select 2015, from: "Max Year"
             #select 5000, from: "Min Price"
@@ -25,8 +26,10 @@ RSpec.describe 'dashboard page' do
             #select 5000, from: "Min Mileage"
             #select 30000, from: "Max Mileage"
 
-            fill_in "Make", with: 'Subaru'
-            fill_in "Model", with: 'Impreza'
+
+
+            #fill_in "Make", with: 'Subaru'
+            #fill_in "Model", with: 'Impreza'
             fill_in "Min year", with: 2002
             fill_in "Max year", with: 2015
             fill_in "Min price", with: 5000
