@@ -1,34 +1,30 @@
 <div class="filters">
   <%= form_with url: '/', method: :get, local: true do |f| %>
-  <%= fields_for :search_params do |ff| %>
-    <%= ff.label :make %>
-    <%= ff.select :make, Listing.all_makes, include_blank: true%>
+    <%= fields_for :search_params do |ff| %>
+      <%= ff.label :make %>
+      <%= ff.select :make, Listing.all_makes, selected: session[:search_params][:make], include_blank: true%>
 
-    <%= ff.label :model %>
-    <%= ff.select :model, Listing.all_models, include_blank: true%>
+      <%= ff.label :model %>
+      <%= ff.select :model, Listing.all_models, selected: session[:search_params][:model], include_blank: true%>
 
-    <%= ff.label :min_year %>
-    <%= ff.number_field :min_year%>
+      <%= ff.label :min_year %>
+      <%= ff.number_field :min_year, value: session[:search_params][:min_year]%>
 
-    <%= ff.label :max_year %>
-    <%= ff.number_field :max_year%>
+      <%= ff.label :max_year %>
+      <%= ff.number_field :max_year, value: session[:search_params][:max_year]%>
 
-    <%= ff.label :min_price %>
-    <%= ff.number_field :min_price%>
+      <%= ff.label :min_price %>
+      <%= ff.number_field :min_price%>
 
-    <%= ff.label :max_price %>
-    <%= ff.number_field :max_price%>
+      <%= ff.label :max_price %>
+      <%= ff.number_field :max_price%>
 
-    <%= ff.label :min_mileage %>
-    <%= ff.number_field :min_mileage%>
+      <%= ff.label :min_mileage %>
+      <%= ff.number_field :min_mileage%>
 
-    <%= ff.label :max_mileage %>
-    <%= ff.number_field :max_mileage%>
-  <% end %>
-
-
-
-
+      <%= ff.label :max_mileage %>
+      <%= ff.number_field :max_mileage%>
+    <% end %>
 
   <%= f.submit "Search Listings" %>
   <% end %>
