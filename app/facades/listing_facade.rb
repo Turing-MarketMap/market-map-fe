@@ -18,4 +18,11 @@ class ListingFacade
     Listing.new(listing_data)
   end
 
+  def self.listings_by_user_id(id)
+    listing_data = ListingService.listings_by_user_id(id)[:data]
+
+    listing_data.map do |listing|
+      Listing.new(listing[:attributes])
+    end
+  end
 end
