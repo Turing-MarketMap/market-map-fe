@@ -2,7 +2,13 @@ require 'rails_helper'
 
 RSpec.describe ListingService do
 
-
+  it 'gets listing based on given id', :vcr do
+    listing = ListingService.get_listing_by_id(1)
+    expect(listing).to be_a(Hash)
+    expect(listing[:data][:attributes][:year]).to be_an(Integer)
+    expect(listing[:data][:attributes][:make]).to be_a(String)
+    expect(listing[:data][:attributes][:model]).to be_a(String)
+  end
   ##Supposed to get listing based on filter params(Big One) && one based on listing id
 
 

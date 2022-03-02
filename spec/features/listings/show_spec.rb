@@ -24,7 +24,7 @@ RSpec.describe 'Listings Show Page', type: :feature do
 
         listing = build(:listing, listing_data)
         listing_attr = {
-                        id: listing.id, 
+                        id: listing.id,
                         year: listing.year,
                         make: listing.make,
                         model: listing.model,
@@ -46,6 +46,19 @@ RSpec.describe 'Listings Show Page', type: :feature do
 
         expect(page).to have_css('img')
       end
+    end
+  end
+
+  describe 'listing show page' do
+
+    it 'displays attributes of listing by id', :vcr do
+      # listing = build(:listing)
+      visit "/listings/#{1}"
+
+      expect(page).to have_content("Make: ")
+      expect(page).to have_content("Model: ")
+      expect(page).to have_content("Year: ")
+      expect(page).to have_content("Miles: ")
     end
   end
 end
