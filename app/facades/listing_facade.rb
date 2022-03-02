@@ -18,12 +18,11 @@ class ListingFacade
   end
 
   def self.listings_by_user_id(id)
-    listing_data = ListingService.listings_by_user_id(id)
-    listing_poros = []
+    listing_data = ListingService.listings_by_user_id(id)[:data]
 
-    listing_data[:data].each do |listing|
-      listing_poros << Listing.new(listing[:attributes])
+    listing_poros_array = listing_data.map do |listing|
+      Listing.new(listing[:attributes])
     end
-    listing_poros
+    listing_poros_array
   end
 end
