@@ -17,5 +17,4 @@ class ListingFacade
     end
     listing_poros
   end
-
 end
