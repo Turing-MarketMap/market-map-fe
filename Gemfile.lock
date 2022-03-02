@@ -154,6 +154,9 @@ GEM
     omniauth-oauth2 (1.7.2)
       oauth2 (~> 1.4)
       omniauth (>= 1.9, < 3)
+    omniauth-rails_csrf_protection (1.0.1)
+      actionpack (>= 4.2)
+      omniauth (~> 2.0)
     orderly (0.1.1)
       capybara (>= 1.1)
       rspec (>= 2.14)
@@ -305,6 +308,7 @@ DEPENDENCIES
   launchy
   listen (>= 3.0.5, < 3.2)
   omniauth-google-oauth2
+  omniauth-rails_csrf_protection
   orderly
   pg (>= 0.18, < 2.0)
   popper_js
