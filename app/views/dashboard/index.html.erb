@@ -14,5 +14,94 @@
 
   <%= f.submit "Search Listings" %>
   <% end %>
+</div>
 
+<div class="js_chart">
+  <canvas id="myChart" width="600" height="150"></canvas>
+  <script type="text/javascript">
+    var listing_data = JSON.parse('<%= raw(@data.to_json) %>');
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const mixedChart = new Chart(ctx, {
+      type: 'scatter',
+      data: {
+          datasets: [{
+              type: 'line',
+              showLine: false,
+              label: 'Listings',
+              //data: [{selling_price: 1, odometer: 1, make: "Honda", model: 'Civic', year: 2010},
+              //      {selling_price: 1, odometer: 2, make: "Honda", model: 'Civic', year: 2018},
+              //      {selling_price: 0, odometer: 1, make: "Honda", model: 'Civic', year: 2013},
+              //      {selling_price: 3, odometer: 3, make: "Honda", model: 'Civic', year: 2018},
+              //      {selling_price: 2.6, odometer: 2, make: "Honda", model: 'Civic', year: 2015},
+              //      {selling_price: 1.8, odometer: 1.4, make: "Honda", model: 'Civic', year: 2017}],
+              data: listing_data,
+              pointBackgroundColor: 'rgba(0,0,200,1)',
+              pointBorderColor: 'rgba(0,0,0,.1)',
+              pointRadius: 2,
+              pointHoverRadius: 20
+          }, {
+              type: 'line',
+              label: 'Regression',
+              //data: [{selling_price: 1, odometer: 1, make: "test"},{selling_price: 1, odometer: 2, make: "test"},{selling_price: 0, odometer: 1, make: "test"},{selling_price: 3, odometer: 3, make: "test"},{selling_price: 2.6, odometer: 2, make: "test"},{selling_price: 1.8, odometer: 1.4, make: "test"}],
+              //data: [[0,1.1],[1,1.6], [2,1.6],[2.5,1.9],[3,2.6]],
+              borderColor: 'rgba(255,150,150,1)',
+              borderJoinStyle: 'bevel',
+              borderWidth: 4,
+              pointBackgroundColor: 'rgba(200,0,0,1)',
+              pointBorderColor: 'rgba(0,0,0,.1)',
+          }]
+      },
+      options: {
+        parsing: {
+          xAxisKey: 'odometer',
+          yAxisKey: 'sellingprice'
+        },
+
+        scales: {
+          y: { title: { color: 'grey', display: true, text: 'Price' } },
+          x: { title: { color: 'grey', display: true, text: 'Mileage' } }
+        },
+
+        plugins: {
+            tooltip: {
+                callbacks: {
+                    label: function(context) {
+                      let data = context.dataset.data[context.dataIndex];
+                      let label = [''];
+
+                      if (data.title) {
+                        label[0] = `${data.title}`;
+                      }
+                      if (data.sellingprice !== null) {
+                        price_label = 'Price: ';
+                        price_label += new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(data.selling_price);
+                        label.push(price_label);
+                      }
+                      if (data.odometer !== null) {
+                        label.push(`Mileage: ${data.odometer}`);
+                      }
+                      if (data.condition !== null) {
+                        label.push(`Condition: ${data.condition}`);
+                      }
+
+                      return label;
+                    }
+                }
+            }
+          },
+
+        onClick: function clickHandler(evt) {
+          const points = mixedChart.getElementsAtEventForMode(evt, 'nearest', { intersect: true }, true);
+
+          if (points.length) {
+            // Gather data from point that is clicked
+            const firstPoint = points[0];
+            const data = mixedChart.data.datasets[firstPoint.datasetIndex].data[firstPoint.index];
+            // redirect to show page with data added to query string
+            location.href = `/listings/${data.id}`;
+          }
+        }
+      }
+    });
+  </script>
 </div>

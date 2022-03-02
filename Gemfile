@@ -58,6 +58,7 @@ group :development, :test do
   gem 'simplecov', require: false, group: :test
   gem 'figaro'
   gem 'jsonapi-serializer'
+  gem 'chartkick'
 end
 
 group :development do
