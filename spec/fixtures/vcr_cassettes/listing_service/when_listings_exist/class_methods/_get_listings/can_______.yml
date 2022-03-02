@@ -1,0 +1,37 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/listings/search?search_params%5Bmake%5D=Toyota&search_params%5Bmax_year%5D=2000&search_params%5Bmin_year%5D=2000&search_params%5Bmodel%5D=Camry
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"93d0ac575c0765fd5103daad42056bfd"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ab4f16ff-97a0-4bd3-8a50-1a0eda4d7ae8
+      X-Runtime:
+      - '0.389815'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"26021","type":"listing","attributes":{"year":2000,"make":"Toyota","model":"Camry","trim":"LE","body":"Sedan","transmission":"automatic","vin":"jt2bg22k8y0482056","state":"ca","condition":4.2,"odometer":142643,"color":"white","interior":"gray","sellingprice":3300}},{"id":"29744","type":"listing","attributes":{"year":2000,"make":"Toyota","model":"Camry","trim":"LE","body":"Sedan","transmission":"automatic","vin":"jt2bg22kxy0477117","state":"fl","condition":2.1,"odometer":102839,"color":"gray","interior":"gray","sellingprice":3000}}]}'
+  recorded_at: Wed, 02 Mar 2022 02:35:20 GMT
+recorded_with: VCR 6.0.0
