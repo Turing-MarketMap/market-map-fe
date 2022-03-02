@@ -34,9 +34,9 @@ RSpec.describe 'listing service' do
         it 'can ______' do
           query = {}
           query[:min_year] = 2000
-          query[:max_year] = 2000
-          query[:make] = "Toyota"
-          query[:model] = "Camry"
+          query[:max_year] = 2010
+          query[:make] = "Subaru"
+          query[:model] = "Impreza"
           listing = ListingService.get_listings(query)
           expect(listing).to be_a(Hash)
           expect(listing[:data]).to be_a(Array)

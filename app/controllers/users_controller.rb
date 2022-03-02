@@ -13,4 +13,8 @@ class UsersController < ApplicationController
     session[:user_id] = user[:data][:id]
     redirect_to root_path
   end
+
+  def destroy
+    UserService.delete_account(session[:user_id])
+  end
 end

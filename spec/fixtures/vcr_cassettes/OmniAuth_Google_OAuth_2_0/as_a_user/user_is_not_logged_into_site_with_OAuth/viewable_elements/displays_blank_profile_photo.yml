@@ -25,9 +25,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b769cfbe-3fd0-452a-80e2-8045e947099d
+      - 55a35356-fbc6-4a9d-9652-a096199bfbf2
       X-Runtime:
-      - '0.043650'
+      - '0.070251'
       Transfer-Encoding:
       - chunked
     body:
@@ -247,5 +247,5 @@ http_interactions:
         Premium PZEV","body":"wagon","transmission":"automatic","vin":"4s4brbcc5c3229871","state":"ny","condition":3.6,"odometer":46936,"color":"gray","interior":"black","sellingprice":16800}},{"id":"12470","type":"listing","attributes":{"year":2014,"make":"Subaru","model":"Outback","trim":"2.5i
         Limited PZEV","body":"wagon","transmission":"automatic","vin":"4s4brbnc8e3215947","state":"ca","condition":4.2,"odometer":29907,"color":"white","interior":"beige","sellingprice":24000}},{"id":"12471","type":"listing","attributes":{"year":2012,"make":"Subaru","model":"Outback","trim":"2.5i
         Premium PZEV","body":"wagon","transmission":"automatic","vin":"4s4brbcc8c3230531","state":"wa","condition":3.0,"odometer":37154,"color":"blue","interior":"beige","sellingprice":17400}}]}'
-  recorded_at: Wed, 02 Mar 2022 20:20:03 GMT
+  recorded_at: Wed, 02 Mar 2022 20:22:11 GMT
 recorded_with: VCR 6.0.0

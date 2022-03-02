@@ -11,19 +11,35 @@ RSpec.describe 'dashboard page' do
     end
 
     describe 'filters' do
-      describe 'make filters' do
-        let!(:make_options_1) { ["A", "B", "C"] }
-        let!(:make_options_2) { ["A", "B", "C", "D", "E"] }
-
-        xit "has make dropdowns that match available models in retreived listings" do
-
+      describe 'filters' do
+        it "they exist", :vcr do
           visit '/'
 
           within 'div.filters' do
-            listings.all_makes.each do |make|
-              select make, from: "Make"
-            end
+            select 'Subaru', from: "Make"
+            select 'Subaru: Impreza', from: "Model"
+            #select 2002, from: "Min Year"
+            #select 2015, from: "Max Year"
+            #select 5000, from: "Min Price"
+            #select 30000, from: "Max Price"
+            #select 5000, from: "Min Mileage"
+            #select 30000, from: "Max Mileage"
+
+
+
+            #fill_in "Make", with: 'Subaru'
+            #fill_in "Model", with: 'Impreza'
+            fill_in "Min year", with: 2002
+            fill_in "Max year", with: 2015
+            fill_in "Min price", with: 5000
+            fill_in "Max price", with: 30000
+            fill_in "Min mileage", with: 5000
+            fill_in "Max mileage", with: 30000
+
+            click_on "Search Listings"
+
           end
+          expect(current_path).to eq('/')
         end
       end
 

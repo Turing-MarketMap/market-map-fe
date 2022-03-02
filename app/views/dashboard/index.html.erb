@@ -1,16 +1,30 @@
 <div class="filters">
   <%= form_with url: '/', method: :get, local: true do |f| %>
-  <%= f.label :min_year %>
-  <%= f.number_field :min_year, value: 2010 %>
+    <%= fields_for :search_params do |ff| %>
+      <%= ff.label :make %>
+      <%= ff.select :make, Listing.all_makes, selected: session[:search_params][:make], include_blank: true%>
 
-  <%= f.label :max_year %>
-  <%= f.number_field :max_year, value: 2010 %>
+      <%= ff.label :model %>
+      <%= ff.select :model, Listing.all_models, selected: session[:search_params][:model], include_blank: true%>
 
-  <%= f.label :make %>
-  <%= f.text_field :make, value: "Honda" %>
+      <%= ff.label :min_year %>
+      <%= ff.number_field :min_year, value: session[:search_params][:min_year]%>
 
-  <%= f.label :model %>
-  <%= f.text_field :model, value: "Civic" %>
+      <%= ff.label :max_year %>
+      <%= ff.number_field :max_year, value: session[:search_params][:max_year]%>
+
+      <%= ff.label :min_price %>
+      <%= ff.number_field :min_price%>
+
+      <%= ff.label :max_price %>
+      <%= ff.number_field :max_price%>
+
+      <%= ff.label :min_mileage %>
+      <%= ff.number_field :min_mileage%>
+
+      <%= ff.label :max_mileage %>
+      <%= ff.number_field :max_mileage%>
+    <% end %>
 
   <%= f.submit "Search Listings" %>
   <% end %>
@@ -20,6 +34,7 @@
   <canvas id="myChart" width="600" height="150"></canvas>
   <script type="text/javascript">
     var listing_data = JSON.parse('<%= raw(@data.to_json) %>');
+    var title = `${listing_data[0].make} ${listing_data[0].model}`
     const ctx = document.getElementById('myChart').getContext('2d');
     const mixedChart = new Chart(ctx, {
       type: 'scatter',
@@ -63,32 +78,36 @@
         },
 
         plugins: {
-            tooltip: {
-                callbacks: {
-                    label: function(context) {
-                      let data = context.dataset.data[context.dataIndex];
-                      let label = [''];
-
-                      if (data.title) {
-                        label[0] = `${data.title}`;
-                      }
-                      if (data.sellingprice !== null) {
-                        price_label = 'Price: ';
-                        price_label += new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(data.selling_price);
-                        label.push(price_label);
-                      }
-                      if (data.odometer !== null) {
-                        label.push(`Mileage: ${data.odometer}`);
-                      }
-                      if (data.condition !== null) {
-                        label.push(`Condition: ${data.condition}`);
-                      }
-
-                      return label;
-                    }
-                }
-            }
+          title: {
+            display: true,
+            text: title
           },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                let data = context.dataset.data[context.dataIndex];
+                let label = [''];
+
+                if (data.title) {
+                  label[0] = `${data.title}`;
+                }
+                if (data.sellingprice !== null) {
+                  price_label = 'Price: ';
+                  price_label += new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(data.sellingprice);
+                  label.push(price_label);
+                }
+                if (data.odometer !== null) {
+                  label.push(`Mileage: ${data.odometer}`);
+                }
+                if (data.condition !== null) {
+                  label.push(`Condition: ${data.condition}`);
+                }
+
+                return label;
+              }
+            }
+          }
+        },
 
         onClick: function clickHandler(evt) {
           const points = mixedChart.getElementsAtEventForMode(evt, 'nearest', { intersect: true }, true);
