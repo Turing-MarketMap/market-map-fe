@@ -1,3 +1,50 @@
+require 'rails_helper'
+
+RSpec.describe ListingService do
+
+
+  ##Supposed to get listing based on filter params(Big One) && one based on listing id
+
+
+#   it 'can get listing based on id', :vcr do
+#
+#     listing_json = "{\"data\":[{\"id\":\"2092\",\"type\":\"listing\",\"attributes\":{\"year\":2001,\"make\":\"Toyota\",\"model\":\"Camry\",\"trim\":\"ESi\",\"body\":\"Hatchback\",\"transmission\":\"Manual\",\"vin\":\"0XZYK6N14YA209760\",\"state\":\"WY\",\"condition\":2.83,\"odometer\":64746,\"color\":\"Blue\",\"interior\":\"Odio minima modi omnis.\",\"sellingprice\":29407}}]}"
+#
+#     stub_request(:get, "http://localhost:3000/api/v1/listings/search").with(query: { 'listing[:make]' => 'Toyota', 'listing[:model]' => 'Camry'}).to_return(status: 200, body: listing_json, headers: {})
+#
+#
+#
+#     listing =  ListingService.find_listing('Toyota', 'Camry')
+#     binding.pry
+#     expect(listing[:data][:attributes][:id]).to eq(1)
+#     expect(listing[:data][:attributes][:color]).to eq('color')
+#     expect(listing[:data][:attributes][:drivetrain]).to eq('drivetrain')
+#   end
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # require 'rails_helper'
 #
 # RSpec.describe 'listing service' do
