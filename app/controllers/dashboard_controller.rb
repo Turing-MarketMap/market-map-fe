@@ -1,6 +1,7 @@
 class DashboardController < ApplicationController
   before_action :current_user
 
+  def index
     @listings = ListingFacade.get_listings(search_params.to_h.symbolize_keys)
     if @listings != []
       @data = ListingFacade.data_hash(@listings)

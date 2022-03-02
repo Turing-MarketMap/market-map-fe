@@ -21,17 +21,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"93d0ac575c0765fd5103daad42056bfd"
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ab4f16ff-97a0-4bd3-8a50-1a0eda4d7ae8
+      - 1b6e488a-9236-449a-84e5-01a85e3ca518
       X-Runtime:
-      - '0.389815'
+      - '0.013946'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"26021","type":"listing","attributes":{"year":2000,"make":"Toyota","model":"Camry","trim":"LE","body":"Sedan","transmission":"automatic","vin":"jt2bg22k8y0482056","state":"ca","condition":4.2,"odometer":142643,"color":"white","interior":"gray","sellingprice":3300}},{"id":"29744","type":"listing","attributes":{"year":2000,"make":"Toyota","model":"Camry","trim":"LE","body":"Sedan","transmission":"automatic","vin":"jt2bg22kxy0477117","state":"fl","condition":2.1,"odometer":102839,"color":"gray","interior":"gray","sellingprice":3000}}]}'
-  recorded_at: Wed, 02 Mar 2022 02:35:20 GMT
+      string: '{"data":[]}'
+  recorded_at: Wed, 02 Mar 2022 20:20:04 GMT
 recorded_with: VCR 6.0.0
