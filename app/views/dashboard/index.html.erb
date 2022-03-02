@@ -1,7 +1,7 @@
 <h1>Market Map</h1>
 
 <div class="filters">
-  <%= form_with url: '/listings', method: :get, local: true do |f| %>
+  <%= form_with url: '/', method: :get, local: true do |f| %>
   <%= f.label :min_year %>
   <%= f.number_field :min_year, value: 2010 %>
 

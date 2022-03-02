@@ -4,10 +4,6 @@ class ListingsController < ApplicationController
     @image = ImageFacade.search_for_listing_image(@listing.title, @listing.color)
   end
 
-  def search
-    @listings = ListingFacade.get_listings(params)
-    redirect_to '/'
-  end
 
   private
 
