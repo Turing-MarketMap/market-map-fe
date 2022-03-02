@@ -33,7 +33,6 @@ gem 'jbuilder', '~> 2.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
-
 # Add Faraday for HTTP requests
 gem 'faraday'
 
@@ -59,6 +58,7 @@ group :development, :test do
   gem 'simplecov', require: false, group: :test
   gem 'figaro'
   gem 'jsonapi-serializer'
+  gem 'chartkick'
 end
 
 group :development do

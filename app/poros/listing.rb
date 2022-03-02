@@ -13,7 +13,8 @@ class Listing
               :color,
               :interior,
               :selling_price,
-              :title
+              :title,
+              :data_hash
 
   def initialize(data = {})
     @id = data[:id]
@@ -29,8 +30,11 @@ class Listing
     @odometer = data[:odometer]
     @color = data[:color]
     @interior = data[:interior]
-    @selling_price = data[:sellingPrice]
+    @selling_price = data[:selling_price]
     @title = "#{@year} #{@make} #{@model}"
+
+    data[:title] = @title
+    @data_hash = data
   end
 
   def self.all_makes

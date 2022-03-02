@@ -25,7 +25,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Tue, 01 Mar 2022 17:05:57 GMT
+      - Wed, 02 Mar 2022 01:46:22 GMT
       Server:
       - ESF
       Cache-Control:
@@ -50,13 +50,72 @@ http_interactions:
             "message": "The request is missing a valid API key.",
             "errors": [
               {
-                "message": "The request is missing a valid API key.",
-                "domain": "global",
-                "reason": "forbidden"
+                "title": "Google Custom Search - 2015 kia sorento",
+                "totalResults": "41800000",
+                "searchTerms": "2015 kia sorento",
+                "count": 1,
+                "startIndex": 1,
+                "inputEncoding": "utf8",
+                "outputEncoding": "utf8",
+                "safe": "off",
+                "cx": "<cx>",
+                "searchType": "image",
+                "imgSize": "large",
+                "imgType": "photo",
+                "imgColorType": "color",
+                "imgDominantColor": "blue"
               }
             ],
-            "status": "PERMISSION_DENIED"
-          }
+            "nextPage": [
+              {
+                "title": "Google Custom Search - 2015 kia sorento",
+                "totalResults": "41800000",
+                "searchTerms": "2015 kia sorento",
+                "count": 1,
+                "startIndex": 2,
+                "inputEncoding": "utf8",
+                "outputEncoding": "utf8",
+                "safe": "off",
+                "cx": "<cx>",
+                "searchType": "image",
+                "imgSize": "large",
+                "imgType": "photo",
+                "imgColorType": "color",
+                "imgDominantColor": "blue"
+              }
+            ]
+          },
+          "context": {
+            "title": "market-map-images"
+          },
+          "searchInformation": {
+            "searchTime": 0.532774,
+            "formattedSearchTime": "0.53",
+            "totalResults": "41800000",
+            "formattedTotalResults": "41,800,000"
+          },
+          "items": [
+            {
+              "kind": "customsearch#result",
+              "title": "2015 Kia Sorento for Sale in Whitewater, WI - Russ Darrow Kia of ...",
+              "htmlTitle": "\u003cb\u003e2015 Kia Sorento\u003c/b\u003e for Sale in Whitewater, WI - Russ Darrow \u003cb\u003eKia\u003c/b\u003e of ...",
+              "link": "https://www.kiaofwaukesha.com/resrc/media/image/222266/cm-header-15-sorento.jpg",
+              "displayLink": "www.kiaofwaukesha.com",
+              "snippet": "2015 Kia Sorento for Sale in Whitewater, WI - Russ Darrow Kia of ...",
+              "htmlSnippet": "\u003cb\u003e2015 Kia Sorento\u003c/b\u003e for Sale in Whitewater, WI - Russ Darrow \u003cb\u003eKia\u003c/b\u003e of ...",
+              "mime": "image/jpeg",
+              "fileFormat": "image/jpeg",
+              "image": {
+                "contextLink": "https://www.kiaofwaukesha.com/2015-kia-sorento-whitewater/",
+                "height": 400,
+                "width": 960,
+                "byteSize": 183559,
+                "thumbnailLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmkXLiR-_8rl5pRzrhm-ya-vlMpO0Evuj_MrH6jqHTxzg5QXxiG-O1wQs&s",
+                "thumbnailHeight": 62,
+                "thumbnailWidth": 148
+              }
+            }
+          ]
         }
-  recorded_at: Tue, 01 Mar 2022 17:05:57 GMT
+  recorded_at: Wed, 02 Mar 2022 01:46:22 GMT
 recorded_with: VCR 6.0.0
