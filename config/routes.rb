@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#destroy'
 
   get '/profile', to: 'users#show'
+  delete '/users', to: 'users#destroy'
 
   resources :listings, only: %i[show]
 end
