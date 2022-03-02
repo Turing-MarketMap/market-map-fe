@@ -25,7 +25,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Sun, 27 Feb 2022 01:21:34 GMT
+      - Wed, 02 Mar 2022 01:46:24 GMT
       Server:
       - ESF
       Cache-Control:
@@ -54,7 +54,7 @@ http_interactions:
             "request": [
               {
                 "title": "Google Custom Search - 2015 Honda Civic",
-                "totalResults": "611000000",
+                "totalResults": "585000000",
                 "searchTerms": "2015 Honda Civic",
                 "count": 1,
                 "startIndex": 1,
@@ -72,7 +72,7 @@ http_interactions:
             "nextPage": [
               {
                 "title": "Google Custom Search - 2015 Honda Civic",
-                "totalResults": "611000000",
+                "totalResults": "585000000",
                 "searchTerms": "2015 Honda Civic",
                 "count": 1,
                 "startIndex": 2,
@@ -92,10 +92,10 @@ http_interactions:
             "title": "market-map-images"
           },
           "searchInformation": {
-            "searchTime": 0.527402,
-            "formattedSearchTime": "0.53",
-            "totalResults": "611000000",
-            "formattedTotalResults": "611,000,000"
+            "searchTime": 0.482472,
+            "formattedSearchTime": "0.48",
+            "totalResults": "585000000",
+            "formattedTotalResults": "585,000,000"
           },
           "items": [
             {
@@ -120,7 +120,7 @@ http_interactions:
             }
           ]
         }
-  recorded_at: Sun, 27 Feb 2022 01:21:34 GMT
+  recorded_at: Wed, 02 Mar 2022 01:46:24 GMT
 - request:
     method: get
     uri: https://customsearch.googleapis.com/customsearch/v1?cx=<cx>&imgColorType=color&imgDominantColor=gray&imgSize=LARGE&imgType=photo&key=<key>&num=1&q=2015%20Honda%20Civic&searchType=image
@@ -146,7 +146,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Sun, 27 Feb 2022 01:21:35 GMT
+      - Wed, 02 Mar 2022 01:46:24 GMT
       Server:
       - ESF
       Cache-Control:
@@ -175,7 +175,7 @@ http_interactions:
             "request": [
               {
                 "title": "Google Custom Search - 2015 Honda Civic",
-                "totalResults": "607000000",
+                "totalResults": "585000000",
                 "searchTerms": "2015 Honda Civic",
                 "count": 1,
                 "startIndex": 1,
@@ -193,7 +193,7 @@ http_interactions:
             "nextPage": [
               {
                 "title": "Google Custom Search - 2015 Honda Civic",
-                "totalResults": "607000000",
+                "totalResults": "585000000",
                 "searchTerms": "2015 Honda Civic",
                 "count": 1,
                 "startIndex": 2,
@@ -213,10 +213,10 @@ http_interactions:
             "title": "market-map-images"
           },
           "searchInformation": {
-            "searchTime": 0.416834,
-            "formattedSearchTime": "0.42",
-            "totalResults": "607000000",
-            "formattedTotalResults": "607,000,000"
+            "searchTime": 0.140153,
+            "formattedSearchTime": "0.14",
+            "totalResults": "585000000",
+            "formattedTotalResults": "585,000,000"
           },
           "items": [
             {
@@ -241,5 +241,5 @@ http_interactions:
             }
           ]
         }
-  recorded_at: Sun, 27 Feb 2022 01:21:35 GMT
+  recorded_at: Wed, 02 Mar 2022 01:46:24 GMT
 recorded_with: VCR 6.0.0

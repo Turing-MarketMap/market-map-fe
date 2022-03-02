@@ -25,7 +25,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Sat, 26 Feb 2022 22:57:56 GMT
+      - Wed, 02 Mar 2022 01:46:22 GMT
       Server:
       - ESF
       Cache-Control:
@@ -54,7 +54,7 @@ http_interactions:
             "request": [
               {
                 "title": "Google Custom Search - 2015 kia sorento",
-                "totalResults": "40500000",
+                "totalResults": "41800000",
                 "searchTerms": "2015 kia sorento",
                 "count": 1,
                 "startIndex": 1,
@@ -72,7 +72,7 @@ http_interactions:
             "nextPage": [
               {
                 "title": "Google Custom Search - 2015 kia sorento",
-                "totalResults": "40500000",
+                "totalResults": "41800000",
                 "searchTerms": "2015 kia sorento",
                 "count": 1,
                 "startIndex": 2,
@@ -92,33 +92,33 @@ http_interactions:
             "title": "market-map-images"
           },
           "searchInformation": {
-            "searchTime": 0.273012,
-            "formattedSearchTime": "0.27",
-            "totalResults": "40500000",
-            "formattedTotalResults": "40,500,000"
+            "searchTime": 0.532774,
+            "formattedSearchTime": "0.53",
+            "totalResults": "41800000",
+            "formattedTotalResults": "41,800,000"
           },
           "items": [
             {
               "kind": "customsearch#result",
-              "title": "Used 2015 Kia Sorento for Sale Near Me | Edmunds",
-              "htmlTitle": "Used \u003cb\u003e2015 Kia Sorento\u003c/b\u003e for Sale Near Me | Edmunds",
-              "link": "https://media.ed.edmunds-media.com/for-sale/30-5xykt4a64fg560469/img-1-600x400.jpg",
-              "displayLink": "www.edmunds.com",
-              "snippet": "Used 2015 Kia Sorento for Sale Near Me | Edmunds",
-              "htmlSnippet": "Used \u003cb\u003e2015 Kia Sorento\u003c/b\u003e for Sale Near Me | Edmunds",
+              "title": "2015 Kia Sorento for Sale in Whitewater, WI - Russ Darrow Kia of ...",
+              "htmlTitle": "\u003cb\u003e2015 Kia Sorento\u003c/b\u003e for Sale in Whitewater, WI - Russ Darrow \u003cb\u003eKia\u003c/b\u003e of ...",
+              "link": "https://www.kiaofwaukesha.com/resrc/media/image/222266/cm-header-15-sorento.jpg",
+              "displayLink": "www.kiaofwaukesha.com",
+              "snippet": "2015 Kia Sorento for Sale in Whitewater, WI - Russ Darrow Kia of ...",
+              "htmlSnippet": "\u003cb\u003e2015 Kia Sorento\u003c/b\u003e for Sale in Whitewater, WI - Russ Darrow \u003cb\u003eKia\u003c/b\u003e of ...",
               "mime": "image/jpeg",
               "fileFormat": "image/jpeg",
               "image": {
-                "contextLink": "https://www.edmunds.com/kia/sorento/2015/",
+                "contextLink": "https://www.kiaofwaukesha.com/2015-kia-sorento-whitewater/",
                 "height": 400,
-                "width": 600,
-                "byteSize": 43046,
-                "thumbnailLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKQ4hbU9K3FDjI5Z-GY8VUVV4xSqRmwgOJIrIuNGHSTh6_fruYG5_Ltlw&s",
-                "thumbnailHeight": 90,
-                "thumbnailWidth": 135
+                "width": 960,
+                "byteSize": 183559,
+                "thumbnailLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmkXLiR-_8rl5pRzrhm-ya-vlMpO0Evuj_MrH6jqHTxzg5QXxiG-O1wQs&s",
+                "thumbnailHeight": 62,
+                "thumbnailWidth": 148
               }
             }
           ]
         }
-  recorded_at: Sat, 26 Feb 2022 22:57:56 GMT
+  recorded_at: Wed, 02 Mar 2022 01:46:22 GMT
 recorded_with: VCR 6.0.0

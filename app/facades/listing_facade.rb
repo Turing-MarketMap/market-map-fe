@@ -1,6 +1,9 @@
 class ListingFacade
   def self.get_listings(query)
     json = ListingService.get_listings(query)
+    json[:data].map do |listing|
+      Listing.new(listing[:attributes])
+    end
   end
 
   def self.data_hash(listings)
