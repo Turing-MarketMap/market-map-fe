@@ -1,9 +1,18 @@
 <div class="filters">
-  <%= form_with url: '/listings', method: :post, local: true do |f| %>
-    <%= f.label :make %>
-    <%= f.select(:make, ["a","b"]) %>
-    <%= f.label :model %>
-    <%= f.select(:model, ["a","b"]) %>
+  <%= form_with url: '/', method: :get, local: true do |f| %>
+  <%= f.label :min_year %>
+  <%= f.number_field :min_year, value: 2010 %>
+
+  <%= f.label :max_year %>
+  <%= f.number_field :max_year, value: 2010 %>
+
+  <%= f.label :make %>
+  <%= f.text_field :make, value: "Honda" %>
+
+  <%= f.label :model %>
+  <%= f.text_field :model, value: "Civic" %>
+
+  <%= f.submit "Search Listings" %>
   <% end %>
 </div>
 

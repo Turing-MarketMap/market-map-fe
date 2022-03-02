@@ -3,6 +3,7 @@ class DashboardController < ApplicationController
     if session[:auth_hash]
       current_user
     end
-    @listings = ListingFacade.get_listings(:q)
+    @listings = ListingFacade.get_listings(params)
   end
+
 end
