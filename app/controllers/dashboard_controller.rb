@@ -1,8 +1,9 @@
 class DashboardController < ApplicationController
   def index
-    @listings = ListingFacade.get_listings(:q)
-
-    # If session[:user_id].nil? == false
-    ## UserService.find_user(session[:email])
+    if session[:auth_hash]
+      current_user
+    end
+    @listings = ListingFacade.get_listings(params)
   end
+
 end

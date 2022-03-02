@@ -36,6 +36,16 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # Add Faraday for HTTP requests
 gem 'faraday'
 
+# Google OmniAuth, Oauth implementation
+gem 'omniauth-google-oauth2'
+
+# Add bootstrap and related FE gems
+gem 'bootstrap', '~> 5.1.3'
+gem 'jquery-rails'
+gem 'simple_form'
+gem 'popper_js'
+gem 'tether-rails'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

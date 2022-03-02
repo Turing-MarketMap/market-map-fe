@@ -4,24 +4,25 @@ class ListingsController < ApplicationController
     @image = ImageFacade.search_for_listing_image(@listing.title, @listing.color)
   end
 
+
   private
 
   def listing_params
     params.require(:listing).permit(
-                                    :id, 
-                                    :year, 
-                                    :make, 
-                                    :model, 
-                                    :trim, 
-                                    :body, 
-                                    :transmission, 
-                                    :vin, 
-                                    :state, 
-                                    :condition, 
-                                    :odometer, 
-                                    :color, 
-                                    :interior, 
-                                    :selling_price, 
+                                    :id,
+                                    :year,
+                                    :make,
+                                    :model,
+                                    :trim,
+                                    :body,
+                                    :transmission,
+                                    :vin,
+                                    :state,
+                                    :condition,
+                                    :odometer,
+                                    :color,
+                                    :interior,
+                                    :selling_price,
                                     :title
                                    )
   end
