@@ -4,7 +4,9 @@ class ListingFacade
   end
 
   def self.data_hash(listings)
-    listings.map { |listing| listing.data_hash }
+    if listings != []
+      return listings.map { |listing| listing.data_hash }
+    end
   end
 
 end
