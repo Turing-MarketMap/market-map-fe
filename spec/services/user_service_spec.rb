@@ -20,7 +20,6 @@ RSpec.describe UserService do
   xit 'can destroy a users account', :vcr do
     user = UserService.find_user('eturambi@gmail.com', 'eldridge', 'turambi')
     json = UserService.delete_account(user[:data][:id])
-    binding.pry
     expect(response.status).to eq(204)
   end
 end
