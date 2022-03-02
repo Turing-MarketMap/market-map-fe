@@ -46,6 +46,11 @@ RSpec.describe 'dashboard page' do
     end
   end
 
+  describe 'Link to listing show page' do
+
+    it 'sees link that routes to listing show page'
+  end
+
   context 'as user' do
     describe 'before logging into the site' do
       describe 'viewable elements' do
