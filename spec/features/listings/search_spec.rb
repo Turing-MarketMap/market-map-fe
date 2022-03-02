@@ -5,10 +5,10 @@ RSpec.describe 'Listings search', type: :feature do
   context 'as a logged in user', :vcr do
     it 'can display matching cars when search is completed' do
       visit '/'
-      fill_in :min_year, with: 2001
-      fill_in :max_year, with: 2005
-      fill_in :make, with: "Toyota"
-      fill_in :model, with: "Camry"
+      fill_in "Min year", with: 2002
+      fill_in "Max year", with: 2015
+      select "Subaru", from: "Make"
+      select "Subaru: Outback", from: "Model"
 
       click_button "Search Listings"
 

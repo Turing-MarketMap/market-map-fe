@@ -25,16 +25,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f8f7ca58-c888-48ab-b75a-a6706b28da5d
+      - 2fe5d53a-1b9a-485a-930f-d7612c82477d
       X-Runtime:
-      - '0.019916'
+      - '0.002038'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"listing","attributes":{"year":2014,"make":"Acura","model":"ILX","trim":"Technology
         Package","body":"Sedan","transmission":"automatic","vin":"19vde1f70ee008913","state":"ca","condition":2.5,"odometer":9051,"color":"gray","interior":"black","sellingprice":21250}}}'
-  recorded_at: Wed, 02 Mar 2022 01:28:04 GMT
+  recorded_at: Wed, 02 Mar 2022 20:20:03 GMT
 - request:
     method: get
     uri: https://customsearch.googleapis.com/customsearch/v1?cx=<cx>&imgColorType=color&imgDominantColor=gray&imgSize=LARGE&imgType=photo&key=<key>&num=1&q=2014%20Acura%20ILX&searchType=image
@@ -60,7 +60,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 02 Mar 2022 01:28:05 GMT
+      - Wed, 02 Mar 2022 20:20:04 GMT
       Server:
       - ESF
       Cache-Control:
@@ -89,7 +89,7 @@ http_interactions:
             "request": [
               {
                 "title": "Google Custom Search - 2014 Acura ILX",
-                "totalResults": "19400000",
+                "totalResults": "17700000",
                 "searchTerms": "2014 Acura ILX",
                 "count": 1,
                 "startIndex": 1,
@@ -107,7 +107,7 @@ http_interactions:
             "nextPage": [
               {
                 "title": "Google Custom Search - 2014 Acura ILX",
-                "totalResults": "19400000",
+                "totalResults": "17700000",
                 "searchTerms": "2014 Acura ILX",
                 "count": 1,
                 "startIndex": 2,
@@ -127,10 +127,10 @@ http_interactions:
             "title": "market-map-images"
           },
           "searchInformation": {
-            "searchTime": 0.448495,
-            "formattedSearchTime": "0.45",
-            "totalResults": "19400000",
-            "formattedTotalResults": "19,400,000"
+            "searchTime": 0.146147,
+            "formattedSearchTime": "0.15",
+            "totalResults": "17700000",
+            "formattedTotalResults": "17,700,000"
           },
           "items": [
             {
@@ -155,5 +155,5 @@ http_interactions:
             }
           ]
         }
-  recorded_at: Wed, 02 Mar 2022 01:28:05 GMT
+  recorded_at: Wed, 02 Mar 2022 20:20:04 GMT
 recorded_with: VCR 6.0.0
