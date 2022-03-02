@@ -1,0 +1,95 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <!-- Toggle button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Navbar brand -->
+      <a class="navbar-brand mt-2 mt-lg-0" href="#">
+        <img
+          src="/assets/market_map_icon.png"
+          height="50"
+          alt="Market Map Logo"
+          loading="lazy"
+        />
+        <small>Market Map</small>
+      </a>
+      <span class="navbar-text">
+        Find your used car destination today!
+      </span>
+    </div>
+    <!-- Collapsible wrapper -->
+
+    <!-- Right elements -->
+    <div class="d-flex align-items-center">
+      <!-- Avatar -->
+      <% if @current_user.present? %>
+        <div class="dropdown">
+          <a
+            class="dropdown-toggle d-flex align-items-center hidden-arrow"
+            href="/profile"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img
+              src="<%= @current_user[:image] %>"
+              class="rounded-circle"
+              height="25"
+              alt="<%= @current_user[:name] %> - Profile's Photo"
+              loading="lazy"
+            />
+          </a>
+          <ul
+            class="dropdown-menu dropdown-menu-end"
+            aria-labelledby="navbarDropdown"
+          >
+            <li>
+              <a class="dropdown-item" href="/profile">My profile</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="/logout">Logout</a>
+            </li>
+          </ul>
+        </div>
+      <% else %>
+        <div class="no-user-present">
+          <a
+            class="d-flex align-items-center"
+            href="/auth/google_oauth2"
+            id="navbarNoProfile"
+            role="button"
+            aria-expanded="false"
+          >
+          Login with Google
+            <img
+              src="/assets/person-circle.svg"
+              class="rounded-circle ms-1"
+              height="25"
+              alt="Login with Google"
+              loading="lazy"
+            />
+          </a>
+        </div>
+      <% end %>
+
+    </div>
+    <!-- Right elements -->
+  </div>
+  <!-- Container wrapper -->
+</nav>
+<!-- Navbar -->
