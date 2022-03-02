@@ -1,23 +1,24 @@
 require 'rails_helper'
 
 RSpec.describe 'listing poro' do
-  let!(:listing) { build(:listing,
-                        id: 1,
-                        year: 2015,
-                        make: "Honda",
-                        model: "Civic",
-                        trim: "LX",
-                        body: "sedan",
-                        transmission: "automatic",
-                        vin: "19xfb2f58ce307205",
-                        state: "ca",
-                        condition: 2.6,
-                        odometer: 73995,
-                        color: "gray",
-                        interior: "gray",
-                        selling_price: 8900,
-                        title: '2015 Honda Civic'
-                        ) }
+  let!(:listing_data) { {
+                  id: 1,
+                  year: 2015,
+                  make: "Honda",
+                  model: "Civic",
+                  trim: "LX",
+                  body: "sedan",
+                  transmission: "automatic",
+                  vin: "19xfb2f58ce307205",
+                  state: "ca",
+                  condition: 2.6,
+                  odometer: 73995,
+                  color: "gray",
+                  interior: "gray",
+                  selling_price: 8900,
+                  title: '2015 Honda Civic'
+                 } }
+  let!(:listing) { Listing.new(listing_data) }
 
   it "exists" do
     expect(listing).to be_a(Listing)
@@ -39,6 +40,7 @@ RSpec.describe 'listing poro' do
     expect(listing.interior).to be_a(String)
     expect(listing.selling_price).to be_a(Integer)
     expect(listing.title).to be_a(String)
+    expect(listing.data_hash).to be_a(Hash)
 
     expect(listing.id).to eq(1)
     expect(listing.year).to eq(2015)
@@ -55,6 +57,7 @@ RSpec.describe 'listing poro' do
     expect(listing.interior).to eq("gray")
     expect(listing.selling_price).to eq(8900)
     expect(listing.title).to eq('2015 Honda Civic')
+    expect(listing.data_hash).to eq(listing_data)
   end
 
   it "has factory with correct default attributes" do

@@ -68,8 +68,8 @@
                       let data = context.dataset.data[context.dataIndex];
                       let label = [''];
 
-                      if (data.make !== null && data.model != null && data.year) {
-                        label[0] = `${data.year} ${data.make} ${data.model}`;
+                      if (data.title) {
+                        label[0] = `${data.title}`;
                       }
                       if (data.selling_price !== null) {
                         price_label = 'Price: ';
@@ -79,6 +79,10 @@
                       if (data.odometer !== null) {
                         label.push(`Mileage: ${data.odometer}`);
                       }
+                      if (data.condition !== null) {
+                        label.push(`Condition: ${data.condition}`);
+                      }
+
                       return label;
                     }
                 }
