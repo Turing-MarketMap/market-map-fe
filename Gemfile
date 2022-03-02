@@ -38,6 +38,7 @@ gem 'faraday'
 
 # Google OmniAuth, Oauth implementation
 gem 'omniauth-google-oauth2'
+gem 'omniauth-rails_csrf_protection'
 
 # Add bootstrap and related FE gems
 gem 'bootstrap', '~> 5.1.3'
