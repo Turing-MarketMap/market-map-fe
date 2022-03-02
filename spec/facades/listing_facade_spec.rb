@@ -1,6 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe 'listing_facade' do
+  it 'makes Listing poros', :vcr do
+    listing = ListingFacade.get_listing_by_id(1)
+    expect(listing.make).to be_a(String)
+    expect(listing.model).to be_a(String)
+    expect(listing.year).to be_a(Integer)
+  end
+
   context 'class methods' do
     describe 'data_hash' do
       context 'listings exist' do
@@ -31,7 +38,6 @@ RSpec.describe 'listing_facade' do
           expect(ListingFacade.data_hash([])).to eq(nil)
         end
       end
-
     end
   end
 end

@@ -24,7 +24,7 @@ RSpec.describe 'listing poro' do
     expect(listing).to be_a(Listing)
   end
 
-  it "has correct attributes" do
+  xit "has correct attributes" do
     expect(listing.id).to be_a(Integer)
     expect(listing.year).to be_a(Integer)
     expect(listing.make).to be_a(String)
@@ -60,7 +60,7 @@ RSpec.describe 'listing poro' do
     expect(listing.data_hash).to eq(listing_data)
   end
 
-  it "has factory with correct default attributes" do
+  xit "has factory with correct default attributes" do
     listing = build(:listing)
     expect(listing.id).to be_a(Integer)
     expect(listing.year).to be_a(Integer)

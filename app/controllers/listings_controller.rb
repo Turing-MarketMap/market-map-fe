@@ -1,6 +1,7 @@
 class ListingsController < ApplicationController
   def show
-    @listing = Listing.new(listing_params)
+    # @listing = Listing.new(listing_params)
+    @listing = ListingFacade.get_listing_by_id(params[:id])
     @image = ImageFacade.search_for_listing_image(@listing.title, @listing.color)
   end
 

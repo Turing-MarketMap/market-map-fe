@@ -12,4 +12,9 @@ class ListingFacade
     end
   end
 
+  def self.get_listing_by_id(id)
+    listing_data = ListingService.get_listing_by_id(id)[:data][:attributes]
+    Listing.new(listing_data)
+  end
+
 end
