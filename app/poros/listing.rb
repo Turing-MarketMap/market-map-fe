@@ -32,6 +32,8 @@ class Listing
     @interior = data[:interior]
     @selling_price = data[:selling_price]
     @title = "#{@year} #{@make} #{@model}"
+
+    data[:title] = @title
     @data_hash = data
   end
 
