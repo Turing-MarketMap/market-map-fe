@@ -35,6 +35,7 @@
     <canvas id="myChart" width="600" height="200"></canvas>
     <script type="text/javascript">
       var listing_data = JSON.parse('<%= raw(@data.to_json) %>');
+      var fair_price_data = JSON.parse('<%= raw(@fair_prices.to_json) %>');
       var title = `${listing_data[0].make} ${listing_data[0].model}`
       const ctx = document.getElementById('myChart').getContext('2d');
       const mixedChart = new Chart(ctx, {
@@ -52,8 +53,7 @@
             }, {
                 type: 'line',
                 label: 'Regression',
-                //data: [{selling_price: 1, odometer: 1, make: "test"},{selling_price: 1, odometer: 2, make: "test"},{selling_price: 0, odometer: 1, make: "test"},{selling_price: 3, odometer: 3, make: "test"},{selling_price: 2.6, odometer: 2, make: "test"},{selling_price: 1.8, odometer: 1.4, make: "test"}],
-                //data: [[0,1.1],[1,1.6], [2,1.6],[2.5,1.9],[3,2.6]],
+                data: fair_price_data,
                 borderColor: 'rgba(255,150,150,1)',
                 borderJoinStyle: 'bevel',
                 borderWidth: 4,

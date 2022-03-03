@@ -8,8 +8,11 @@ RSpec.describe 'FairPriceFacade' do
     it "returns expected data", :vcr do
       data = FairPriceFacade.get_fair_price(name, mileage)
       expect(data).to be_a(Array)
-      expect(data.count).to eq(2)
-      expect(data.sample(1)[0]).to be_a(Integer)
+      sample = data.sample(1)[0]
+      expect(sample).to be_a(Hash)
+      expect(sample.keys).to eq([:odometer, :sellingprice])
+      expect(sample[:odometer]).to be_a(Integer)
+      expect(sample[:sellingprice]).to be_a(Integer)
     end
   end
 

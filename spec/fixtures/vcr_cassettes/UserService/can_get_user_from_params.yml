@@ -27,13 +27,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c039def8-90dc-4eb2-9779-bcdc2aaec20a
+      - 87c3b285-5ea5-4450-bf5e-f16420b2a0cc
       X-Runtime:
-      - '0.122397'
+      - '0.055510'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"eldridge","last_name":"turambi","email":"eturambi@gmail.com"}}}'
-  recorded_at: Wed, 02 Mar 2022 23:05:02 GMT
+  recorded_at: Thu, 03 Mar 2022 19:22:58 GMT
 recorded_with: VCR 6.0.0
