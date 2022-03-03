@@ -10,5 +10,7 @@ class UsersController < ApplicationController
 
   def destroy
     UserService.delete_account(session[:user_id])
+    
+    redirect_to logout_path
   end
 end
