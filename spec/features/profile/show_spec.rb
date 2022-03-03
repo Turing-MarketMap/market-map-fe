@@ -12,31 +12,31 @@ RSpec.describe 'User profile show page', :vcr, type: :feature do
       click_link 'Login with Google'
 
       visit '/profile'
+
       expect(page).to have_content("My account details:")
       expect(page).to have_content("Name: Example User")
       expect(page).to have_content("User ID: 1234")
       expect(page).to have_link("Delete my account")
       ### Add tests for saved listings
-
     end
 
-    it 'no longer shows profile page after user logs out' do
+    it 'no longer shows profile page after user logs out and flash message' do
       visit '/'
       click_link 'Login with Google'
       click_link 'Logout'
       visit '/profile'
+
       expect(current_path).to eq('/')
       expect(page).to have_content('Please login to see user profile information')
-
     end
   end
 
   context 'not logged in', :vcr do
     it 'does not show profile page' do
       visit '/profile'
+      
       expect(current_path).to eq('/')
       expect(page).to have_content('Please login to see user profile information')
-      save_and_open_page
     end
   end
 end
