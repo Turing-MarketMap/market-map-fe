@@ -17,4 +17,12 @@ class UsersController < ApplicationController
   def destroy
     UserService.delete_account(session[:user_id])
   end
+
+  def show
+    if session[:auth_hash] == nil
+      redirect_to '/'
+      flash[:alert] = "Please login to see user profile information"
+    end
+
+  end
 end
