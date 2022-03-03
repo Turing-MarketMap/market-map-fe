@@ -18,7 +18,8 @@ class ListingService
       search_query[:model] = query[:model]
       response = conn.get('listings/search') do|req|
           req.params['search_params'] = search_query
-        end
+      end
+      
       parse_json(response)
     end
 
