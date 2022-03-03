@@ -20,8 +20,7 @@ class UserService
     end
 
     def delete_account(user_id)
-      response = connection.delete("users/#{user_id}")
-      parse_json(response)
+      connection.delete("users/#{user_id}")
     end
 
 
