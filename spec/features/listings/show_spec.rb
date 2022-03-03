@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Listings Show Page', type: :feature do
   context 'as a logged in user', :vcr do
     describe 'viewable elements' do
-      xit 'displays an image of the listing' do
+      it 'displays an image of the listing' do
         listing_data = {
                         id: 1,
                         year: 2015,
@@ -19,7 +19,24 @@ RSpec.describe 'Listings Show Page', type: :feature do
                         color: "gray",
                         interior: "gray",
                         sellingPrice: 8900,
-                        title: '2015 Honda Civic'
+                        title: '2015 Honda Civic',
+                        data_hash: {
+                                    id: 1,
+                                    year: 2015,
+                                    make: "Honda",
+                                    model: "Civic",
+                                    trim: "LX",
+                                    body: "sedan",
+                                    transmission: "automatic",
+                                    vin: "19xfb2f58ce307205",
+                                    state: "ca",
+                                    condition: 2.6,
+                                    odometer: 73995,
+                                    color: "gray",
+                                    interior: "gray",
+                                    sellingPrice: 8900,
+                                    title: '2015 Honda Civic'
+                                   }
                        }
 
         listing = build(:listing, listing_data)
@@ -50,15 +67,13 @@ RSpec.describe 'Listings Show Page', type: :feature do
   end
 
   describe 'listing show page' do
-
     it 'displays attributes of listing by id', :vcr do
       # listing = build(:listing)
       visit "/listings/#{1}"
-
-      expect(page).to have_content("Make: ")
-      expect(page).to have_content("Model: ")
-      expect(page).to have_content("Year: ")
-      expect(page).to have_content("Miles: ")
+      expect(page).to have_content("make")
+      expect(page).to have_content("model")
+      expect(page).to have_content("year")
+      expect(page).to have_content("odometer")
     end
   end
 end

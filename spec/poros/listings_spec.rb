@@ -13,9 +13,9 @@ RSpec.describe 'Listings poro' do
   end
 
   describe 'instance methods' do
-    let!(:listing_1) { build(:listing, make: 'Honda', model: 'Civic', odometer: 10000, selling_price: 25000)}
-    let!(:listing_2) { build(:listing, make: 'Honda', model: 'Accord', odometer: 50000, selling_price: 8000)}
-    let!(:listing_3) { build(:listing, make: 'Mazda', model: 'Mazda3', odometer: 30000, selling_price: 15000)}
+    let!(:listing_1) { build(:listing, make: 'Honda', model: 'Civic', odometer: 10000, sellingprice: 25000)}
+    let!(:listing_2) { build(:listing, make: 'Honda', model: 'Accord', odometer: 50000, sellingprice: 8000)}
+    let!(:listing_3) { build(:listing, make: 'Mazda', model: 'Mazda3', odometer: 30000, sellingprice: 15000)}
 
     let!(:listings_object_2) { Listings.new([listing_1, listing_2, listing_3]) }
 

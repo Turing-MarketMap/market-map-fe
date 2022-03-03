@@ -3,7 +3,7 @@ class UserService
   class << self
 
     def connection
-      Faraday.new(url: "http://localhost:3000/api/v1/")
+      Faraday.new(url: ENV['consultancy_be'])
     end
 
     def parse_json(response)
@@ -20,8 +20,7 @@ class UserService
     end
 
     def delete_account(user_id)
-      response = connection.delete("users/#{user_id}")
-      parse_json(response)
+      connection.delete("users/#{user_id}")
     end
 
 

@@ -1,3 +1,9 @@
+<% if flash.any? %>
+<% flash.each do |type, msg| %>
+<%= msg %>
+<% end %>
+<% end %>
+
 <div class="filters">
   <%= form_with url: '/', method: :get, local: true do |f| %>
     <%= fields_for :search_params do |ff| %>

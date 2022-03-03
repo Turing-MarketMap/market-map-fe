@@ -30,7 +30,7 @@ RSpec.describe 'listing_facade' do
                                                                             :odometer,
                                                                             :color,
                                                                             :interior,
-                                                                            :selling_price,
+                                                                            :sellingprice,
                                                                             :title])
         end
       end
@@ -54,7 +54,7 @@ RSpec.describe 'listing_facade' do
           expect(listing.model).to be_a(String)
           expect(listing.year).to be_an(Integer)
         end
-      end 
+      end
     end
   end
 end
