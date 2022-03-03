@@ -54,11 +54,10 @@ RSpec.describe 'Listings Show Page', type: :feature do
     it 'displays attributes of listing by id', :vcr do
       # listing = build(:listing)
       visit "/listings/#{1}"
-
-      expect(page).to have_content("Make: ")
-      expect(page).to have_content("Model: ")
-      expect(page).to have_content("Year: ")
-      expect(page).to have_content("Miles: ")
+      expect(page).to have_content("make")
+      expect(page).to have_content("model")
+      expect(page).to have_content("year")
+      expect(page).to have_content("odometer")
     end
   end
 end
