@@ -25,7 +25,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Thu, 03 Mar 2022 19:22:53 GMT
+      - Thu, 03 Mar 2022 19:30:21 GMT
       Server:
       - ESF
       Cache-Control:
@@ -92,8 +92,8 @@ http_interactions:
             "title": "market-map-images"
           },
           "searchInformation": {
-            "searchTime": 0.196929,
-            "formattedSearchTime": "0.20",
+            "searchTime": 0.278685,
+            "formattedSearchTime": "0.28",
             "totalResults": "36000000",
             "formattedTotalResults": "36,000,000"
           },
@@ -120,5 +120,5 @@ http_interactions:
             }
           ]
         }
-  recorded_at: Thu, 03 Mar 2022 19:22:53 GMT
+  recorded_at: Thu, 03 Mar 2022 19:30:21 GMT
 recorded_with: VCR 6.0.0

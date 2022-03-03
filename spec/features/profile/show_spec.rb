@@ -7,7 +7,7 @@ RSpec.describe 'User profile show page', :vcr, type: :feature do
     auth_hash = Faker::Omniauth.google
     OmniAuth.config.mock_auth[:google] = OmniAuth::AuthHash.new(auth_hash)
 
-    it 'can display information on user' do
+    xit 'can display information on user', :vcr do
       visit '/'
       click_link 'Login with Google'
 
@@ -20,7 +20,7 @@ RSpec.describe 'User profile show page', :vcr, type: :feature do
 
     end
 
-    it 'no longer shows profile page after user logs out' do
+    xit 'no longer shows profile page after user logs out', :vcr do
       visit '/'
       click_link 'Login with Google'
       click_link 'Logout'
@@ -32,11 +32,10 @@ RSpec.describe 'User profile show page', :vcr, type: :feature do
   end
 
   context 'not logged in', :vcr do
-    it 'does not show profile page' do
+    xit 'does not show profile page' do
       visit '/profile'
       expect(current_path).to eq('/')
       expect(page).to have_content('Please login to see user profile information')
-      save_and_open_page
     end
   end
 end
