@@ -29,6 +29,16 @@ RSpec.describe 'User profile show page', :vcr, type: :feature do
       expect(page).to have_content('Please login to see user profile information')
 
     end
+
+    it 'allows user to delete account' do
+      visit '/'
+      click_link 'Login with Google'
+      visit '/profile'
+      click_link 'Delete my account'
+      expect(current_path).to eq('/')
+      expect(page).to have_link('Login with Google')
+      expect(page).to_not have_link('My Profile')
+    end
   end
 
   context 'not logged in', :vcr do
@@ -36,7 +46,6 @@ RSpec.describe 'User profile show page', :vcr, type: :feature do
       visit '/profile'
       expect(current_path).to eq('/')
       expect(page).to have_content('Please login to see user profile information')
-      save_and_open_page
     end
   end
 end
