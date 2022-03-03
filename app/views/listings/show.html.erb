@@ -1,17 +1,37 @@
-<%= image_tag @image.url, size: '600xauto', alt: @image.title %>
+<style>
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
 
-<h3>Title:<%= @listing.title %></h3>
+  td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
 
-<p>Year: <%= @listing.year %></p>
-<p>Make: <%= @listing.make %></p>
-<p>Model: <%= @listing.model %></p>
-<p>Trim: <%= @listing.trim %></p>
-<p>Body: <%= @listing.body %></p>
-<p>Transmission: <%= @listing.transmission %></p>
-<p>Vin: <%= @listing.vin %></p>
-<p>State: <%= @listing.state %></p>
-<p>Condition: <%= @listing.condition %></p>
-<p>Miles: <%= @listing.odometer %></p>
-<p>Color: <%= @listing.color %></p>
-<p>Interior Color: <%= @listing.interior %></p>
-<p>Price: <%= @listing.selling_price %></p>
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+</style>
+
+<div class="container px-4 px-lg-5 my-5">
+    <div class="row gx-4 gx-lg-5 align-items-top">
+        <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="<%= @image.url %>" alt="alt"></div>
+        <div class="col-md-6">
+            <h1 class="display-5 fw-bolder"><%= @listing.title %></h1>
+            <div class="fs-5 mb-5">
+                <span>$<%= (@listing.selling_price / 1000).to_i %>,<%= @listing.selling_price % 1000 %>.00</span>
+            </div>
+            <table>
+              <% @listing.data_hash.each do |attribute, value| %>
+                <tr>
+                  <td><%= attribute.to_s %></td>
+                  <td><%= value %></td>
+                </tr>
+              <% end %>
+            </table>
+        </div>
+    </div>
+</div>

@@ -18,7 +18,7 @@
     <!-- Collapsible wrapper -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <!-- Navbar brand -->
-      <a class="navbar-brand mt-2 mt-lg-0" href="#">
+      <a class="navbar-brand mt-2 mt-lg-0" href="/">
         <img
           src="/assets/market_map_icon.png"
           height="50"
@@ -37,7 +37,7 @@
     <div class="d-flex align-items-center">
       <!-- Avatar -->
       <% if @current_user.present? %>
-        <div class="dropdown">
+        <div class="dropdown user_id#<%= @current_user[:user_id] %>">
           <a
             class="dropdown-toggle d-flex align-items-center hidden-arrow"
             href="/profile"
