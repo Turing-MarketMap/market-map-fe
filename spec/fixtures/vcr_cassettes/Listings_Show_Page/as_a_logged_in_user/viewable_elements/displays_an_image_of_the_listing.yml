@@ -25,7 +25,11 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
+<<<<<<< HEAD
       - Thu, 03 Mar 2022 18:00:58 GMT
+=======
+      - Thu, 03 Mar 2022 17:29:02 GMT
+>>>>>>> 3141724 (Test: update fixture)
       Server:
       - ESF
       Cache-Control:
@@ -92,8 +96,13 @@ http_interactions:
             "title": "market-map-images"
           },
           "searchInformation": {
+<<<<<<< HEAD
             "searchTime": 0.173776,
             "formattedSearchTime": "0.17",
+=======
+            "searchTime": 0.294407,
+            "formattedSearchTime": "0.29",
+>>>>>>> 3141724 (Test: update fixture)
             "totalResults": "457000000",
             "formattedTotalResults": "457,000,000"
           },
@@ -120,7 +129,11 @@ http_interactions:
             }
           ]
         }
+<<<<<<< HEAD
   recorded_at: Thu, 03 Mar 2022 18:00:58 GMT
+=======
+  recorded_at: Thu, 03 Mar 2022 17:29:02 GMT
+>>>>>>> 3141724 (Test: update fixture)
 - request:
     method: get
     uri: http://localhost:3000/api/v1/listings/1
@@ -146,16 +159,61 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
+<<<<<<< HEAD
       - 1fffb284-364a-4e6f-ad32-c48411eedb92
       X-Runtime:
       - '0.005304'
+=======
+      - c71d62d4-11d0-47c1-8dd9-3562bee0f676
+      X-Runtime:
+      - '0.102402'
+>>>>>>> 3141724 (Test: update fixture)
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"listing","attributes":{"year":2014,"make":"Acura","model":"ILX","trim":"Technology
         Package","body":"Sedan","transmission":"automatic","vin":"19vde1f70ee008913","state":"ca","condition":2.5,"odometer":9051,"color":"gray","interior":"black","sellingprice":21250}}}'
+<<<<<<< HEAD
   recorded_at: Thu, 03 Mar 2022 18:00:58 GMT
+=======
+  recorded_at: Thu, 03 Mar 2022 17:29:26 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/listings/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"b37bbdacb098d1c780733febebdf02c3"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 022d3101-f702-4bd0-b862-7b727c3e348d
+      X-Runtime:
+      - '0.009039'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"listing","attributes":{"year":2014,"make":"Acura","model":"ILX","trim":"Technology
+        Package","body":"Sedan","transmission":"automatic","vin":"19vde1f70ee008913","state":"ca","condition":2.5,"odometer":9051,"color":"gray","interior":"black","sellingprice":21250}}}'
+  recorded_at: Thu, 03 Mar 2022 17:29:34 GMT
+>>>>>>> 3141724 (Test: update fixture)
 - request:
     method: get
     uri: https://customsearch.googleapis.com/customsearch/v1?cx=<cx>&imgColorType=color&imgDominantColor=gray&imgSize=LARGE&imgType=photo&key=<key>&num=1&q=2014%20Acura%20ILX&searchType=image
@@ -181,7 +239,11 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
+<<<<<<< HEAD
       - Thu, 03 Mar 2022 18:00:59 GMT
+=======
+      - Thu, 03 Mar 2022 17:29:35 GMT
+>>>>>>> 3141724 (Test: update fixture)
       Server:
       - ESF
       Cache-Control:
@@ -210,7 +272,11 @@ http_interactions:
             "request": [
               {
                 "title": "Google Custom Search - 2014 Acura ILX",
+<<<<<<< HEAD
                 "totalResults": "18300000",
+=======
+                "totalResults": "16200000",
+>>>>>>> 3141724 (Test: update fixture)
                 "searchTerms": "2014 Acura ILX",
                 "count": 1,
                 "startIndex": 1,
@@ -228,7 +294,11 @@ http_interactions:
             "nextPage": [
               {
                 "title": "Google Custom Search - 2014 Acura ILX",
+<<<<<<< HEAD
                 "totalResults": "18300000",
+=======
+                "totalResults": "16200000",
+>>>>>>> 3141724 (Test: update fixture)
                 "searchTerms": "2014 Acura ILX",
                 "count": 1,
                 "startIndex": 2,
@@ -248,10 +318,17 @@ http_interactions:
             "title": "market-map-images"
           },
           "searchInformation": {
+<<<<<<< HEAD
             "searchTime": 0.337458,
             "formattedSearchTime": "0.34",
             "totalResults": "18300000",
             "formattedTotalResults": "18,300,000"
+=======
+            "searchTime": 0.345614,
+            "formattedSearchTime": "0.35",
+            "totalResults": "16200000",
+            "formattedTotalResults": "16,200,000"
+>>>>>>> 3141724 (Test: update fixture)
           },
           "items": [
             {
@@ -276,5 +353,9 @@ http_interactions:
             }
           ]
         }
+<<<<<<< HEAD
   recorded_at: Thu, 03 Mar 2022 18:00:59 GMT
+=======
+  recorded_at: Thu, 03 Mar 2022 17:29:35 GMT
+>>>>>>> 3141724 (Test: update fixture)
 recorded_with: VCR 6.0.0
