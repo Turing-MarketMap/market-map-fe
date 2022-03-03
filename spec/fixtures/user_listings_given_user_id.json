@@ -1,0 +1,79 @@
+{
+"data":[
+    {
+    "id":"420",
+    "type":"listing",
+    "attributes":{
+      "year":"2015",
+      "make":"Honda",
+      "model":"Accord",
+      "trim":"test movie",
+      "body":"test movie",
+      "transmission":"test movie",
+      "vin":"test movie",
+      "state":"test movie",
+      "condition":"good",
+      "odometer":"120000",
+      "color":"test movie",
+      "interior":"test movie",
+      "selling_price":"test movie",
+      "title":"test movie"
+    },
+    {
+    "id":"421",
+    "type":"listing",
+    "attributes":{
+      "year":"2012",
+      "make":"Kia",
+      "model":"Sorento",
+      "trim":"test movie",
+      "body":"test movie",
+      "transmission":"test movie",
+      "vin":"test movie",
+      "state":"Colorado",
+      "condition":"test movie",
+      "odometer":"100000",
+      "color":"test movie",
+      "interior":"test movie",
+      "selling_price":"test movie",
+      "title":"test movie"
+    },
+    {
+    "id":"422",
+    "type":"listing",
+    "attributes":{
+      "year":"2013",
+      "make":"Ford",
+      "model":"Focus",
+      "trim":"test movie",
+      "body":"test movie",
+      "transmission":"test movie",
+      "vin":"test movie",
+      "state":"Colorado",
+      "condition":"test movie",
+      "odometer":"100000",
+      "color":"test movie",
+      "interior":"test movie",
+      "selling_price":"test movie",
+      "title":"test movie"
+    },
+    {
+    "id":"423",
+    "type":"listing",
+    "attributes":{
+      "year":"2016",
+      "make":"Toyota",
+      "model":"Tacoma",
+      "trim":"test movie",
+      "body":"test movie",
+      "transmission":"test movie",
+      "vin":"test movie",
+      "state":"Colorado",
+      "condition":"test movie",
+      "odometer":"100000",
+      "color":"test movie",
+      "interior":"test movie",
+      "selling_price":"test movie",
+      "title":"test movie"
+    }]
+}
