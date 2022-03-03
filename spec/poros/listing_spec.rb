@@ -15,7 +15,7 @@ RSpec.describe 'listing poro' do
                   odometer: 73995,
                   color: "gray",
                   interior: "gray",
-                  selling_price: 8900,
+                  sellingprice: 8900,
                   title: '2015 Honda Civic'
                  } }
   let!(:listing) { Listing.new(listing_data) }
@@ -24,7 +24,7 @@ RSpec.describe 'listing poro' do
     expect(listing).to be_a(Listing)
   end
 
-  xit "has correct attributes" do
+  it "has correct attributes" do
     expect(listing.id).to be_a(Integer)
     expect(listing.year).to be_a(Integer)
     expect(listing.make).to be_a(String)
@@ -60,7 +60,7 @@ RSpec.describe 'listing poro' do
     expect(listing.data_hash).to eq(listing_data)
   end
 
-  xit "has factory with correct default attributes" do
+  it "has factory with correct default attributes" do
     listing = build(:listing)
     expect(listing.id).to be_a(Integer)
     expect(listing.year).to be_a(Integer)
