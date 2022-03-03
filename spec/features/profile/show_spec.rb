@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'User profile show page', :vcr, type: :feature do
+RSpec.describe 'User profile show page', type: :feature do
   before(:each) do
     @auth_hash = {
                    :provider=>"google_oauth2",
@@ -48,35 +48,51 @@ RSpec.describe 'User profile show page', :vcr, type: :feature do
 
   context 'as a logged in user', :vcr do
     it 'can display information on user' do
-      visit '/'
-      click_link 'Login with Google'
+      VCR.insert_cassette('profile_root_1') do
+        VCR.insert_cassette('profile_login_1') do
+          VCR.insert_cassette('profile_visit_1') do
+            visit '/'
+            click_link 'Login with Google'
 
-      visit '/profile'
+            visit '/profile'
 
-      expect(page).to have_content("My account details:")
-      expect(page).to have_content("Name: Tommy Bartell")
-      expect(page).to have_content("User ID: 1")
-      expect(page).to have_link("Delete my account")
-      ### Add tests for saved listings
+            expect(page).to have_content("My account details:")
+            expect(page).to have_content("Name: Tommy Bartell")
+            expect(page).to have_content("User ID: 1")
+            expect(page).to have_link("Delete my account")
+            ### Add tests for saved listings
+          end
+        end
+      end
     end
 
     it 'no longer shows profile page after user logs out and flash message' do
-      visit '/'
-      click_link 'Login with Google'
-      click_link 'Logout'
-      visit '/profile'
+      VCR.insert_cassette('profile_root_1') do
+        VCR.insert_cassette('profile_login_1') do
+          VCR.insert_cassette('profile_logout_1') do
+            VCR.insert_cassette('profile_visit_1') do
+              visit '/'
+              click_link 'Login with Google'
+              click_link 'Logout'
+              visit '/profile'
 
-      expect(current_path).to eq('/')
-      expect(page).to have_content('Please login to see user profile information')
+              expect(current_path).to eq('/')
+              expect(page).to have_content('Please login to see user profile information')
+            end
+          end
+        end
+      end
     end
   end
 
-  context 'not logged in', :vcr do
-    xit 'does not show profile page' do
-      visit '/profile'
+  context 'not logged in' do
+    it 'does not show profile page' do
+      VCR.insert_cassette('profile_visit_2') do
+        visit '/profile'
 
-      expect(current_path).to eq('/')
-      expect(page).to have_content('Please login to see user profile information')
+        expect(current_path).to eq('/')
+        expect(page).to have_content('Please login to see user profile information')
+      end
     end
   end
 end
