@@ -37,7 +37,7 @@
     <div class="d-flex align-items-center">
       <!-- Avatar -->
       <% if @current_user.present? %>
-        <div class="dropdown">
+        <div class="dropdown user_id#<%= @current_user[:user_id] %>">
           <a
             class="dropdown-toggle d-flex align-items-center hidden-arrow"
             href="/profile"
