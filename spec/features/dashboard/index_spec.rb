@@ -109,6 +109,9 @@ RSpec.describe 'dashboard page' do
       visit '/listings/3'
       click_link 'Save listing'
 
+      visit '/'
+      expect(page).to have_content("USER LISTING 1 - ETC")
+
     end
   end
 end
