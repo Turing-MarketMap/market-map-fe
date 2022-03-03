@@ -25,7 +25,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Thu, 03 Mar 2022 22:44:32 GMT
+      - Thu, 03 Mar 2022 23:47:13 GMT
       Server:
       - ESF
       Cache-Control:
@@ -92,8 +92,8 @@ http_interactions:
             "title": "market-map-images"
           },
           "searchInformation": {
-            "searchTime": 0.429484,
-            "formattedSearchTime": "0.43",
+            "searchTime": 0.168782,
+            "formattedSearchTime": "0.17",
             "totalResults": "528000000",
             "formattedTotalResults": "528,000,000"
           },
@@ -120,7 +120,7 @@ http_interactions:
             }
           ]
         }
-  recorded_at: Thu, 03 Mar 2022 22:44:32 GMT
+  recorded_at: Thu, 03 Mar 2022 23:47:13 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/listings/1
@@ -146,16 +146,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 81107efe-d995-4554-a9a6-f49cd261dee2
+      - 46cfb197-cdbf-4363-8bd9-d138edaea225
       X-Runtime:
-      - '0.002267'
+      - '0.003753'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"listing","attributes":{"year":2014,"make":"Acura","model":"ILX","trim":"Technology
         Package","body":"Sedan","transmission":"automatic","vin":"19vde1f70ee008913","state":"ca","condition":2.5,"odometer":9051,"color":"gray","interior":"black","sellingprice":21250}}}'
-  recorded_at: Thu, 03 Mar 2022 22:44:32 GMT
+  recorded_at: Thu, 03 Mar 2022 23:47:13 GMT
 - request:
     method: get
     uri: https://customsearch.googleapis.com/customsearch/v1?cx=<cx>&imgColorType=color&imgDominantColor=gray&imgSize=LARGE&imgType=photo&key=<key>&num=1&q=2014%20Acura%20ILX&searchType=image
@@ -181,7 +181,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Thu, 03 Mar 2022 22:44:33 GMT
+      - Thu, 03 Mar 2022 23:47:14 GMT
       Server:
       - ESF
       Cache-Control:
@@ -210,7 +210,7 @@ http_interactions:
             "request": [
               {
                 "title": "Google Custom Search - 2014 Acura ILX",
-                "totalResults": "17600000",
+                "totalResults": "18400000",
                 "searchTerms": "2014 Acura ILX",
                 "count": 1,
                 "startIndex": 1,
@@ -228,7 +228,7 @@ http_interactions:
             "nextPage": [
               {
                 "title": "Google Custom Search - 2014 Acura ILX",
-                "totalResults": "17600000",
+                "totalResults": "18400000",
                 "searchTerms": "2014 Acura ILX",
                 "count": 1,
                 "startIndex": 2,
@@ -248,10 +248,10 @@ http_interactions:
             "title": "market-map-images"
           },
           "searchInformation": {
-            "searchTime": 0.434336,
-            "formattedSearchTime": "0.43",
-            "totalResults": "17600000",
-            "formattedTotalResults": "17,600,000"
+            "searchTime": 0.252792,
+            "formattedSearchTime": "0.25",
+            "totalResults": "18400000",
+            "formattedTotalResults": "18,400,000"
           },
           "items": [
             {
@@ -276,5 +276,5 @@ http_interactions:
             }
           ]
         }
-  recorded_at: Thu, 03 Mar 2022 22:44:33 GMT
+  recorded_at: Thu, 03 Mar 2022 23:47:14 GMT
 recorded_with: VCR 6.0.0

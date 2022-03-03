@@ -6,40 +6,32 @@ RSpec.describe 'dashboard page' do
 
   context 'initial dashboard settings', :vcr do
     it "is the root page", :vrc do
-      visit '/'
-      expect(page).to have_content("Market Map")
+      VCR.insert_cassette('dashboard root_1') do
+        visit '/'
+        expect(page).to have_content("Market Map")
+      end
     end
 
     describe 'filters' do
       describe 'filters' do
         it "they exist", :vcr do
-          visit '/'
+          VCR.insert_cassette('dashboard root_1') do
+            visit '/'
 
-          within 'div.filters' do
-            select 'Subaru', from: "Make"
-            select 'Subaru: Impreza', from: "Model"
-            #select 2002, from: "Min Year"
-            #select 2015, from: "Max Year"
-            #select 5000, from: "Min Price"
-            #select 30000, from: "Max Price"
-            #select 5000, from: "Min Mileage"
-            #select 30000, from: "Max Mileage"
+            within 'div.filters' do
+              select 'Subaru', from: "Make"
+              select 'Subaru: Impreza', from: "Model"
+              fill_in "Min year", with: 2002
+              fill_in "Max year", with: 2015
+              fill_in "Min price", with: 5000
+              fill_in "Max price", with: 30000
+              fill_in "Min mileage", with: 5000
+              fill_in "Max mileage", with: 30000
 
-
-
-            #fill_in "Make", with: 'Subaru'
-            #fill_in "Model", with: 'Impreza'
-            fill_in "Min year", with: 2002
-            fill_in "Max year", with: 2015
-            fill_in "Min price", with: 5000
-            fill_in "Max price", with: 30000
-            fill_in "Min mileage", with: 5000
-            fill_in "Max mileage", with: 30000
-
-            click_on "Search Listings"
-
+              click_on "Search Listings"
+            end
+            expect(current_path).to eq('/')
           end
-          expect(current_path).to eq('/')
         end
       end
 
