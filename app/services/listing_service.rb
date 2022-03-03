@@ -2,7 +2,7 @@ class ListingService
   class << self
 
     def conn
-      url = 'http://localhost:3000/api/v1/'
+      url = ENV['consultancy_be']
       Faraday.new(url: url)
     end
 
@@ -18,7 +18,8 @@ class ListingService
       search_query[:model] = query[:model]
       response = conn.get('listings/search') do|req|
           req.params['search_params'] = search_query
-        end
+      end
+      
       parse_json(response)
     end
 
