@@ -50,7 +50,6 @@ RSpec.describe 'Listings Show Page', type: :feature do
   end
 
   describe 'listing show page' do
-
     it 'displays attributes of listing by id', :vcr do
       # listing = build(:listing)
       visit "/listings/#{1}"
