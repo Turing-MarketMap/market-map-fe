@@ -25,7 +25,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Thu, 03 Mar 2022 19:30:21 GMT
+      - Thu, 03 Mar 2022 22:44:30 GMT
       Server:
       - ESF
       Cache-Control:
@@ -54,7 +54,7 @@ http_interactions:
             "request": [
               {
                 "title": "Google Custom Search - 2015 kia sorento",
-                "totalResults": "36000000",
+                "totalResults": "36300000",
                 "searchTerms": "2015 kia sorento",
                 "count": 1,
                 "startIndex": 1,
@@ -72,7 +72,7 @@ http_interactions:
             "nextPage": [
               {
                 "title": "Google Custom Search - 2015 kia sorento",
-                "totalResults": "36000000",
+                "totalResults": "36300000",
                 "searchTerms": "2015 kia sorento",
                 "count": 1,
                 "startIndex": 2,
@@ -92,10 +92,10 @@ http_interactions:
             "title": "market-map-images"
           },
           "searchInformation": {
-            "searchTime": 0.278685,
-            "formattedSearchTime": "0.28",
-            "totalResults": "36000000",
-            "formattedTotalResults": "36,000,000"
+            "searchTime": 0.165395,
+            "formattedSearchTime": "0.17",
+            "totalResults": "36300000",
+            "formattedTotalResults": "36,300,000"
           },
           "items": [
             {
@@ -120,5 +120,5 @@ http_interactions:
             }
           ]
         }
-  recorded_at: Thu, 03 Mar 2022 19:30:21 GMT
+  recorded_at: Thu, 03 Mar 2022 22:44:30 GMT
 recorded_with: VCR 6.0.0

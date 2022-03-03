@@ -25,14 +25,14 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 5477c51d-833e-4350-9155-14d315c5a710
+      - d2b08024-25f3-4354-beb3-7e4b51cd9756
       X-Runtime:
-      - '0.045077'
+      - '0.008264'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"listing","attributes":{"year":2014,"make":"Acura","model":"ILX","trim":"Technology
         Package","body":"Sedan","transmission":"automatic","vin":"19vde1f70ee008913","state":"ca","condition":2.5,"odometer":9051,"color":"gray","interior":"black","sellingprice":21250}}}'
-  recorded_at: Thu, 03 Mar 2022 19:30:21 GMT
+  recorded_at: Thu, 03 Mar 2022 22:44:30 GMT
 recorded_with: VCR 6.0.0

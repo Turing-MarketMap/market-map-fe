@@ -4,7 +4,7 @@ class FairPriceFacade
     def get_fair_price(model, mileages)
       response = FairPriceService.get_fair_price(model, mileages)
       json = JSON.parse(response.body, symbolize_names: true)
-      predictions = json[:data][:attributes][:predictions].map{ |prediction| prediction.to_i }
+      predictions = json[:data].map{ |prediction| prediction[:attributes][:predictions].to_i }
       data_array = []
       predictions.each_with_index do |prediction, i|
         data_hash = {}

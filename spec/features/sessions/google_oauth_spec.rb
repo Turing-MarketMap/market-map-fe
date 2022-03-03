@@ -49,43 +49,49 @@ RSpec.describe 'OmniAuth Google OAuth 2.0', :vcr, type: :feature do
   context 'as a user' do
     context 'user is not logged into site with OAuth' do
       describe 'viewable elements' do
-        it 'displays login text' do
-          visit root_path
+        VCR.insert_cassette('root_3') do
+          it 'displays login text' do
+            visit root_path
 
-          expect(page).to have_content('Login with Google')
-        end
+            expect(page).to have_content('Login with Google')
+          end
 
-        it 'displays blank profile photo' do
-          visit root_path
+          it 'displays blank profile photo' do
+            visit root_path
 
-          expect(page).to have_xpath('//*[@id="navbarNoProfile"]/img')
+            expect(page).to have_xpath('//*[@id="navbarNoProfile"]/img')
+          end
         end
       end
 
       context 'user logs in with OAuth' do
         describe 'login process' do
-          it 'displays user profile photo after login' do
-            visit root_path
-            click_link 'Login with Google'
+          VCR.insert_cassette('root_1') do
+            VCR.insert_cassette('root_google_login_1') do
+              it 'displays user profile photo after login' do
+                visit root_path
+                click_link 'Login with Google'
 
-            expect(page).to have_xpath('//*[@id="navbarDropdown"]/img')
-            expect(page).to have_no_xpath('//*[@id="navbarNoProfile"]/img')
-            expect(page).to have_no_content('Login with Google')
-          end
+                expect(page).to have_xpath('//*[@id="navbarDropdown"]/img')
+                expect(page).to have_no_xpath('//*[@id="navbarNoProfile"]/img')
+                expect(page).to have_no_content('Login with Google')
+              end
 
-          it 'enables user to visit profile page after login' do
-            visit root_path
-            click_link 'Login with Google'
+              it 'enables user to visit profile page after login' do
+                visit root_path
+                click_link 'Login with Google'
 
-            expect(page).to have_link('My profile', href: '/profile')
-            expect(page).to have_link('Logout', href: '/logout')
-          end
+                expect(page).to have_link('My profile', href: '/profile')
+                expect(page).to have_link('Logout', href: '/logout')
+              end
 
-          it 'retrieves the user id from the user service' do
-            visit root_path
-            click_link 'Login with Google'
+              it 'retrieves the user id from the user service' do
+                visit root_path
+                click_link 'Login with Google'
 
-            expect(page).to have_xpath('/html/body/nav/div/div[2]/div')
+                expect(page).to have_xpath('/html/body/nav/div/div[2]/div')
+              end
+            end
           end
         end
       end
@@ -94,29 +100,45 @@ RSpec.describe 'OmniAuth Google OAuth 2.0', :vcr, type: :feature do
     context 'user is logged into site with OAuth' do
       describe 'viewable elements' do
         it 'does not display login text' do
-          visit root_path
-          click_link 'Login with Google'
+          VCR.insert_cassette('root') do
+            VCR.insert_cassette('root_google_login') do
+              visit root_path
+              click_link 'Login with Google'
 
-          expect(page).to have_no_content('Login with Google')
+              expect(page).to have_no_content('Login with Google')
+            end
+          end
         end
       end
 
       context 'user logs out of OAuth' do
         it 'does not display user profile photo after logout' do
-          visit root_path
-          click_link 'Login with Google'
-          click_link 'Logout'
+          VCR.insert_cassette('root') do
+            VCR.insert_cassette('root_google_login') do
+              VCR.insert_cassette('root_google_logout') do
+                visit root_path
+                click_link 'Login with Google'
+                click_link 'Logout'
 
-          expect(page).to have_no_xpath('//*[@id="navbarDropdown"]/img')
-          expect(page).to have_xpath('//*[@id="navbarNoProfile"]/img')
+                expect(page).to have_no_xpath('//*[@id="navbarDropdown"]/img')
+                expect(page).to have_xpath('//*[@id="navbarNoProfile"]/img')
+              end
+            end
+          end
         end
 
         it 'displays login text' do
-          visit root_path
-          click_link 'Login with Google'
-          click_link 'Logout'
+          VCR.insert_cassette('root') do
+            VCR.insert_cassette('root_google_login') do
+              VCR.insert_cassette('root_google_logout') do
+                visit root_path
+                click_link 'Login with Google'
+                click_link 'Logout'
 
-          expect(page).to have_content('Login with Google')
+                expect(page).to have_content('Login with Google')
+              end
+            end
+          end
         end
       end
     end

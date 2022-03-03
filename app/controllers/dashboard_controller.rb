@@ -27,7 +27,7 @@ class DashboardController < ApplicationController
   end
 
   def get_mileage_range(listings)
-    cadence = 1000
+    cadence = 50000
     max_listing = listings.max_by do |listing|
       listing.odometer
     end
