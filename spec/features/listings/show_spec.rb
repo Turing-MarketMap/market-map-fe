@@ -19,7 +19,24 @@ RSpec.describe 'Listings Show Page', type: :feature do
                         color: "gray",
                         interior: "gray",
                         sellingPrice: 8900,
-                        title: '2015 Honda Civic'
+                        title: '2015 Honda Civic',
+                        data_hash: {
+                                    id: 1,
+                                    year: 2015,
+                                    make: "Honda",
+                                    model: "Civic",
+                                    trim: "LX",
+                                    body: "sedan",
+                                    transmission: "automatic",
+                                    vin: "19xfb2f58ce307205",
+                                    state: "ca",
+                                    condition: 2.6,
+                                    odometer: 73995,
+                                    color: "gray",
+                                    interior: "gray",
+                                    sellingPrice: 8900,
+                                    title: '2015 Honda Civic'
+                                   }
                        }
 
         listing = build(:listing, listing_data)
