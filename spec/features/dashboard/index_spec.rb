@@ -93,5 +93,22 @@ RSpec.describe 'dashboard page' do
 
       end
     end
+
+    describe 'after logging into the site' do
+      OmniAuth.config.test_mode = true
+      auth_hash = Faker::Omniauth.google
+      OmniAuth.config.mock_auth[:google] = OmniAuth::AuthHash.new(auth_hash)
+
+      visit '/'
+      click_link 'Login with Google'
+
+      visit '/listings/1'
+      click_link 'Save listing'
+      visit '/listings/2'
+      click_link 'Save listing'
+      visit '/listings/3'
+      click_link 'Save listing'
+
+    end
   end
 end

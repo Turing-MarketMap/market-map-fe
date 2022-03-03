@@ -1,7 +1,7 @@
 <% if flash.any? %>
-<% flash.each do |type, msg| %>
-<%= msg %>
-<% end %>
+  <% flash.each do |type, msg| %>
+    <%= msg %>
+  <% end %>
 <% end %>
 
 <div class="filters">
@@ -127,4 +127,10 @@
   <% else %>
     <h1>Search Returned 0 Results</h1>
   <% end %>
+</div>
+
+
+
+<div class="user_listings">
+  <%= render "shared/user_listings" %>
 </div>

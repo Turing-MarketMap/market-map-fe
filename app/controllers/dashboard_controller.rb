@@ -3,6 +3,8 @@ class DashboardController < ApplicationController
   before_action :search_params, only: [:index]
 
   def index
+    # @user_listings = ListingFacade.listings_by_user_id(id)
+
     @listings = ListingFacade.get_listings(session[:search_params])
 
     if @listings != []
