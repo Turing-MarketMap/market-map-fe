@@ -29,12 +29,12 @@ RSpec.describe UserService do
         expect(user[:data][:attributes][:last_name]).to eq('turambi')
       end
     end
-  
+
     describe '::delete_account' do
-      xit 'can destroy a users account' do
+      it 'can destroy a users account' do
         user = UserService.find_user('eturambi@gmail.com', 'eldridge', 'turambi')
         response = UserService.delete_account(user[:data][:id])
-        
+
         expect(response.status).to eq(204)
       end
     end
