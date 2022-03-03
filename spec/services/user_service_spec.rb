@@ -20,7 +20,7 @@ RSpec.describe UserService do
       end
     end
 
-    describe '::find_user'  do
+    describe '::find_user' do
       it 'can get user from params' do
         user =  UserService.find_user('eturambi@gmail.com', 'eldridge', 'turambi')
 
@@ -34,7 +34,7 @@ RSpec.describe UserService do
       xit 'can destroy a users account' do
         user = UserService.find_user('eturambi@gmail.com', 'eldridge', 'turambi')
         response = UserService.delete_account(user[:data][:id])
-
+        
         expect(response.status).to eq(204)
       end
     end

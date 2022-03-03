@@ -46,6 +46,7 @@ gem 'jquery-rails'
 gem 'simple_form'
 gem 'popper_js'
 gem 'tether-rails'
+gem 'chartkick'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -59,7 +60,6 @@ group :development, :test do
   gem 'simplecov', require: false, group: :test
   gem 'figaro'
   gem 'jsonapi-serializer'
-  gem 'chartkick'
 end
 
 group :development do
