@@ -42,6 +42,8 @@
 - vcr
 - faker
 - factory_bot
+- ruby-fann
+- -daru
 
 #### Production Environment
 - bootstrap
@@ -54,6 +56,7 @@
 - tether-rails
 - chartkick
 - rails_12factor
+- ruby-fann
 
 ### Setup
 1. Fork and/or Clone this Repo from GitHub.
