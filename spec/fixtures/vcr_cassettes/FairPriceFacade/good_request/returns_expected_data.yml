@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/listings/1
+    uri: http://localhost:3000/api/v1/fair_price?mileage%5B%5D=10000&mileage%5B%5D=50000&model=Impreza
     body:
       encoding: US-ASCII
       string: ''
@@ -21,18 +21,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"b37bbdacb098d1c780733febebdf02c3"
+      - W/"848d9951beb763e0cd4bdbf7ff2114b1"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - db805ae4-3c49-401d-9335-eac372cf3306
+      - c6a34de5-8ca1-46a1-9cf7-213fa3882d37
       X-Runtime:
-      - '0.004005'
+      - '0.005945'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"listing","attributes":{"year":2014,"make":"Acura","model":"ILX","trim":"Technology
-        Package","body":"Sedan","transmission":"automatic","vin":"19vde1f70ee008913","state":"ca","condition":2.5,"odometer":9051,"color":"gray","interior":"black","sellingprice":21250}}}'
+      string: '{"data":{"id":"Impreza","type":"fair_price_prediction","attributes":{"predictions":[15994.689365879532,14464.61939723311],"inputs":[10000.0,50000.0]}}}'
   recorded_at: Fri, 04 Mar 2022 00:53:06 GMT
 recorded_with: VCR 6.0.0

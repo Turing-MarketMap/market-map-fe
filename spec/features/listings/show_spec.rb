@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe 'Listings Show Page', type: :feature do
-  context 'as a logged in user', :vcr do
+  context 'as a logged in user' do
     describe 'viewable elements' do
-      it 'displays an image of the listing' do
+      it 'displays an image of the listing', :vcr do
         listing_data = {
                         id: 1,
                         year: 2015,
