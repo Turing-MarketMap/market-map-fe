@@ -100,6 +100,35 @@ $ rails s
       }
      },
 ```
+
+- Show
+   - View a listing (with optional filters)
+   - Example Request: `https://consultancy-be.herokuapp.com/api/v1/listings/1`
+   - Example Response:
+```
+{
+  "data": {
+    "id": "1",
+    "type": "listing",
+    "attributes": {
+      "year": 2014,
+      "make": "Acura",
+      "model": "ILX",
+      "trim": "Technology Package",
+      "body": "Sedan",
+      "transmission": "automatic",
+      "vin": "19vde1f70ee008913",
+      "state": "ca",
+      "condition": 2.5,
+      "odometer": 9051,
+      "color": "gray",
+      "interior": "black",
+      "sellingprice": 21250
+      }
+    }
+}
+```
+
 ### Users
 - Login/Register
   - Login or create a new user.
