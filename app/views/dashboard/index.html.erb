@@ -19,17 +19,6 @@
       <%= ff.label :max_year %>
       <%= ff.number_field :max_year, value: session[:search_params][:max_year]%>
 
-      <%#= ff.label :min_price %>
-      <%#= ff.number_field :min_price%>
-
-      <%#= ff.label :max_price %>
-      <%#= ff.number_field :max_price%>
-
-      <%#= ff.label :min_mileage %>
-      <%#= ff.number_field :min_mileage%>
-
-      <%#= ff.label :max_mileage %>
-      <%#= ff.number_field :max_mileage%>
     <% end %>
 
   <%= f.submit "Search Listings" %>
@@ -50,21 +39,22 @@
             datasets: [{
                 type: 'line',
                 showLine: false,
-                label: 'Listings',
+                label: 'Vehicle Listings',
                 data: listing_data,
-                pointBackgroundColor: 'rgba(0,0,200,1)',
-                pointBorderColor: 'rgba(0,0,0,.1)',
-                pointRadius: 2,
-                pointHoverRadius: 20
+                pointBackgroundColor: 'rgba(111, 136, 158, 0.92)',
+                pointBorderColor: 'rgba(96, 79, 19, 0.92)',
+                pointRadius: 3,
+                pointHoverRadius: 10
             }, {
                 type: 'line',
-                label: 'Regression',
+                label: 'Fair Price',
                 data: fair_price_data,
-                borderColor: 'rgba(255,150,150,1)',
+                borderColor: 'rgba(251, 206, 45, 0.92)',
                 borderJoinStyle: 'bevel',
                 borderWidth: 4,
-                pointBackgroundColor: 'rgba(200,0,0,1)',
-                pointBorderColor: 'rgba(0,0,0,.1)',
+                pointBackgroundColor: 'rgba(251, 206, 45, 0.92)',
+                pointBorderColor: 'rgba(251, 206, 45, 0.92)',
+                pointRadius: 0
             }]
         },
         options: {
@@ -74,16 +64,18 @@
           },
 
           scales: {
-            y: { title: { color: 'grey', display: true, text: 'Price' } },
-            x: { title: { color: 'grey', display: true, text: 'Mileage' } }
+            y: { title: { color: 'grey', display: true, text: 'Price ( $ )', font: { size: 28} } },
+            x: { title: { color: 'grey', display: true, text: 'Mileage', font: { size: 28} } }
           },
 
           plugins: {
             title: {
               display: true,
-              text: title
+              text: title,
+              font: { size: 40}
             },
             tooltip: {
+              filter: ctx.datasetIndex === 0,
               callbacks: {
                 label: function(context) {
                   let data = context.dataset.data[context.dataIndex];
@@ -103,7 +95,6 @@
                   if (data.condition !== null) {
                     label.push(`Condition: ${data.condition}`);
                   }
-
                   return label;
                 }
               }
