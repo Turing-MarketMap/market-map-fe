@@ -7,5 +7,7 @@ Rails.application.routes.draw do
   get '/profile', to: 'users#show'
   delete '/users', to: 'users#destroy'
 
+  resources :user_listings, only: [:create, :destroy]
+
   resources :listings, only: %i[show]
 end

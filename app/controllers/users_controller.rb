@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :current_user
 
   def index
     user = UserFacade.find_user(email)
@@ -10,7 +11,7 @@ class UsersController < ApplicationController
 
   def destroy
     UserService.delete_account(session[:user_id])
-    
+
     redirect_to logout_path
   end
 
@@ -19,6 +20,5 @@ class UsersController < ApplicationController
       redirect_to '/'
       flash[:alert] = "Please login to see user profile information"
     end
-
   end
 end
