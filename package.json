@@ -1,5 +1,9 @@
 {
   "name": "market-map-fe",
   "private": true,
-  "dependencies": {}
+  "dependencies": {},
+  "engines": {
+    "node": "17.6.0",
+    "npm": "8.5.1"
+  }
 }
