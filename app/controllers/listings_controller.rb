@@ -1,4 +1,6 @@
 class ListingsController < ApplicationController
+  before_action :current_user
+
   def show
     # @listing = Listing.new(listing_params)
     @listing = ListingFacade.get_listing_by_id(params[:id])
