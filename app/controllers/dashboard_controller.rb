@@ -5,6 +5,10 @@ class DashboardController < ApplicationController
   def index
     @listings = ListingFacade.get_listings(session[:search_params])
 
+    if @current_user
+      @user_listings = ListingFacade.listings_by_user_id(@current_user[:user_id])
+    end
+
     if @listings != []
       @data = ListingFacade.data_hash(@listings)
       @fair_prices = FairPriceFacade.get_fair_price(session[:search_params][:model], get_mileage_range(@listings))

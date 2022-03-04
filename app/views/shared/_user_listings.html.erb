@@ -1,0 +1,37 @@
+<style>
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+</style>
+<% if @current_user.present? %>
+<h5>Your Saved Listings:</h5>
+  <table>
+    <tr>
+      <td>Selling Price</td>
+      <td>Year</td>
+      <td>Make</td>
+      <td>Model</td>
+    </tr>
+    <% @user_listings.each do |listing| %>
+    <tr>
+      <td>$<%= listing.selling_price%></td>
+      <td><%= listing.year%></td>
+      <td><%= listing.make%></td>
+      <td><%= listing.model%></td>
+      <td><%= link_to 'Delete Listing', "/user_listings/#{listing.id}", method: :delete %></td>
+    </tr>
+    <% end %>
+  </table>
+<% end %>
