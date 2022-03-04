@@ -13,10 +13,10 @@
 "MarketMap" is a group project built over the course of two weeks in Turing's module 3 backend program. This project is a branch of Turing's Consultancy project. We pitched a rough concept of creating an application that would let a user search for cars and enable them to know if they were getting a good deal based on several factors. See below for more details on the backend features.
 
 ## Frontend Features:
-
-## Learning Goals
-- Practice exposing API's.
-- Practice consuming API's
+- Consume Google Image API to find images for the listings
+- Consume the endpoints exposed by the MarketMap backend
+- Integrate a chart with user/friendly features
+- Implement OAuth using OmniAuth to sign in with Google
 - Build a project with Service Oriented Architecture (SOA)
 
 ## Requirements and Setup (for Mac):
@@ -25,12 +25,31 @@
 - Rails -V 5.2.6
 
 ### Gems Utilized
+#### Development/Testing Environments
 - rspec
 - pry
 - simplecov
 - factory_bot_rails
 - faker
 - jsonapi-serializer
+- figaro
+- shoulda-matchers
+- capybara
+- webmock
+- vcr
+- faker
+- factory_bot
+#### Production Environment
+- bootstrap
+- faraday
+- omniauth-google-oauth2
+- omniauth-rails_csrf_protection
+- jquery-rails
+- simple_form
+- popper_js
+- tether-rails
+- chartkick
+- rails_12factor
 
 ### Setup
 1. Fork and/or Clone this Repo from GitHub.
@@ -98,7 +117,7 @@ $ rails s
         "interior": "gray",
         "sellingprice": 41500
       }
-     },
+     },...
 ```
 
 - Show
@@ -142,7 +161,46 @@ $ rails s
   - Example Response:
 ```
 {
-  "data": []
+  "data": [
+    {
+      "id": "1",
+      "type": "listing",
+      "attributes": {
+        "year": 2014,
+        "make": "Acura",
+        "model": "ILX",
+        "trim": "Technology Package",
+        "body": "Sedan",
+        "transmission": "automatic",
+        "vin": "19vde1f70ee008913",
+        "state": "ca",
+        "condition": 2.5,
+        "odometer": 9051,
+        "color": "gray",
+        "interior": "black",
+        "sellingprice": 21250
+       }
+    },
+    {
+      "id": "2",
+      "type": "listing",
+      "attributes": {
+        "year": 2014,
+        "make": "Acura",
+        "model": "MDX",
+        "trim": "Advance and Entertainment Packages",
+        "body": "SUV",
+        "transmission": "automatic",
+        "vin": "5fryd3h83eb011004",
+        "state": "ca",
+        "condition": 4.9,
+        "odometer": 21523,
+        "color": "white",
+        "interior": "gray",
+        "sellingprice": 41500
+       }
+     }
+    ]
 }
 ```
     
