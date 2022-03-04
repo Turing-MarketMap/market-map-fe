@@ -34,8 +34,10 @@
             </table>
         </div>
     </div>
-</div>
+    <div style="display: flex; float: right">
+      <% if @current_user.present? %>
+        <%= button_to "Save Listing", "/user_listings", params: { listing_id: @listing.id } %>
+      <% end %>
+    </div>
 
-<% if @current_user.present? %>
-  <%= button_to "Save Listing", "/user_listings", params: { listing_id: @listing.id } %>
-<% end %>
+</div>
