@@ -1,0 +1,3 @@
+class UserListingsController < ApplicationController
+
+end
