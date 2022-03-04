@@ -24,14 +24,16 @@
       <td>Make</td>
       <td>Model</td>
     </tr>
-    <% @user_listings.each do |listing| %>
-    <tr>
-      <td>$<%= listing.selling_price%></td>
-      <td><%= listing.year%></td>
-      <td><%= listing.make%></td>
-      <td><%= listing.model%></td>
-      <td><%= link_to 'Delete Listing', "/user_listings/#{listing.id}", method: :delete %></td>
-    </tr>
+    <% if @user_listings %>
+      <% @user_listings.each do |listing| %>
+      <tr>
+        <td>$<%= listing.selling_price%></td>
+        <td><%= listing.year%></td>
+        <td><%= listing.make%></td>
+        <td><%= listing.model%></td>
+        <td><%= link_to 'Delete Listing', "/user_listings/#{listing.id}", method: :delete %></td>
+      </tr>
+      <% end %>
     <% end %>
   </table>
 <% end %>
