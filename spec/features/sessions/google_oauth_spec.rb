@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'OmniAuth Google OAuth 2.0', :vcr, type: :feature do
+RSpec.describe 'OmniAuth Google OAuth 2.0', type: :feature do
   before(:each) do
     @auth_hash = {
                    :provider=>"google_oauth2",
@@ -48,7 +48,7 @@ RSpec.describe 'OmniAuth Google OAuth 2.0', :vcr, type: :feature do
 
   context 'as a user' do
     context 'user is not logged into site with OAuth' do
-      describe 'viewable elements' do
+      describe 'viewable elements', :vcr do
         it 'displays login text' do
           visit root_path
 
@@ -63,7 +63,7 @@ RSpec.describe 'OmniAuth Google OAuth 2.0', :vcr, type: :feature do
       end
 
       context 'user logs in with OAuth' do
-        describe 'login process' do
+        describe 'login process', :vcr do
           it 'displays user profile photo after login' do
             visit root_path
             click_link 'Login with Google'
@@ -93,7 +93,7 @@ RSpec.describe 'OmniAuth Google OAuth 2.0', :vcr, type: :feature do
 
     context 'user is logged into site with OAuth' do
       describe 'viewable elements' do
-        it 'does not display login text' do
+        it 'does not display login text', :vcr do
           visit root_path
           click_link 'Login with Google'
 
@@ -102,7 +102,7 @@ RSpec.describe 'OmniAuth Google OAuth 2.0', :vcr, type: :feature do
       end
 
       context 'user logs out of OAuth' do
-        it 'does not display user profile photo after logout' do
+        it 'does not display user profile photo after logout', :vcr do
           visit root_path
           click_link 'Login with Google'
           click_link 'Logout'
@@ -111,7 +111,7 @@ RSpec.describe 'OmniAuth Google OAuth 2.0', :vcr, type: :feature do
           expect(page).to have_xpath('//*[@id="navbarNoProfile"]/img')
         end
 
-        it 'displays login text' do
+        it 'displays login text', :vcr do
           visit root_path
           click_link 'Login with Google'
           click_link 'Logout'

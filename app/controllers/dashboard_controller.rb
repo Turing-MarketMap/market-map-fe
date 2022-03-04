@@ -7,6 +7,7 @@ class DashboardController < ApplicationController
 
     if @listings != []
       @data = ListingFacade.data_hash(@listings)
+      @fair_prices = FairPriceFacade.get_fair_price(session[:search_params][:model], get_mileage_range(@listings))
     end
   end
 
@@ -23,5 +24,14 @@ class DashboardController < ApplicationController
 
     formatted_search_params = search_params.to_h.symbolize_keys
     session[:search_params] = formatted_search_params
+  end
+
+  def get_mileage_range(listings)
+    cadence = 5000
+    max_listing = listings.max_by do |listing|
+      listing.odometer
+    end
+    max_mileage = (max_listing.odometer * cadence).ceil/cadence
+    mileage_range = 0.step(by: cadence, to: max_mileage).to_a
   end
 end

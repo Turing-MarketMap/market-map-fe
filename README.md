@@ -54,6 +54,81 @@ $ rails s
 
 ## Endpoints
 ### Listings
+ - Index
+   - View listings (with optional filters)
+   - Example Request: `https://consultancy-be.herokuapp.com/api/v1/listings`
+   - Example Response:
+```
+{
+  "data": [
+    {
+      "id": "1",
+      "type": "listing",
+      "attributes": {
+        "year": 2014,
+        "make": "Acura",
+        "model": "ILX",
+        "trim": "Technology Package",
+        "body": "Sedan",
+        "transmission": "automatic",
+        "vin": "19vde1f70ee008913",
+        "state": "ca",
+        "condition": 2.5,
+        "odometer": 9051,
+        "color": "gray",
+        "interior": "black",
+        "sellingprice": 21250
+       }
+    },
+    {
+      "id": "2",
+      "type": "listing",
+      "attributes": {
+        "year": 2014,
+        "make": "Acura",
+        "model": "MDX",
+        "trim": "Advance and Entertainment Packages",
+        "body": "SUV",
+        "transmission": "automatic",
+        "vin": "5fryd3h83eb011004",
+        "state": "ca",
+        "condition": 4.9,
+        "odometer": 21523,
+        "color": "white",
+        "interior": "gray",
+        "sellingprice": 41500
+      }
+     },
+```
+
+- Show
+   - View a listing (with optional filters)
+   - Example Request: `https://consultancy-be.herokuapp.com/api/v1/listings/1`
+   - Example Response:
+```
+{
+  "data": {
+    "id": "1",
+    "type": "listing",
+    "attributes": {
+      "year": 2014,
+      "make": "Acura",
+      "model": "ILX",
+      "trim": "Technology Package",
+      "body": "Sedan",
+      "transmission": "automatic",
+      "vin": "19vde1f70ee008913",
+      "state": "ca",
+      "condition": 2.5,
+      "odometer": 9051,
+      "color": "gray",
+      "interior": "black",
+      "sellingprice": 21250
+      }
+    }
+}
+```
+
 ### Users
 - Login/Register
   - Login or create a new user.
@@ -61,13 +136,21 @@ $ rails s
 - Destroy User
   - Delete a users account.
   - Example Request: `https://https://consultancy-be.herokuapp.com/users/1`
-  
+- User Listings
+  - Can view listings that a user has saved
+  - Example Request: `https://consultancy-be.herokuapp.com/api/v1/users/1/listings`
+  - Example Response:
+```
+{
+  "data": []
+}
+```
     
 ### UserListings
 
 ## Further Project Information
  - [Turing Project Details](https://backend.turing.edu/module3/projects/consultancy/)
-
+ - [Heroku Dashboard](https://consultancy-fe.herokuapp.com/)
 
 
 ## **Contributors** ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
