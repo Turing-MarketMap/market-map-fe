@@ -15,6 +15,7 @@
 - Consuption of Google Image API to find images for the listings
 - Consume the endpoints exposed by the MarketMap backend
 - Integrate a chart with user/friendly features
+- Implement Circle CI
 - Implement OAuth using OmniAuth to sign in with Google
 - Build a project with Service Oriented Architecture (SOA)
 
