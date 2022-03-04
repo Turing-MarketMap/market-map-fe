@@ -2,7 +2,7 @@ class FairPriceService
   class << self
 
     def conn
-      url = 'http://localhost:3000/api/v1/'
+      url = ENV['consultancy_be']
       Faraday.new(url: url)
     end
 

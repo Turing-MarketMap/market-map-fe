@@ -20,6 +20,5 @@ class UsersController < ApplicationController
       redirect_to '/'
       flash[:alert] = "Please login to see user profile information"
     end
-
   end
 end
