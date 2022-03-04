@@ -34,56 +34,6 @@ RSpec.describe 'dashboard page' do
           end
         end
       end
-
-      describe 'model filters' do
-        # Issue: Dashboard can't read currently selected "make" to filter model
-        xit "has model dropdowns that match available models in retreived listings" do
-          make = listings_2.listings.sample(1)[0].make
-          models = listings_2.all_models(make)
-
-          allow(ListingFacade).to receive(:get_listings).and_return(listings_2)
-
-          visit '/'
-
-          within 'div.filters' do
-            select make, from: "Make"
-            models.each do |model|
-              select model, from: "Model"
-            end
-          end
-        end
-      end
-
-      describe 'year filters' do
-        xit "has year range field" do
-
-          #allow(ListingService).to receive(:get_makes).and_return({data: make_options_1})
-          allow(ListingFacade).to receive(:get_listings).and_return(listings)
-          allow(Listing).to receive(:all_makes).and_return(make_options_2)
-
-          visit '/'
-          within 'div.filters' do
-            #select , from: "Make"
-          end
-        end
-      end
-    end
-  end
-
-  describe 'Link to listing show page' do
-
-    xit 'sees link that routes to listing show page' do
-      visit '/'
-
-
-    end
-  end
-
-  context 'as user' do
-    describe 'before logging into the site' do
-      describe 'viewable elements' do
-
-      end
     end
   end
 end
