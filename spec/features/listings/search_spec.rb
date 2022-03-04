@@ -2,8 +2,8 @@ require 'rails_helper'
 
 
 RSpec.describe 'Listings search', type: :feature do
-  context 'as a logged in user', :vcr do
-    it 'can display matching cars when search is completed' do
+  context 'as a logged in user' do
+    it 'can display matching cars when search is completed', :vcr do
       visit '/'
       fill_in "Min year", with: 2002
       fill_in "Max year", with: 2015

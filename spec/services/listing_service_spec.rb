@@ -2,26 +2,6 @@ require 'rails_helper'
 
 RSpec.describe 'listing service' do
   context 'when listings exist' do
-    context 'get makes with no other parameters set' do
-
-      # allow(ListingService).to receive(:get_makes).and_return({data: ["A", "B", "C", "D", "E"]})
-
-      # let!(:make_response) { ListingService.get_makes }
-      # let!(:json) { JSON.parse(make_response.body, symbolize_names: true) }
-
-
-      xit "returns correct https status " do
-        expect(make_response).to have_http_status(200)
-      end
-
-      xit "returns the expected json" do
-        expect(json).to be_a(Hash)
-        expect(json).to have_key(:data)
-        expect(json[:data]).to be_a(Array)
-        expect(json[:data]).to eq(["A", "B", "C", "D", "E"])
-      end
-    end
-
     context 'class methods', :vcr do
       describe 'conn' do
         it 'can return listings hash' do
