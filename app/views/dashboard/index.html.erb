@@ -19,17 +19,6 @@
       <%= ff.label :max_year %>
       <%= ff.number_field :max_year, value: session[:search_params][:max_year]%>
 
-      <%= ff.label :min_price %>
-      <%= ff.number_field :min_price%>
-
-      <%= ff.label :max_price %>
-      <%= ff.number_field :max_price%>
-
-      <%= ff.label :min_mileage %>
-      <%= ff.number_field :min_mileage%>
-
-      <%= ff.label :max_mileage %>
-      <%= ff.number_field :max_mileage%>
     <% end %>
 
   <%= f.submit "Search Listings" %>
