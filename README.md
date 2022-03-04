@@ -208,7 +208,8 @@ $ rails s
 
 ## Further Project Information
  - [Turing Project Details](https://backend.turing.edu/module3/projects/consultancy/)
- - [Heroku Dashboard](https://consultancy-fe.herokuapp.com/)
+ - [Frontend Heroku Dashboard](https://consultancy-fe.herokuapp.com/)
+ - [Backend Github Market Map Repo](https://github.com/Turing-MarketMap/market-map)
 
 
 ## **Contributors** ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
