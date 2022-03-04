@@ -25,13 +25,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8e3824de-e6e8-4fd7-93cb-d749a144a5f3
+      - f2837c36-a1a3-4e48-be34-30fb046bebe5
       X-Runtime:
-      - '0.003703'
+      - '0.006005'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"Impreza","type":"fair_price_prediction","attributes":{"predictions":[15994.689365879532,14464.61939723311],"inputs":[10000.0,50000.0]}}}'
-  recorded_at: Fri, 04 Mar 2022 00:53:11 GMT
+  recorded_at: Fri, 04 Mar 2022 03:07:23 GMT
 recorded_with: VCR 6.0.0

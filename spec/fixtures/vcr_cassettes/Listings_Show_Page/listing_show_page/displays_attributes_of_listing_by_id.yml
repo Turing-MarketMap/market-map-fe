@@ -2,7 +2,42 @@
 http_interactions:
 - request:
     method: get
-    uri: https://customsearch.googleapis.com/customsearch/v1?cx=<cx>&imgColorType=color&imgDominantColor=blue&imgSize=LARGE&imgType=photo&key=<key>&num=1&q=2015%20kia%20sorrento&searchType=image
+    uri: http://localhost:3000/api/v1/listings/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"b37bbdacb098d1c780733febebdf02c3"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f2f1d3ea-6bde-4983-821d-d2482a94112b
+      X-Runtime:
+      - '0.002598'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"listing","attributes":{"year":2014,"make":"Acura","model":"ILX","trim":"Technology
+        Package","body":"Sedan","transmission":"automatic","vin":"19vde1f70ee008913","state":"ca","condition":2.5,"odometer":9051,"color":"gray","interior":"black","sellingprice":21250}}}'
+  recorded_at: Fri, 04 Mar 2022 03:07:21 GMT
+- request:
+    method: get
+    uri: https://customsearch.googleapis.com/customsearch/v1?cx=<cx>&imgColorType=color&imgDominantColor=gray&imgSize=LARGE&imgType=photo&key=<key>&num=1&q=2014%20Acura%20ILX&searchType=image
     body:
       encoding: US-ASCII
       string: ''
@@ -25,7 +60,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Fri, 04 Mar 2022 03:07:24 GMT
+      - Fri, 04 Mar 2022 03:07:21 GMT
       Server:
       - ESF
       Cache-Control:
@@ -53,9 +88,9 @@ http_interactions:
           "queries": {
             "request": [
               {
-                "title": "Google Custom Search - 2015 kia sorrento",
-                "totalResults": "26600000",
-                "searchTerms": "2015 kia sorrento",
+                "title": "Google Custom Search - 2014 Acura ILX",
+                "totalResults": "20100000",
+                "searchTerms": "2014 Acura ILX",
                 "count": 1,
                 "startIndex": 1,
                 "inputEncoding": "utf8",
@@ -66,14 +101,14 @@ http_interactions:
                 "imgSize": "large",
                 "imgType": "photo",
                 "imgColorType": "color",
-                "imgDominantColor": "blue"
+                "imgDominantColor": "gray"
               }
             ],
             "nextPage": [
               {
-                "title": "Google Custom Search - 2015 kia sorrento",
-                "totalResults": "26600000",
-                "searchTerms": "2015 kia sorrento",
+                "title": "Google Custom Search - 2014 Acura ILX",
+                "totalResults": "20100000",
+                "searchTerms": "2014 Acura ILX",
                 "count": 1,
                 "startIndex": 2,
                 "inputEncoding": "utf8",
@@ -84,7 +119,7 @@ http_interactions:
                 "imgSize": "large",
                 "imgType": "photo",
                 "imgColorType": "color",
-                "imgDominantColor": "blue"
+                "imgDominantColor": "gray"
               }
             ]
           },
@@ -92,37 +127,33 @@ http_interactions:
             "title": "market-map-images"
           },
           "searchInformation": {
-            "searchTime": 0.176326,
+            "searchTime": 0.184057,
             "formattedSearchTime": "0.18",
-            "totalResults": "26600000",
-            "formattedTotalResults": "26,600,000"
-          },
-          "spelling": {
-            "correctedQuery": "2015 kia sorento",
-            "htmlCorrectedQuery": "2015 kia \u003cb\u003e\u003ci\u003esorento\u003c/i\u003e\u003c/b\u003e"
+            "totalResults": "20100000",
+            "formattedTotalResults": "20,100,000"
           },
           "items": [
             {
               "kind": "customsearch#result",
-              "title": "2015 Kia Sorento for Sale in Whitewater, WI - Russ Darrow Kia of ...",
-              "htmlTitle": "\u003cb\u003e2015 Kia Sorento\u003c/b\u003e for Sale in Whitewater, WI - Russ Darrow \u003cb\u003eKia\u003c/b\u003e of ...",
-              "link": "https://www.kiaofwaukesha.com/resrc/media/image/222266/cm-header-15-sorento.jpg",
-              "displayLink": "www.kiaofwaukesha.com",
-              "snippet": "2015 Kia Sorento for Sale in Whitewater, WI - Russ Darrow Kia of ...",
-              "htmlSnippet": "\u003cb\u003e2015 Kia Sorento\u003c/b\u003e for Sale in Whitewater, WI - Russ Darrow \u003cb\u003eKia\u003c/b\u003e of ...",
-              "mime": "image/jpeg",
-              "fileFormat": "image/jpeg",
+              "title": "2014 Acura ILX Reliability - Consumer Reports",
+              "htmlTitle": "\u003cb\u003e2014 Acura ILX\u003c/b\u003e Reliability - Consumer Reports",
+              "link": "https://crdms.images.consumerreports.org/c_lfill,w_720,q_auto,f_auto/prod/cars/chrome/white/2014ACU008a_640_12",
+              "displayLink": "www.consumerreports.org",
+              "snippet": "2014 Acura ILX Reliability - Consumer Reports",
+              "htmlSnippet": "\u003cb\u003e2014 Acura ILX\u003c/b\u003e Reliability - Consumer Reports",
+              "mime": "image/",
+              "fileFormat": "image/",
               "image": {
-                "contextLink": "https://www.kiaofwaukesha.com/2015-kia-sorento-whitewater/",
-                "height": 400,
-                "width": 960,
-                "byteSize": 183559,
-                "thumbnailLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmkXLiR-_8rl5pRzrhm-ya-vlMpO0Evuj_MrH6jqHTxzg5QXxiG-O1wQs&s",
-                "thumbnailHeight": 62,
-                "thumbnailWidth": 148
+                "contextLink": "https://www.consumerreports.org/cars/acura/ilx/2014/reliability/",
+                "height": 480,
+                "width": 640,
+                "byteSize": 43395,
+                "thumbnailLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4PI4rGr4nH1GtXDgbalWOB3yuYxMWM-4Ij-ydBTAqG73LgtoVnVtpxw&s",
+                "thumbnailHeight": 103,
+                "thumbnailWidth": 137
               }
             }
           ]
         }
-  recorded_at: Fri, 04 Mar 2022 03:07:24 GMT
+  recorded_at: Fri, 04 Mar 2022 03:07:21 GMT
 recorded_with: VCR 6.0.0

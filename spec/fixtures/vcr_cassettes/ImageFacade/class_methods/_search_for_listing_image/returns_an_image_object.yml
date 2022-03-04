@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://customsearch.googleapis.com/customsearch/v1?cx=<cx>&imgColorType=color&imgDominantColor=blue&imgSize=LARGE&imgType=photo&key=<key>&num=1&q=2015%20kia%20sorrento&searchType=image
+    uri: https://customsearch.googleapis.com/customsearch/v1?cx=<cx>&imgColorType=color&imgDominantColor=blue&imgSize=LARGE&imgType=photo&key=<key>&num=1&q=2015%20kia%20sorento&searchType=image
     body:
       encoding: US-ASCII
       string: ''
@@ -25,7 +25,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Fri, 04 Mar 2022 03:07:24 GMT
+      - Fri, 04 Mar 2022 03:07:16 GMT
       Server:
       - ESF
       Cache-Control:
@@ -53,9 +53,9 @@ http_interactions:
           "queries": {
             "request": [
               {
-                "title": "Google Custom Search - 2015 kia sorrento",
-                "totalResults": "26600000",
-                "searchTerms": "2015 kia sorrento",
+                "title": "Google Custom Search - 2015 kia sorento",
+                "totalResults": "34900000",
+                "searchTerms": "2015 kia sorento",
                 "count": 1,
                 "startIndex": 1,
                 "inputEncoding": "utf8",
@@ -71,9 +71,9 @@ http_interactions:
             ],
             "nextPage": [
               {
-                "title": "Google Custom Search - 2015 kia sorrento",
-                "totalResults": "26600000",
-                "searchTerms": "2015 kia sorrento",
+                "title": "Google Custom Search - 2015 kia sorento",
+                "totalResults": "34900000",
+                "searchTerms": "2015 kia sorento",
                 "count": 1,
                 "startIndex": 2,
                 "inputEncoding": "utf8",
@@ -92,14 +92,10 @@ http_interactions:
             "title": "market-map-images"
           },
           "searchInformation": {
-            "searchTime": 0.176326,
-            "formattedSearchTime": "0.18",
-            "totalResults": "26600000",
-            "formattedTotalResults": "26,600,000"
-          },
-          "spelling": {
-            "correctedQuery": "2015 kia sorento",
-            "htmlCorrectedQuery": "2015 kia \u003cb\u003e\u003ci\u003esorento\u003c/i\u003e\u003c/b\u003e"
+            "searchTime": 0.456127,
+            "formattedSearchTime": "0.46",
+            "totalResults": "34900000",
+            "formattedTotalResults": "34,900,000"
           },
           "items": [
             {
@@ -124,5 +120,5 @@ http_interactions:
             }
           ]
         }
-  recorded_at: Fri, 04 Mar 2022 03:07:24 GMT
+  recorded_at: Fri, 04 Mar 2022 03:07:16 GMT
 recorded_with: VCR 6.0.0
