@@ -35,3 +35,7 @@
         </div>
     </div>
 </div>
+
+<% if @current_user.present? %>
+  <%= button_to "Save Listing", "/user_listings", params: { listing_id: @listing.id } %>
+<% end %>
