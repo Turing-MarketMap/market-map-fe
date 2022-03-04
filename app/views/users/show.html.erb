@@ -1,7 +1,6 @@
 <br>
 <h5>My account details: </h5>
-<p>Name: <%= session[:auth_hash]["info"]["name"] %></p>
-<p>User ID: <%= session[:auth_hash]['info']['user_id'] %></p>
+<p>Name: <%= @current_user[:name] %></p>
+<p>User ID: <%= @current_user[:user_id] %></p>
 
-<p>Saved listings: </p>
 <p><%=  link_to 'Delete my account', '/users', method: :delete%></p>

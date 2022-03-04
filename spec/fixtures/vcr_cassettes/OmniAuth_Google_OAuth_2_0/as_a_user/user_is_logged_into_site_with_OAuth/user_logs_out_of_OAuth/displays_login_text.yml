@@ -25,9 +25,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - aa97e56a-b87a-4ca9-80b5-dbb216344b57
+      - 64ce6843-63ae-4fab-ac82-5d373c0576e9
       X-Runtime:
-      - '0.046232'
+      - '0.084965'
       Transfer-Encoding:
       - chunked
     body:
@@ -247,7 +247,7 @@ http_interactions:
         Premium PZEV","body":"wagon","transmission":"automatic","vin":"4s4brbcc5c3229871","state":"ny","condition":3.6,"odometer":46936,"color":"gray","interior":"black","sellingprice":16800}},{"id":"12470","type":"listing","attributes":{"year":2014,"make":"Subaru","model":"Outback","trim":"2.5i
         Limited PZEV","body":"wagon","transmission":"automatic","vin":"4s4brbnc8e3215947","state":"ca","condition":4.2,"odometer":29907,"color":"white","interior":"beige","sellingprice":24000}},{"id":"12471","type":"listing","attributes":{"year":2012,"make":"Subaru","model":"Outback","trim":"2.5i
         Premium PZEV","body":"wagon","transmission":"automatic","vin":"4s4brbcc8c3230531","state":"wa","condition":3.0,"odometer":37154,"color":"blue","interior":"beige","sellingprice":17400}}]}'
-  recorded_at: Fri, 04 Mar 2022 00:53:11 GMT
+  recorded_at: Fri, 04 Mar 2022 04:45:18 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/fair_price?mileage%5B%5D=0&mileage%5B%5D=10000&mileage%5B%5D=100000&mileage%5B%5D=105000&mileage%5B%5D=110000&mileage%5B%5D=115000&mileage%5B%5D=120000&mileage%5B%5D=125000&mileage%5B%5D=130000&mileage%5B%5D=135000&mileage%5B%5D=140000&mileage%5B%5D=145000&mileage%5B%5D=15000&mileage%5B%5D=150000&mileage%5B%5D=155000&mileage%5B%5D=160000&mileage%5B%5D=165000&mileage%5B%5D=170000&mileage%5B%5D=175000&mileage%5B%5D=180000&mileage%5B%5D=185000&mileage%5B%5D=190000&mileage%5B%5D=195000&mileage%5B%5D=20000&mileage%5B%5D=200000&mileage%5B%5D=205000&mileage%5B%5D=210000&mileage%5B%5D=215000&mileage%5B%5D=220000&mileage%5B%5D=225000&mileage%5B%5D=230000&mileage%5B%5D=235000&mileage%5B%5D=240000&mileage%5B%5D=245000&mileage%5B%5D=25000&mileage%5B%5D=250000&mileage%5B%5D=255000&mileage%5B%5D=260000&mileage%5B%5D=265000&mileage%5B%5D=270000&mileage%5B%5D=275000&mileage%5B%5D=280000&mileage%5B%5D=285000&mileage%5B%5D=290000&mileage%5B%5D=295000&mileage%5B%5D=30000&mileage%5B%5D=300000&mileage%5B%5D=305000&mileage%5B%5D=310000&mileage%5B%5D=315000&mileage%5B%5D=320000&mileage%5B%5D=35000&mileage%5B%5D=40000&mileage%5B%5D=45000&mileage%5B%5D=5000&mileage%5B%5D=50000&mileage%5B%5D=55000&mileage%5B%5D=60000&mileage%5B%5D=65000&mileage%5B%5D=70000&mileage%5B%5D=75000&mileage%5B%5D=80000&mileage%5B%5D=85000&mileage%5B%5D=90000&mileage%5B%5D=95000&model=Outback
@@ -273,15 +273,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c86072fd-68f6-44e1-a61a-178b8a00494e
+      - 2b3bb155-6d93-4c4c-9474-208c2c878535
       X-Runtime:
-      - '0.004338'
+      - '0.005389'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"Outback","type":"fair_price_prediction","attributes":{"predictions":[1040.954340791346,10351.346191593764,23335.205596755095,23261.21507154706,23195.980060860395,22537.530176091932,21485.766520187586,20368.81906533272,19164.40461285667,17990.920226163627,16838.64662238779,15635.550968076219,14643.37589004944,13863.961524755692,13221.248884956662,12560.993802219366,11877.008506070408,11183.000187148265,10488.991868226125,9792.513819423124,8854.497337894105,7876.675912489195,7239.957241945871,6651.535120251269,6031.713629612107,5412.878234415003,4805.7672919831,4246.234225264264,3847.0566126791296,3463.533087131886,3173.766627657272,2896.8925324839506,2619.8191504969327,2343.8261503850754,2077.0950111090815,1826.6414896145343,1565.83068450546,1473.34633928701,1432.9403301736402,1398.2258980181552,1365.6278853604674,1339.061975543903,1319.9908281888922,1301.570591358708,1282.9087689350652,1263.7657409443489,1244.1711321525695,1223.9417909995109,1202.7880052676194,1181.563907848077,1159.853149486769,1139.0236309927618,1118.2167608612356,1097.7564562078362,1077.2961515544366,1057.175210090518,1037.3522995583253,1016.1334503714112,994.9146011844973,973.6957519975822,952.680458854384,932.4053130792706,913.8429880480713,895.6675402934833,877.6733270872741],"inputs":[0.0,5000.0,10000.0,15000.0,20000.0,25000.0,30000.0,35000.0,40000.0,45000.0,50000.0,55000.0,60000.0,65000.0,70000.0,75000.0,80000.0,85000.0,90000.0,95000.0,100000.0,105000.0,110000.0,115000.0,120000.0,125000.0,130000.0,135000.0,140000.0,145000.0,150000.0,155000.0,160000.0,165000.0,170000.0,175000.0,180000.0,185000.0,190000.0,195000.0,200000.0,205000.0,210000.0,215000.0,220000.0,225000.0,230000.0,235000.0,240000.0,245000.0,250000.0,255000.0,260000.0,265000.0,270000.0,275000.0,280000.0,285000.0,290000.0,295000.0,300000.0,305000.0,310000.0,315000.0,320000.0]}}}'
-  recorded_at: Fri, 04 Mar 2022 00:53:11 GMT
+  recorded_at: Fri, 04 Mar 2022 04:45:18 GMT
 - request:
     method: post
     uri: http://localhost:3000/api/v1/users?user%5Bemail%5D=bartell_tommy@example.net&user%5Bfirst_name%5D=Tommy&user%5Blast_name%5D=Bartell
@@ -309,15 +309,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1b785ed7-dad7-4ed9-9c46-a55182f2ff5a
+      - 7bc6171c-05c7-4a88-bd52-b5b79bd5ee14
       X-Runtime:
-      - '0.003169'
+      - '0.004441'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"2","type":"user","attributes":{"first_name":"Tommy","last_name":"Bartell","email":"bartell_tommy@example.net"}}}'
-  recorded_at: Fri, 04 Mar 2022 00:53:11 GMT
+  recorded_at: Fri, 04 Mar 2022 04:45:18 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/listings/search?search_params%5Bmake%5D=Subaru&search_params%5Bmax_year%5D=2015&search_params%5Bmin_year%5D=2000&search_params%5Bmodel%5D=Outback
@@ -343,9 +343,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 3c4b396d-cf40-417c-a698-b584d565b495
+      - 647f202c-3aa1-4cbb-b15f-537a9164f63d
       X-Runtime:
-      - '0.042808'
+      - '0.057474'
       Transfer-Encoding:
       - chunked
     body:
@@ -565,7 +565,41 @@ http_interactions:
         Premium PZEV","body":"wagon","transmission":"automatic","vin":"4s4brbcc5c3229871","state":"ny","condition":3.6,"odometer":46936,"color":"gray","interior":"black","sellingprice":16800}},{"id":"12470","type":"listing","attributes":{"year":2014,"make":"Subaru","model":"Outback","trim":"2.5i
         Limited PZEV","body":"wagon","transmission":"automatic","vin":"4s4brbnc8e3215947","state":"ca","condition":4.2,"odometer":29907,"color":"white","interior":"beige","sellingprice":24000}},{"id":"12471","type":"listing","attributes":{"year":2012,"make":"Subaru","model":"Outback","trim":"2.5i
         Premium PZEV","body":"wagon","transmission":"automatic","vin":"4s4brbcc8c3230531","state":"wa","condition":3.0,"odometer":37154,"color":"blue","interior":"beige","sellingprice":17400}}]}'
-  recorded_at: Fri, 04 Mar 2022 00:53:11 GMT
+  recorded_at: Fri, 04 Mar 2022 04:45:18 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/2/listings
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - fdcca8fe-880c-4a34-b13f-bece950109b5
+      X-Runtime:
+      - '0.003504'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Mar 2022 04:45:18 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/fair_price?mileage%5B%5D=0&mileage%5B%5D=10000&mileage%5B%5D=100000&mileage%5B%5D=105000&mileage%5B%5D=110000&mileage%5B%5D=115000&mileage%5B%5D=120000&mileage%5B%5D=125000&mileage%5B%5D=130000&mileage%5B%5D=135000&mileage%5B%5D=140000&mileage%5B%5D=145000&mileage%5B%5D=15000&mileage%5B%5D=150000&mileage%5B%5D=155000&mileage%5B%5D=160000&mileage%5B%5D=165000&mileage%5B%5D=170000&mileage%5B%5D=175000&mileage%5B%5D=180000&mileage%5B%5D=185000&mileage%5B%5D=190000&mileage%5B%5D=195000&mileage%5B%5D=20000&mileage%5B%5D=200000&mileage%5B%5D=205000&mileage%5B%5D=210000&mileage%5B%5D=215000&mileage%5B%5D=220000&mileage%5B%5D=225000&mileage%5B%5D=230000&mileage%5B%5D=235000&mileage%5B%5D=240000&mileage%5B%5D=245000&mileage%5B%5D=25000&mileage%5B%5D=250000&mileage%5B%5D=255000&mileage%5B%5D=260000&mileage%5B%5D=265000&mileage%5B%5D=270000&mileage%5B%5D=275000&mileage%5B%5D=280000&mileage%5B%5D=285000&mileage%5B%5D=290000&mileage%5B%5D=295000&mileage%5B%5D=30000&mileage%5B%5D=300000&mileage%5B%5D=305000&mileage%5B%5D=310000&mileage%5B%5D=315000&mileage%5B%5D=320000&mileage%5B%5D=35000&mileage%5B%5D=40000&mileage%5B%5D=45000&mileage%5B%5D=5000&mileage%5B%5D=50000&mileage%5B%5D=55000&mileage%5B%5D=60000&mileage%5B%5D=65000&mileage%5B%5D=70000&mileage%5B%5D=75000&mileage%5B%5D=80000&mileage%5B%5D=85000&mileage%5B%5D=90000&mileage%5B%5D=95000&model=Outback
@@ -591,15 +625,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b8ca9c01-2acb-43d0-9f22-8ac5cbe7214a
+      - '086ff5dd-8328-4cd7-9c0c-5cf7c7c79a12'
       X-Runtime:
-      - '0.003560'
+      - '0.002588'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"Outback","type":"fair_price_prediction","attributes":{"predictions":[1040.954340791346,10351.346191593764,23335.205596755095,23261.21507154706,23195.980060860395,22537.530176091932,21485.766520187586,20368.81906533272,19164.40461285667,17990.920226163627,16838.64662238779,15635.550968076219,14643.37589004944,13863.961524755692,13221.248884956662,12560.993802219366,11877.008506070408,11183.000187148265,10488.991868226125,9792.513819423124,8854.497337894105,7876.675912489195,7239.957241945871,6651.535120251269,6031.713629612107,5412.878234415003,4805.7672919831,4246.234225264264,3847.0566126791296,3463.533087131886,3173.766627657272,2896.8925324839506,2619.8191504969327,2343.8261503850754,2077.0950111090815,1826.6414896145343,1565.83068450546,1473.34633928701,1432.9403301736402,1398.2258980181552,1365.6278853604674,1339.061975543903,1319.9908281888922,1301.570591358708,1282.9087689350652,1263.7657409443489,1244.1711321525695,1223.9417909995109,1202.7880052676194,1181.563907848077,1159.853149486769,1139.0236309927618,1118.2167608612356,1097.7564562078362,1077.2961515544366,1057.175210090518,1037.3522995583253,1016.1334503714112,994.9146011844973,973.6957519975822,952.680458854384,932.4053130792706,913.8429880480713,895.6675402934833,877.6733270872741],"inputs":[0.0,5000.0,10000.0,15000.0,20000.0,25000.0,30000.0,35000.0,40000.0,45000.0,50000.0,55000.0,60000.0,65000.0,70000.0,75000.0,80000.0,85000.0,90000.0,95000.0,100000.0,105000.0,110000.0,115000.0,120000.0,125000.0,130000.0,135000.0,140000.0,145000.0,150000.0,155000.0,160000.0,165000.0,170000.0,175000.0,180000.0,185000.0,190000.0,195000.0,200000.0,205000.0,210000.0,215000.0,220000.0,225000.0,230000.0,235000.0,240000.0,245000.0,250000.0,255000.0,260000.0,265000.0,270000.0,275000.0,280000.0,285000.0,290000.0,295000.0,300000.0,305000.0,310000.0,315000.0,320000.0]}}}'
-  recorded_at: Fri, 04 Mar 2022 00:53:11 GMT
+  recorded_at: Fri, 04 Mar 2022 04:45:18 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/listings/search?search_params%5Bmake%5D=Subaru&search_params%5Bmax_year%5D=2015&search_params%5Bmin_year%5D=2000&search_params%5Bmodel%5D=Outback
@@ -625,9 +659,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - cb4113e8-bc32-47ff-a582-2f4c37ad78f7
+      - 4ec3bc29-d83b-48a5-8470-9cdab80696b3
       X-Runtime:
-      - '0.053022'
+      - '0.038516'
       Transfer-Encoding:
       - chunked
     body:
@@ -847,7 +881,7 @@ http_interactions:
         Premium PZEV","body":"wagon","transmission":"automatic","vin":"4s4brbcc5c3229871","state":"ny","condition":3.6,"odometer":46936,"color":"gray","interior":"black","sellingprice":16800}},{"id":"12470","type":"listing","attributes":{"year":2014,"make":"Subaru","model":"Outback","trim":"2.5i
         Limited PZEV","body":"wagon","transmission":"automatic","vin":"4s4brbnc8e3215947","state":"ca","condition":4.2,"odometer":29907,"color":"white","interior":"beige","sellingprice":24000}},{"id":"12471","type":"listing","attributes":{"year":2012,"make":"Subaru","model":"Outback","trim":"2.5i
         Premium PZEV","body":"wagon","transmission":"automatic","vin":"4s4brbcc8c3230531","state":"wa","condition":3.0,"odometer":37154,"color":"blue","interior":"beige","sellingprice":17400}}]}'
-  recorded_at: Fri, 04 Mar 2022 00:53:11 GMT
+  recorded_at: Fri, 04 Mar 2022 04:45:18 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/fair_price?mileage%5B%5D=0&mileage%5B%5D=10000&mileage%5B%5D=100000&mileage%5B%5D=105000&mileage%5B%5D=110000&mileage%5B%5D=115000&mileage%5B%5D=120000&mileage%5B%5D=125000&mileage%5B%5D=130000&mileage%5B%5D=135000&mileage%5B%5D=140000&mileage%5B%5D=145000&mileage%5B%5D=15000&mileage%5B%5D=150000&mileage%5B%5D=155000&mileage%5B%5D=160000&mileage%5B%5D=165000&mileage%5B%5D=170000&mileage%5B%5D=175000&mileage%5B%5D=180000&mileage%5B%5D=185000&mileage%5B%5D=190000&mileage%5B%5D=195000&mileage%5B%5D=20000&mileage%5B%5D=200000&mileage%5B%5D=205000&mileage%5B%5D=210000&mileage%5B%5D=215000&mileage%5B%5D=220000&mileage%5B%5D=225000&mileage%5B%5D=230000&mileage%5B%5D=235000&mileage%5B%5D=240000&mileage%5B%5D=245000&mileage%5B%5D=25000&mileage%5B%5D=250000&mileage%5B%5D=255000&mileage%5B%5D=260000&mileage%5B%5D=265000&mileage%5B%5D=270000&mileage%5B%5D=275000&mileage%5B%5D=280000&mileage%5B%5D=285000&mileage%5B%5D=290000&mileage%5B%5D=295000&mileage%5B%5D=30000&mileage%5B%5D=300000&mileage%5B%5D=305000&mileage%5B%5D=310000&mileage%5B%5D=315000&mileage%5B%5D=320000&mileage%5B%5D=35000&mileage%5B%5D=40000&mileage%5B%5D=45000&mileage%5B%5D=5000&mileage%5B%5D=50000&mileage%5B%5D=55000&mileage%5B%5D=60000&mileage%5B%5D=65000&mileage%5B%5D=70000&mileage%5B%5D=75000&mileage%5B%5D=80000&mileage%5B%5D=85000&mileage%5B%5D=90000&mileage%5B%5D=95000&model=Outback
@@ -873,13 +907,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 86d93b71-8212-440b-805c-644e31676dab
+      - 99436cf4-ec88-412b-8ff6-d1175071c6fb
       X-Runtime:
-      - '0.003475'
+      - '0.003927'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"Outback","type":"fair_price_prediction","attributes":{"predictions":[1040.954340791346,10351.346191593764,23335.205596755095,23261.21507154706,23195.980060860395,22537.530176091932,21485.766520187586,20368.81906533272,19164.40461285667,17990.920226163627,16838.64662238779,15635.550968076219,14643.37589004944,13863.961524755692,13221.248884956662,12560.993802219366,11877.008506070408,11183.000187148265,10488.991868226125,9792.513819423124,8854.497337894105,7876.675912489195,7239.957241945871,6651.535120251269,6031.713629612107,5412.878234415003,4805.7672919831,4246.234225264264,3847.0566126791296,3463.533087131886,3173.766627657272,2896.8925324839506,2619.8191504969327,2343.8261503850754,2077.0950111090815,1826.6414896145343,1565.83068450546,1473.34633928701,1432.9403301736402,1398.2258980181552,1365.6278853604674,1339.061975543903,1319.9908281888922,1301.570591358708,1282.9087689350652,1263.7657409443489,1244.1711321525695,1223.9417909995109,1202.7880052676194,1181.563907848077,1159.853149486769,1139.0236309927618,1118.2167608612356,1097.7564562078362,1077.2961515544366,1057.175210090518,1037.3522995583253,1016.1334503714112,994.9146011844973,973.6957519975822,952.680458854384,932.4053130792706,913.8429880480713,895.6675402934833,877.6733270872741],"inputs":[0.0,5000.0,10000.0,15000.0,20000.0,25000.0,30000.0,35000.0,40000.0,45000.0,50000.0,55000.0,60000.0,65000.0,70000.0,75000.0,80000.0,85000.0,90000.0,95000.0,100000.0,105000.0,110000.0,115000.0,120000.0,125000.0,130000.0,135000.0,140000.0,145000.0,150000.0,155000.0,160000.0,165000.0,170000.0,175000.0,180000.0,185000.0,190000.0,195000.0,200000.0,205000.0,210000.0,215000.0,220000.0,225000.0,230000.0,235000.0,240000.0,245000.0,250000.0,255000.0,260000.0,265000.0,270000.0,275000.0,280000.0,285000.0,290000.0,295000.0,300000.0,305000.0,310000.0,315000.0,320000.0]}}}'
-  recorded_at: Fri, 04 Mar 2022 00:53:11 GMT
+  recorded_at: Fri, 04 Mar 2022 04:45:18 GMT
 recorded_with: VCR 6.0.0

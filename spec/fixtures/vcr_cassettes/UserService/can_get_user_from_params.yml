@@ -1,14 +1,16 @@
 ---
 http_interactions:
 - request:
-    method: get
-    uri: http://localhost:3000/api/v1/fair_price?mileage%5B%5D=10000&mileage%5B%5D=50000&model=Impreza
+    method: post
+    uri: http://localhost:3000/api/v1/users?user%5Bemail%5D=eturambi@gmail.com&user%5Bfirst_name%5D=eldridge&user%5Blast_name%5D=turambi
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
       User-Agent:
       - Faraday v2.2.0
+      Content-Length:
+      - '0'
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -21,17 +23,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"848d9951beb763e0cd4bdbf7ff2114b1"
+      - W/"81c0c308e8e11127ad579b6fa86cd93c"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8573d81f-f4c0-4e2f-aa28-165e71ec9fbd
+      - 3706631d-0279-4668-8dd5-b3c2150d7ac5
       X-Runtime:
-      - '0.002208'
+      - '0.091030'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"Impreza","type":"fair_price_prediction","attributes":{"predictions":[15994.689365879532,14464.61939723311],"inputs":[10000.0,50000.0]}}}'
-  recorded_at: Fri, 04 Mar 2022 04:57:04 GMT
+      string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"eldridge","last_name":"turambi","email":"eturambi@gmail.com"}}}'
+  recorded_at: Wed, 02 Mar 2022 23:05:47 GMT
 recorded_with: VCR 6.0.0

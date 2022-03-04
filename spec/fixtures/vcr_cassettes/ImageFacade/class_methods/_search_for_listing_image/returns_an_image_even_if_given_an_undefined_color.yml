@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://customsearch.googleapis.com/customsearch/v1?cx=<cx>&imgColorType=color&imgDominantColor=blue&imgSize=LARGE&imgType=photo&key=<key>&num=1&q=2015%20kia%20sorento&searchType=image
+    uri: https://customsearch.googleapis.com/customsearch/v1?cx=<cx>&imgColorType=color&imgDominantColor=IMG_DOMINANT_COLOR_UNDEFINED&imgSize=LARGE&imgType=photo&key=<key>&num=1&q=2015%20kia%20sorento&searchType=image
     body:
       encoding: US-ASCII
       string: ''
@@ -25,7 +25,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Fri, 04 Mar 2022 04:32:21 GMT
+      - Fri, 04 Mar 2022 04:56:58 GMT
       Server:
       - ESF
       Cache-Control:
@@ -54,7 +54,7 @@ http_interactions:
             "request": [
               {
                 "title": "Google Custom Search - 2015 kia sorento",
-                "totalResults": "34900000",
+                "totalResults": "172000000",
                 "searchTerms": "2015 kia sorento",
                 "count": 1,
                 "startIndex": 1,
@@ -65,14 +65,13 @@ http_interactions:
                 "searchType": "image",
                 "imgSize": "large",
                 "imgType": "photo",
-                "imgColorType": "color",
-                "imgDominantColor": "blue"
+                "imgColorType": "color"
               }
             ],
             "nextPage": [
               {
                 "title": "Google Custom Search - 2015 kia sorento",
-                "totalResults": "34900000",
+                "totalResults": "172000000",
                 "searchTerms": "2015 kia sorento",
                 "count": 1,
                 "startIndex": 2,
@@ -83,8 +82,7 @@ http_interactions:
                 "searchType": "image",
                 "imgSize": "large",
                 "imgType": "photo",
-                "imgColorType": "color",
-                "imgDominantColor": "blue"
+                "imgColorType": "color"
               }
             ]
           },
@@ -92,33 +90,33 @@ http_interactions:
             "title": "market-map-images"
           },
           "searchInformation": {
-            "searchTime": 0.173687,
-            "formattedSearchTime": "0.17",
-            "totalResults": "34900000",
-            "formattedTotalResults": "34,900,000"
+            "searchTime": 0.400493,
+            "formattedSearchTime": "0.40",
+            "totalResults": "172000000",
+            "formattedTotalResults": "172,000,000"
           },
           "items": [
             {
               "kind": "customsearch#result",
-              "title": "2015 Kia Sorento for Sale in Whitewater, WI - Russ Darrow Kia of ...",
-              "htmlTitle": "\u003cb\u003e2015 Kia Sorento\u003c/b\u003e for Sale in Whitewater, WI - Russ Darrow \u003cb\u003eKia\u003c/b\u003e of ...",
-              "link": "https://www.kiaofwaukesha.com/resrc/media/image/222266/cm-header-15-sorento.jpg",
-              "displayLink": "www.kiaofwaukesha.com",
-              "snippet": "2015 Kia Sorento for Sale in Whitewater, WI - Russ Darrow Kia of ...",
-              "htmlSnippet": "\u003cb\u003e2015 Kia Sorento\u003c/b\u003e for Sale in Whitewater, WI - Russ Darrow \u003cb\u003eKia\u003c/b\u003e of ...",
+              "title": "2015 Kia Sorento Prices, Reviews, & Pictures | U.S. News",
+              "htmlTitle": "\u003cb\u003e2015 Kia Sorento\u003c/b\u003e Prices, Reviews, &amp; Pictures | U.S. News",
+              "link": "https://cars.usnews.com/static/images/Auto/izmo/i4761/2015_kia_sorento_angularfront.jpg",
+              "displayLink": "cars.usnews.com",
+              "snippet": "2015 Kia Sorento Prices, Reviews, & Pictures | U.S. News",
+              "htmlSnippet": "\u003cb\u003e2015 Kia Sorento\u003c/b\u003e Prices, Reviews, &amp; Pictures | U.S. News",
               "mime": "image/jpeg",
               "fileFormat": "image/jpeg",
               "image": {
-                "contextLink": "https://www.kiaofwaukesha.com/2015-kia-sorento-whitewater/",
-                "height": 400,
-                "width": 960,
-                "byteSize": 183559,
-                "thumbnailLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmkXLiR-_8rl5pRzrhm-ya-vlMpO0Evuj_MrH6jqHTxzg5QXxiG-O1wQs&s",
-                "thumbnailHeight": 62,
-                "thumbnailWidth": 148
+                "contextLink": "https://cars.usnews.com/cars-trucks/kia/sorento/2015",
+                "height": 480,
+                "width": 640,
+                "byteSize": 35771,
+                "thumbnailLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk0gOXvlOZUyZIy5NqGgO3B1rFUdaxd6vEUOUxlmJ38QHG7WlqYvC0eg&s",
+                "thumbnailHeight": 103,
+                "thumbnailWidth": 137
               }
             }
           ]
         }
-  recorded_at: Fri, 04 Mar 2022 04:32:21 GMT
+  recorded_at: Fri, 04 Mar 2022 04:56:58 GMT
 recorded_with: VCR 6.0.0
