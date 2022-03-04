@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users?user%5Bemail%5D=eturambi@gmail.com&user%5Bfirst_name%5D=eldridge&user%5Blast_name%5D=turambi
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.2.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"81c0c308e8e11127ad579b6fa86cd93c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 346e39fc-724e-4ea0-a960-57dc7b6f6628
+      X-Runtime:
+      - '0.003192'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"eldridge","last_name":"turambi","email":"eturambi@gmail.com"}}}'
+  recorded_at: Fri, 04 Mar 2022 04:57:04 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/1/listings?listing_id=2&user_id=1
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.2.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"d10ee99705ab049ba359b3abe5aa123e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - '028c3d0c-acba-4f7c-b7b3-8aa9bb2289a0'
+      X-Runtime:
+      - '0.004481'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"Saved listing for user."}'
+  recorded_at: Fri, 04 Mar 2022 04:57:04 GMT
+recorded_with: VCR 6.0.0

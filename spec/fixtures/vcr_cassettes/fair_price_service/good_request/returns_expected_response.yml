@@ -1,0 +1,37 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/fair_price?mileage%5B%5D=10000&mileage%5B%5D=50000&model=Impreza
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"848d9951beb763e0cd4bdbf7ff2114b1"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8573d81f-f4c0-4e2f-aa28-165e71ec9fbd
+      X-Runtime:
+      - '0.002208'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"Impreza","type":"fair_price_prediction","attributes":{"predictions":[15994.689365879532,14464.61939723311],"inputs":[10000.0,50000.0]}}}'
+  recorded_at: Fri, 04 Mar 2022 04:57:04 GMT
+recorded_with: VCR 6.0.0

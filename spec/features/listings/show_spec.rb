@@ -131,17 +131,6 @@ RSpec.describe 'Listings Show Page', type: :feature do
 
         expect(current_path).to eq("/profile")
       end
-
-      it 'after clicking save listing button, you see the listing saved on your profile page' do
-        visit root_path
-        click_link 'Login with Google'
-
-        visit listing_path(@listing.id, listing: @listing_attr)
-
-        click_on("Save Listing")
-
-        expect(page).to have_content('2015 Honda Civic')
-      end
     end
   end
 

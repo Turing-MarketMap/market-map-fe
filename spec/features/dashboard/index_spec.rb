@@ -81,29 +81,28 @@ RSpec.describe 'dashboard page' do
 
         visit '/'
         expect(page).to_not have_content('Year')
-        expect(page).to_not have_content('Make')
-        expect(page).to_not have_content('Model')
+
 
         click_link 'Login with Google'
-
+        expect(page).to_not have_link('Login with Google')
         expect(page).to have_content('Price')
         expect(page).to have_content('Year')
         expect(page).to have_content('Make')
         expect(page).to have_content('Model')
 
         visit '/listings/1'
-        # click_link 'Save listing'
-        # expect(current_path).to eq(root_path)
-        #
-        # visit '/listings/2'
-        # click_link 'Save listing'
-        #
-        # visit '/'
-        #
-        # expect(page).to have_content('Price: ****')
-        # expect(page).to have_content('Year: ****')
-        # expect(page).to have_content('Make: ****')
-        # expect(page).to have_content('Model: ****')
+        click_button 'Save Listing'
+        expect(current_path).to eq('/profile')
+
+        visit '/listings/2'
+        click_button 'Save Listing'
+
+        visit '/'
+
+        expect(page).to have_content('21250')
+        expect(page).to have_content('2014')
+        expect(page).to have_content('Acura')
+        expect(page).to have_content('ILX')
       end
     end
   end
