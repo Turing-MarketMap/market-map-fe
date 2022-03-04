@@ -8,7 +8,7 @@ class UserListingsController < ApplicationController
   end
 
   def destroy
-    UserListingService.delete_user_listing(@current_user[:user_id], params[:listing_id])
+    UserListingService.delete_user_listing(@current_user[:user_id], params[:id])
 
     redirect_to "/profile"
   end

@@ -9,7 +9,6 @@
 
 
 ## Background & Description:
-
 "MarketMap" is a group project built over the course of 10 days in Turing's module 3 backend program. This project is a branch of Turing's Consultancy project. We pitched a rough concept of creating an application that would let a user search for cars listings and enable them to know if they were getting a good deal based other listings across the United States. See below for more details on the backend features.
 
 ## Frontend Features:
@@ -20,7 +19,8 @@
 - Build a project with Service Oriented Architecture (SOA)
 
 ## Backend Features:
-- Utilized Bonjan Tunguz, Used Car Price ML Database on [Kaggle](https://www.kaggle.com/tunguz/used-car-auction-prices).
+- Implemented ML trendlines for used car price database
+- Utilized Bonjan Tunguz, Used Car Price ML Database on [Kaggle](https://www.kaggle.com/tunguz/used-car-auction-prices)
 
 ## Requirements and Setup (for Mac):
 ### Ruby and Rails
@@ -42,6 +42,7 @@
 - vcr
 - faker
 - factory_bot
+
 #### Production Environment
 - bootstrap
 - faraday
@@ -64,7 +65,7 @@
 ```shell
 $ rails s
 ```
- - Open Web Broswer and visit http://localhost:3000/
+ - Open Web Broswer and visit http://localhost:5000/
    - Please visit below endpoints to see JSON data being exposed
 
 ## Testing
@@ -74,10 +75,15 @@ $ rails s
  ```
    or test the whole suite with `$ rspec`
 
+## Heroku Hosting Locations
+ - [Frontend Heroku Dashboard](https://consultancy-fe.herokuapp.com/)
+ - [Backend Github Market Map Repo](https://github.com/Turing-MarketMap/market-map)
+
 ## External API Endpoint
 ### Google Image Search API
 - Google Image Search
   - Search Custom Google Image API for car images matching car listing color
+  - HTTP Response 200.
   - Required Params:
     - `cx` Search Engine ID - data type `string` - default from env
     - `key` Google API Key - data type `string` - default from env
@@ -175,7 +181,13 @@ $ rails s
 ### Listings
  - Index
    - View listings (with optional filters)
+   - Params:
+     - `min_year` Minimum Year - data type `integer` - set by params
+     - `max_year` Maximum Year - data type `integer` - set by params
+     - `make` Car Make - data type `string` - set by params
+     - `model` Car Model - data type `string` - set by params
    - Example Request: `https://consultancy-be.herokuapp.com/api/v1/listings`
+   - HTTP Response 200.
    - Example Response:
 ```json
 {
@@ -222,7 +234,8 @@ $ rails s
 
 - Show
    - View a listing (with optional filters)
-   - Example Request: `https://consultancy-be.herokuapp.com/api/v1/listings/1`
+   - Example Request: `https://consultancy-be.herokuapp.com/api/v1/listings/:id`
+   - HTTP Response 200.
    - Example Response:
 ```json
 {
@@ -249,68 +262,93 @@ $ rails s
 ```
 
 ### Users
-- Login/Register
+- Find/Create User
   - Login or create a new user.
+  - Required Params:
+    - `email` User Email - data type `string` - set by params
+    - `first_name` User first name - data type `string` - set by params
+    - `last_name` User last name - data type `string` - set by params
   - Example Request: `https://https://consultancy-be.herokuapp.com/api/v1/users`
-- Destroy User
-  - Delete a users account.
-  - Example Request: `https://https://consultancy-be.herokuapp.com/users/1`
-- User Listings
-  - Can view listings that a user has saved
-  - Example Request: `https://consultancy-be.herokuapp.com/api/v1/users/1/listings`
+  - HTTP Response 200.
   - Example Response:
 ```json
 {
-  "data": [
-    {
-      "id": "1",
-      "type": "listing",
-      "attributes": {
-        "year": 2014,
-        "make": "Acura",
-        "model": "ILX",
-        "trim": "Technology Package",
-        "body": "Sedan",
-        "transmission": "automatic",
-        "vin": "19vde1f70ee008913",
-        "state": "ca",
-        "condition": 2.5,
-        "odometer": 9051,
-        "color": "gray",
-        "interior": "black",
-        "sellingprice": 21250
-       }
-    },
-    {
-      "id": "2",
-      "type": "listing",
-      "attributes": {
-        "year": 2014,
-        "make": "Acura",
-        "model": "MDX",
-        "trim": "Advance and Entertainment Packages",
-        "body": "SUV",
-        "transmission": "automatic",
-        "vin": "5fryd3h83eb011004",
-        "state": "ca",
-        "condition": 4.9,
-        "odometer": 21523,
-        "color": "white",
-        "interior": "gray",
-        "sellingprice": 41500
-       }
-     }
-    ]
+  "data": {
+    "id": "1",
+    "type": "user",
+    "attributes": {
+      "first_name": "Tommy",
+      "last_name":"Bartell",
+      "email": "bartell_tommy@example.net"
+    }
+  }
 }
 ```
 
+- Destroy User
+  - Delete a users account.
+  - Required Params:
+    - `id` User ID - data type `string` - set by params
+  - Example Request: `https://https://consultancy-be.herokuapp.com/users/1`
+  - HTTP Response 204.
+
 ### UserListings
+- Create User Listing
+  - Create a new saved listing for the user.
+  - Required Params:
+    - `user_id` User ID - data type `integer` - currently signed in user id
+    - `listing_id` Listing ID - data type `integer` - listing ID to be added to users saved listings
+  - Example Request: `https://https://consultancy-be.herokuapp.com/api/v1/users/:user_id/listings`
+  - Example Response:
+```json
+{
+  "data": [{
+    "id": "1",
+    "type": "listing",
+    "attributes": {
+      "year": 2014,
+      "make": "Acura",
+      "model": "ILX",
+      "trim": "Technology Package",
+      "body":"Sedan",
+      "transmission": "automatic",
+      "vin": "19vde1f70ee008913",
+      "state": "ca",
+      "condition": 2.5,
+      "odometer": 9051,
+      "color": "gray",
+      "interior": "black",
+      "sellingprice": 21250
+      }
+    }, {
+    "id": "1",
+    "type": "listing",
+    "attributes": {
+      "year": 2014,
+      "make": "Acura",
+      "model": "ILX",
+      "trim": "Technology Package",
+      "body": "Sedan", "transmission": "automatic",
+      "vin": "19vde1f70ee008913",
+      "state": "ca",
+      "condition": 2.5,
+      "odometer": 9051,
+      "color": "gray",
+      "interior": "black",
+      "sellingprice": 21250
+    }
+  } ...
+```
+- Destroy User
+  - Delete a users account.
+  - Example Request: `https://https://consultancy-be.herokuapp.com/api/v1/users/:user_id/listings`
+  - Required Params:
+    - `user_id` User ID - data type `integer` - currently signed in user id
+    - `listing_id` Listing ID - data type `integer` - listing ID to be added to users saved listings
+  - HTTP Response 204.
 
 ## Further Project Information
  - [Turing Project Details](https://backend.turing.edu/module3/projects/consultancy/)
- - [Frontend Heroku Dashboard](https://consultancy-fe.herokuapp.com/)
- - [Backend Github Market Map Repo](https://github.com/Turing-MarketMap/market-map)
-
 
 ## **Contributors** ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
