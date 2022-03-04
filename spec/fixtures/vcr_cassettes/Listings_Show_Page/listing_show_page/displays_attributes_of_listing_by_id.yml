@@ -25,16 +25,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f2f1d3ea-6bde-4983-821d-d2482a94112b
+      - 2897b44d-ac53-4b70-8983-4afa87d549bd
       X-Runtime:
-      - '0.002598'
+      - '0.001825'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"listing","attributes":{"year":2014,"make":"Acura","model":"ILX","trim":"Technology
         Package","body":"Sedan","transmission":"automatic","vin":"19vde1f70ee008913","state":"ca","condition":2.5,"odometer":9051,"color":"gray","interior":"black","sellingprice":21250}}}'
-  recorded_at: Fri, 04 Mar 2022 03:07:21 GMT
+  recorded_at: Fri, 04 Mar 2022 02:23:44 GMT
 - request:
     method: get
     uri: https://customsearch.googleapis.com/customsearch/v1?cx=<cx>&imgColorType=color&imgDominantColor=gray&imgSize=LARGE&imgType=photo&key=<key>&num=1&q=2014%20Acura%20ILX&searchType=image
@@ -50,17 +50,17 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 429
+      message: Too Many Requests
     headers:
-      Content-Type:
-      - application/json; charset=UTF-8
       Vary:
       - Origin
       - Referer
       - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
       Date:
-      - Fri, 04 Mar 2022 03:07:21 GMT
+      - Fri, 04 Mar 2022 02:23:45 GMT
       Server:
       - ESF
       Cache-Control:
@@ -80,80 +80,31 @@ http_interactions:
       encoding: ASCII-8BIT
       string: |
         {
-          "kind": "customsearch#search",
-          "url": {
-            "type": "application/json",
-            "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&relatedSite={relatedSite?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
-          },
-          "queries": {
-            "request": [
+          "error": {
+            "code": 429,
+            "message": "Quota exceeded for quota metric 'Queries' and limit 'Queries per day' of service 'customsearch.googleapis.com' for consumer 'project_number:501043472451'.",
+            "errors": [
               {
-                "title": "Google Custom Search - 2014 Acura ILX",
-                "totalResults": "20100000",
-                "searchTerms": "2014 Acura ILX",
-                "count": 1,
-                "startIndex": 1,
-                "inputEncoding": "utf8",
-                "outputEncoding": "utf8",
-                "safe": "off",
-                "cx": "<cx>",
-                "searchType": "image",
-                "imgSize": "large",
-                "imgType": "photo",
-                "imgColorType": "color",
-                "imgDominantColor": "gray"
+                "message": "Quota exceeded for quota metric 'Queries' and limit 'Queries per day' of service 'customsearch.googleapis.com' for consumer 'project_number:501043472451'.",
+                "domain": "global",
+                "reason": "rateLimitExceeded"
               }
             ],
-            "nextPage": [
+            "status": "RESOURCE_EXHAUSTED",
+            "details": [
               {
-                "title": "Google Custom Search - 2014 Acura ILX",
-                "totalResults": "20100000",
-                "searchTerms": "2014 Acura ILX",
-                "count": 1,
-                "startIndex": 2,
-                "inputEncoding": "utf8",
-                "outputEncoding": "utf8",
-                "safe": "off",
-                "cx": "<cx>",
-                "searchType": "image",
-                "imgSize": "large",
-                "imgType": "photo",
-                "imgColorType": "color",
-                "imgDominantColor": "gray"
+                "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+                "reason": "RATE_LIMIT_EXCEEDED",
+                "domain": "googleapis.com",
+                "metadata": {
+                  "quota_limit": "DefaultPerDayPerProject",
+                  "service": "customsearch.googleapis.com",
+                  "consumer": "projects/501043472451",
+                  "quota_metric": "customsearch.googleapis.com/requests"
+                }
               }
             ]
-          },
-          "context": {
-            "title": "market-map-images"
-          },
-          "searchInformation": {
-            "searchTime": 0.184057,
-            "formattedSearchTime": "0.18",
-            "totalResults": "20100000",
-            "formattedTotalResults": "20,100,000"
-          },
-          "items": [
-            {
-              "kind": "customsearch#result",
-              "title": "2014 Acura ILX Reliability - Consumer Reports",
-              "htmlTitle": "\u003cb\u003e2014 Acura ILX\u003c/b\u003e Reliability - Consumer Reports",
-              "link": "https://crdms.images.consumerreports.org/c_lfill,w_720,q_auto,f_auto/prod/cars/chrome/white/2014ACU008a_640_12",
-              "displayLink": "www.consumerreports.org",
-              "snippet": "2014 Acura ILX Reliability - Consumer Reports",
-              "htmlSnippet": "\u003cb\u003e2014 Acura ILX\u003c/b\u003e Reliability - Consumer Reports",
-              "mime": "image/",
-              "fileFormat": "image/",
-              "image": {
-                "contextLink": "https://www.consumerreports.org/cars/acura/ilx/2014/reliability/",
-                "height": 480,
-                "width": 640,
-                "byteSize": 43395,
-                "thumbnailLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4PI4rGr4nH1GtXDgbalWOB3yuYxMWM-4Ij-ydBTAqG73LgtoVnVtpxw&s",
-                "thumbnailHeight": 103,
-                "thumbnailWidth": 137
-              }
-            }
-          ]
+          }
         }
-  recorded_at: Fri, 04 Mar 2022 03:07:21 GMT
+  recorded_at: Fri, 04 Mar 2022 02:23:45 GMT
 recorded_with: VCR 6.0.0

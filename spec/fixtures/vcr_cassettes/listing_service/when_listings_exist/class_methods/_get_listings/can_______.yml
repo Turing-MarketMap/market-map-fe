@@ -25,9 +25,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 07100b54-8039-427b-bb57-52202a5eb6b1
+      - d8a10759-3dc3-4815-9706-ad03dd1cd505
       X-Runtime:
-      - '0.016360'
+      - '0.022285'
       Transfer-Encoding:
       - chunked
     body:
@@ -45,5 +45,5 @@ http_interactions:
         STI","body":"hatchback","transmission":"manual","vin":"jf1gr896x9l802941","state":"tx","condition":2.7,"odometer":74806,"color":"white","interior":"black","sellingprice":21600}},{"id":"2536","type":"listing","attributes":{"year":2008,"make":"Subaru","model":"Impreza","trim":"WRX
         STI","body":"hatchback","transmission":"manual","vin":"jf1gr89678l837094","state":"pa","condition":1.9,"odometer":57325,"color":"black","interior":"black","sellingprice":23200}},{"id":"2560","type":"listing","attributes":{"year":2008,"make":"Subaru","model":"Impreza","trim":"2.5i","body":"hatchback","transmission":"automatic","vin":"jf1gh61638h803207","state":"co","condition":2.6,"odometer":37515,"color":"silver","interior":"black","sellingprice":10100}},{"id":"2601","type":"listing","attributes":{"year":2007,"make":"Subaru","model":"Impreza","trim":"2.5
         i","body":"wagon","transmission":"automatic","vin":"jf1gg61617h803367","state":"ma","condition":1.9,"odometer":132887,"color":"blue","interior":"gray","sellingprice":2800}}]}'
-  recorded_at: Fri, 04 Mar 2022 03:07:24 GMT
+  recorded_at: Fri, 04 Mar 2022 02:23:56 GMT
 recorded_with: VCR 6.0.0
