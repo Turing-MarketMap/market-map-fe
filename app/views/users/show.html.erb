@@ -1,6 +1,8 @@
-<br>
-<h5>My account details: </h5>
-<p>Name: <%= @current_user[:name] %></p>
-<p>User ID: <%= @current_user[:user_id] %></p>
+<div class="">
+  <h5>My account details: </h5>
+  <p>Name: <%= @current_user[:name] %></p>
+  <p>User ID: <%= @current_user[:user_id] %></p>
 
-<p><%=  link_to 'Delete my account', '/users', method: :delete%></p>
+  <p><%=  link_to 'Delete my account', '/users', method: :delete%></p>
+
+</div><br>
