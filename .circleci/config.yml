@@ -22,7 +22,7 @@ jobs:
           command: bundle install
       - run:
           name: Create Database
-          command: bundle exec rake db:create
+          command: bundle exec rake db:{drop,create}
       - run:
           name: Run RSpec Tests
           command: |
