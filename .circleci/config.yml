@@ -24,9 +24,6 @@ jobs:
           name: Create Database
           command: bundle exec rake db:create
       - run:
-          name: Load Database
-          command: bundle exec rake import_listings_csv
-      - run:
           name: Run RSpec Tests
           command: |
             TESTFILES=$(circleci tests glob "spec/**/*_spec.rb" |
