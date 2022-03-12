@@ -114,6 +114,7 @@ GEM
     jwt (2.3.0)
     launchy (2.5.0)
       addressable (~> 2.7)
+    libv8-node (16.10.0.0)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -128,6 +129,8 @@ GEM
     method_source (1.0.0)
     mini_mime (1.1.2)
     mini_portile2 (2.8.0)
+    mini_racer (0.6.2)
+      libv8-node (~> 16.10.0.0)
     minitest (5.15.0)
     msgpack (1.4.5)
     multi_json (1.15.0)
@@ -312,6 +315,7 @@ DEPENDENCIES
   jsonapi-serializer
   launchy
   listen (>= 3.0.5, < 3.2)
+  mini_racer
   omniauth-google-oauth2
   omniauth-rails_csrf_protection
   orderly
