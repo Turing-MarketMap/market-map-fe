@@ -80,4 +80,5 @@ VCR.configure do |c|
   c.filter_sensitive_data('<encrypted_key>') { ENV['google_client_id'] }
   c.filter_sensitive_data('<encrypted_key>') { ENV['client_secret_id'] }
   c.configure_rspec_metadata!
+  c.allow_http_connections_when_no_cassette = true
 end
