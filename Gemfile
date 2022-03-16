@@ -74,6 +74,7 @@ group :test do
   gem 'vcr'
   gem 'faker'
   gem 'factory_bot_rails'
+  gem 'rspec_junit_formatter'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
