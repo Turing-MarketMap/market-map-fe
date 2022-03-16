@@ -16,8 +16,8 @@ class ListingService
       search_query[:max_year] = query[:max_year]
       search_query[:make] = query[:make]
       search_query[:model] = query[:model]
-      response = conn.get('listings/search') do|req|
-          req.params['search_params'] = search_query
+      response = conn.get('listings/search') do |req|
+        req.params['search_params'] = search_query
       end
       
       parse_json(response)
