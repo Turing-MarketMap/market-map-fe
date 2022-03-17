@@ -4,6 +4,6 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
   def current_user
-    @current_user ||= session[:auth_hash]['info'].deep_symbolize_keys! if session[:auth_hash]
+    @current_user ||= session[:auth_hash].deep_symbolize_keys! if session[:auth_hash]
   end
 end

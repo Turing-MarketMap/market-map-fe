@@ -68,8 +68,16 @@
         </div>
       <% else %>
         <div class="no-user-present">
+          <!--
           <a
             class="d-flex align-items-center"
+            href="/auth/google_oauth2"
+            id="navbarNoProfile"
+            role="button"
+            aria-expanded="false"
+          > -->
+          <a
+            class="btn btn-outline-secondary d-flex align-items-center button"
             href="/auth/google_oauth2"
             id="navbarNoProfile"
             role="button"
@@ -84,6 +92,7 @@
               loading="lazy"
             />
           </a>
+          <!--</a> -->
         </div>
       <% end %>
 
