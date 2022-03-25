@@ -14,17 +14,16 @@
 
 ## Screenshots of the Interface
 #### Before Login:
-![image](https://user-images.githubusercontent.com/15107515/156827318-3dc09e99-2113-4023-9829-a64bac711827.png)
+![image](https://user-images.githubusercontent.com/78194232/160194813-a9f7eeca-7cba-4709-b09c-88e58e2b0e98.png)
 
 #### After Login
-![image](https://user-images.githubusercontent.com/15107515/156827336-535ecb3c-e292-439f-afca-ab16d0524e13.png)
+![image](https://user-images.githubusercontent.com/78194232/160195123-95fb9fae-52f7-4686-bd3a-9b71c011bd05.png)
 
 #### Listing Detail Page
-![image](https://user-images.githubusercontent.com/15107515/156827372-bd76d392-4b63-4558-9724-4161a4a3e34c.png)
+![image](https://user-images.githubusercontent.com/78194232/160195403-ff85e140-d9ee-49a6-a3bd-47d3479c86d5.png)
 
 #### User Profile Page
-![image](https://user-images.githubusercontent.com/15107515/156827423-4b8122cf-c693-41a3-9dcf-f7904692d11e.png)
-
+![image](https://user-images.githubusercontent.com/78194232/160195496-2864c6ca-e3fc-4224-a5bb-c78b5d669c6a.png)
 
 
 ## Frontend Features:
