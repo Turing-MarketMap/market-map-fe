@@ -27,7 +27,7 @@
 
 
 ## Frontend Features:
-- Consuption of Google Image API to find images for the listings
+- Consumption of Google Image API to find images for the listings
 - Consume the endpoints exposed by the MarketMap backend
 - Integrate a chart with user/friendly features
 - Implement Circle CI
