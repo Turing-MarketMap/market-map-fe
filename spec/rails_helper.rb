@@ -77,8 +77,8 @@ VCR.configure do |c|
   c.hook_into :webmock
   c.filter_sensitive_data('<cx>') { ENV['google_image_cx'] }
   c.filter_sensitive_data('<key>') { ENV['google_image_api_key'] }
-  c.filter_sensitive_data('<encrypted_key>') { ENV['google_client_id'] }
-  c.filter_sensitive_data('<encrypted_key>') { ENV['client_secret_id'] }
+  c.filter_sensitive_data('<google_encrypted_key>') { ENV['google_client_id'] }
+  c.filter_sensitive_data('<client_id_encrypted_key>') { ENV['client_secret_id'] }
   c.configure_rspec_metadata!
   c.allow_http_connections_when_no_cassette = true
 end
