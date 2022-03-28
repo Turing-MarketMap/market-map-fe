@@ -25,7 +25,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Fri, 04 Mar 2022 04:56:59 GMT
+      - Mon, 28 Mar 2022 19:14:23 GMT
       Server:
       - ESF
       Cache-Control:
@@ -70,8 +70,8 @@ http_interactions:
             ]
           },
           "searchInformation": {
-            "searchTime": 0.230011,
-            "formattedSearchTime": "0.23",
+            "searchTime": 0.199652,
+            "formattedSearchTime": "0.20",
             "totalResults": "0",
             "formattedTotalResults": "0"
           },
@@ -80,5 +80,5 @@ http_interactions:
             "htmlCorrectedQuery": "\u003cb\u003e\u003ci\u003ed&amp;D\u003c/i\u003e\u003c/b\u003e*^$T&amp;^#&amp;%$7625\u003cb\u003e\u003ci\u003ehdfs jjk\u003c/i\u003e\u003c/b\u003e"
           }
         }
-  recorded_at: Fri, 04 Mar 2022 04:56:59 GMT
-recorded_with: VCR 6.0.0
+  recorded_at: Mon, 28 Mar 2022 19:14:23 GMT
+recorded_with: VCR 6.1.0

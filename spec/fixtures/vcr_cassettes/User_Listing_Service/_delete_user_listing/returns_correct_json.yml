@@ -27,15 +27,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a933c1e8-1d56-4438-98da-9cb4bd064b1e
+      - 69f2004e-bebe-45eb-af36-0ad535593b27
       X-Runtime:
-      - '0.004406'
+      - '0.002780'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"eldridge","last_name":"turambi","email":"eturambi@gmail.com"}}}'
-  recorded_at: Fri, 04 Mar 2022 04:57:04 GMT
+  recorded_at: Mon, 28 Mar 2022 19:14:36 GMT
 - request:
     method: post
     uri: http://localhost:3000/api/v1/users/1/listings?listing_id=2&user_id=1
@@ -63,15 +63,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 3ddb6cda-6d9f-486e-a191-d68525b16ba3
+      - f7a376f1-afeb-45f8-9231-aa2bc5f1ef91
       X-Runtime:
-      - '0.006022'
+      - '0.005402'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"message":"Saved listing for user."}'
-  recorded_at: Fri, 04 Mar 2022 04:57:04 GMT
+  recorded_at: Mon, 28 Mar 2022 19:14:36 GMT
 - request:
     method: delete
     uri: http://localhost:3000/api/v1/users/1/listings/2
@@ -93,11 +93,11 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - cb81816a-4a3c-4707-b735-48e255710947
+      - d0439471-fbef-48b2-9ac2-c0f3e2a3030e
       X-Runtime:
-      - '0.004280'
+      - '0.003334'
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Fri, 04 Mar 2022 04:57:04 GMT
-recorded_with: VCR 6.0.0
+  recorded_at: Mon, 28 Mar 2022 19:14:36 GMT
+recorded_with: VCR 6.1.0

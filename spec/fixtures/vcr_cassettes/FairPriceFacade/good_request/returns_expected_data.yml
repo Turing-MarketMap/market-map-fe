@@ -21,17 +21,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"848d9951beb763e0cd4bdbf7ff2114b1"
+      - W/"5824ec8a160daa8977463bea0618a3bf"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 92c75b50-0640-41ab-ba6b-689ce5d27639
+      - 3a270d59-6b5b-416f-8081-c541f1ee199b
       X-Runtime:
-      - '0.028314'
+      - '0.006361'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"Impreza","type":"fair_price_prediction","attributes":{"predictions":[15994.689365879532,14464.61939723311],"inputs":[10000.0,50000.0]}}}'
-  recorded_at: Fri, 04 Mar 2022 04:56:58 GMT
-recorded_with: VCR 6.0.0
+      string: '{"data":{"id":"Impreza","type":"fair_price_prediction","attributes":{"predictions":[16453.55121113996,15818.468512281685],"inputs":[10000.0,50000.0]}}}'
+  recorded_at: Mon, 28 Mar 2022 19:14:22 GMT
+recorded_with: VCR 6.1.0
